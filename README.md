@@ -8,9 +8,9 @@ https://github.com/yangkun19921001/AVFFmpegLib
 https://github.com/google/cpu_features/tags => v0.7.0
 ```
 
-## pcm to audio
+## 音频转码
 ```
-1.音频转码
+1.pcm => wav
 ffmpeg -y -f s16le -ar 16000 -ac 1 -acodec pcm_s16le -i audio.pcm out.wav
 2.pcm => amr
 ffmpeg -y -f s16le -ar 16000 -ac 1 -acodec pcm_s16le -i audio.pcm out.amr
