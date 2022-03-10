@@ -1,0 +1,71 @@
+apply plugin: 'com.android.library'
+
+android {
+
+//    compileSdkVersion 29
+    compileSdkVersion 31
+    buildToolsVersion "31.0.0"
+
+//    compileOptions.encoding = "UTF-8"
+//    ndkPath "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499"
+//    ndkVersion "16.1.4479499"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 31
+
+        externalNativeBuild {
+
+//            cmake {
+//                version "3.18.1"
+//                arguments "-GAndroid Gradle - Ninja"
+////                cppFlags "-frtti -fexceptions"
+////                arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=gcc"//, "-DANDROID_ALLOW_UNDEFINED_SYMBOLS=TRUE"
+////                abiFilters 'armeabi-v7a'
+//            }
+
+            cmake {
+                cppFlags ""
+                //cppFlags "-frtti -fexceptions"
+//                arguments "-DOpenCV_DIR=" + project(':opencv').projectDir + "/native/jni",
+//                        "-DANDROID_STL=c++_shared",
+//                        "-DANDROID_TOOLCHAIN=clang"
+                //cppFlags "-std=c++11 -frtti -fexceptions"
+                //arguments "-DANDROID_STL=c++_shared"
+                //abiFilters 'armeabi-v7a','arm64-v8a'
+//                arguments "-GAndroid Gradle - Ninja"
+                arguments "-DCMAKE_MAKE_PROGRAM=C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/bin/ninja"
+            }
+//        ndk {
+//            moduleName "native-lib"
+//            abiFilters "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
+//        }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ["libs"]
+//        }
+//    }
+//
+//    packagingOptions {
+//        pickFirst 'lib/armeabi-v7a/libavcodec.so'
+//    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+}

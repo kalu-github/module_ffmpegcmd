@@ -1,0 +1,5 @@
+# Project exclude paths
+/.gradle/
+/app/build/
+/lib_ffmpegcmd/.cxx/
+/lib_ffmpegcmd/build/

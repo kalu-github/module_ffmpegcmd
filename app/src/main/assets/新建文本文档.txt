@@ -1,0 +1,6 @@
+adb shell am start com.dangbei.tvlauncher/com.dangbei.launcher.ui.main.MainActivity
+
+
+
+ffmpeg -i v35.mp4 -i a1.mp3 -i a2.mp3 -i a3.mp3 -i a4.mp3 -i a5.mp3  -filter_complex "[1]adelay=0|0[a1];[2]adelay=5000|5000[a2];[3]a
+delay=10000|10000[a3];[4]adelay=15000|15000[a4];[5]adelay=20000|20000[a5];[0][a1][a2][a3][a4][a5]amix=6" -c:v copy  /save_path.mp4
