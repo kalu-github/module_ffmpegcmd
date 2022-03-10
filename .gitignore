@@ -2,5 +2,8 @@
 /.idea/
 /.gradle/
 /app/build/
+/app/release/
 /lib_ffmpegcmd/.cxx/
 /lib_ffmpegcmd/build/
+/lib_cpu_features/.cxx/
+/lib_cpu_features/build/
