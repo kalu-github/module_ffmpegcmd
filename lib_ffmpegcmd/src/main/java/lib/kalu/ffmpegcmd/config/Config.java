@@ -101,7 +101,7 @@ public class Config {
         System.loadLibrary("avformat");
         System.loadLibrary("avfilter");
         System.loadLibrary("avdevice");
-        System.loadLibrary("c++_shared");
+//        System.loadLibrary("c++_shared");
         System.loadLibrary("ffmpeg-core");
 
         /* NATIVE LOG LEVEL IS RECEIVED ONLY ON STARTUP */
