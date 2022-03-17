@@ -1,3 +1,9 @@
+# todo list
+```
+1. 同步传进监听状态
+2. 更新ffmpeg版本
+```
+
 # ffmpeg-command
 ```
 https://github.com/yangkun19921001/AVFFmpegLib
