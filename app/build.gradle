@@ -11,8 +11,8 @@ android {
         targetSdkVersion 31
         multiDexEnabled true
         ndk {
-            abiFilters 'armeabi-v7a'
-//            abiFilters 'armeabi-v7a', 'x86'
+//            abiFilters 'armeabi-v7a'
+            abiFilters 'armeabi-v7a', 'x86'
         }
     }
 
@@ -50,7 +50,7 @@ repositories {
 
 dependencies {
 //    implementation files('libs/lib_ffmpegcmd_v4.4_release_20220309.aar')
-    implementation files('libs/lib_ffmpegcmd_v4.4_release_20220311.aar')
+    implementation files('libs/lib_ffmpegcmd_v4.4_audio_release_20220404.aar')
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.android.support:multidex:1.0.3'
 }
