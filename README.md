@@ -21,3 +21,21 @@ ffmpeg -y -i from.mp3 -i 1.mp3 -i 2.mp3 -i 3.mp3 -i 4.mp3 -filter_complex [1]ade
 1.mp3、2.mp3、3.mp3、4.mp3 混音到 from.mp4 生成 result.mp4
 ffmpeg -y -i from.mp4 -i 1.mp3 -i 2.mp3 -i 3.mp3 -i 4.mp3 -filter_complex [1]adelay=10000|10000[a1];[2]adelay=20000|20000[a2];[3]adelay=30000|30000[a3];[4]adelay=40000|40000[a4];[0][a1][a2][a3][a4]amix=5 result.mp4
 ```
+
+## 音频-采样数
+```
+"-ar", // 采样数
+"22050",
+```
+
+## 音频-码率
+```
+"-b:a", // 音频码率
+"48000",
+```
+
+## 音频-降噪
+```
+"-af",
+"asendcmd=0.0 afftdn sn start,asendcmd=0.4 afftdn sn stop,afftdn=nr=20:nf=-40",
+```
