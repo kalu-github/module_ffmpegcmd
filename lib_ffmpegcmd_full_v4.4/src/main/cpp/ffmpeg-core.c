@@ -89,7 +89,7 @@ static jclass stringClass;
 static jmethodID stringConstructor;
 
 /** Full name of the Config class */
-const char *configClassName = "lib/kalu/ffmpegcmd/config/Config";
+const char *configClassName = "lib/kalu/ffmpegcmd/cmd/Cmd";
 
 /** Full name of String class */
 const char *stringClassName = "java/lang/String";
