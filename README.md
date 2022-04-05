@@ -1,19 +1,3 @@
-# todo list
-```
-1. 同步传进监听状态
-2. 更新ffmpeg版本
-```
-
-# ffmpeg-command
-```
-https://github.com/yangkun19921001/AVFFmpegLib
-```
-
-## cpu_features
-```
-https://github.com/google/cpu_features/tags => v0.7.0
-```
-
 ## 音频转码
 ```
 1.pcm => wav
