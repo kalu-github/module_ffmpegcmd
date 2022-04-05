@@ -1,51 +1,17 @@
-/*
- * Copyright (c) 2018-2020 DevYK
- *
- * This file is part of MobileFFmpeg.
- *
- * MobileFFmpeg is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * MobileFFmpeg is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with MobileFFmpeg.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 package lib.kalu.ffmpegcmd.ffmpeg;
 
 import android.os.AsyncTask;
-
-import lib.kalu.ffmpegcmd.async.AsyncFFmpegExecuteTask;
-import lib.kalu.ffmpegcmd.callback.ExecuteCallback;
-import lib.kalu.ffmpegcmd.config.Config;
-import lib.kalu.ffmpegcmd.entity.FFmpegExecution;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * <p>Main class for FFmpeg operations. Supports synchronous {@link #execute(String...)} and
- * asynchronous {@link #executeAsync(String, ExecuteCallback)} methods to execute FFmpeg commands.
- * <pre>
- *      int rc = FFmpeg.execute("-i file1.mp4 -c:v libxvid file1.avi");
- *      Log.i(Config.TAG, String.format("Command execution %s.", (rc == 0?"completed successfully":"failed with rc=" + rc));
- * </pre>
- * <pre>
- *      long executionId = FFmpeg.executeAsync("-i file1.mp4 -c:v libxvid file1.avi", executeCallback);
- *      Log.i(Config.TAG, String.format("Asynchronous execution %d started.", executionId));
- * </pre>
- *
- * @author DevYK
- * @since v1.0
- */
+import lib.kalu.ffmpegcmd.async.AsyncFFmpegExecuteTask;
+import lib.kalu.ffmpegcmd.callback.ExecuteCallback;
+import lib.kalu.ffmpegcmd.cmd.Cmd;
+import lib.kalu.ffmpegcmd.entity.FFmpegExecution;
+
 public class FFmpeg {
 
     private static final String FFMPEG = "ffmpeg";
@@ -83,12 +49,12 @@ public class FFmpeg {
             list.remove(0);
         }
 
-        return Config.ffmpegExecute(DEFAULT_EXECUTION_ID, list.toArray(new String[]{}));
+        return Cmd.ffmpegExecute(DEFAULT_EXECUTION_ID, list.toArray(new String[]{}));
     }
 
 
     public static int execute(final String[] arguments) {
-        return Config.ffmpegExecute(DEFAULT_EXECUTION_ID, arguments);
+        return Cmd.ffmpegExecute(DEFAULT_EXECUTION_ID, arguments);
     }
 
     /**
@@ -223,7 +189,7 @@ public class FFmpeg {
      * <p>This function does not wait for termination to complete and returns immediately.
      */
     public static void cancel() {
-        Config.nativeFFmpegCancel(DEFAULT_EXECUTION_ID);
+        Cmd.nativeFFmpegCancel(DEFAULT_EXECUTION_ID);
     }
 
     /**
@@ -234,7 +200,7 @@ public class FFmpeg {
      * @param executionId id of the execution
      */
     public static void cancel(final long executionId) {
-        Config.nativeFFmpegCancel(executionId);
+        Cmd.nativeFFmpegCancel(executionId);
     }
 
     /**
@@ -243,7 +209,7 @@ public class FFmpeg {
      * @return list of ongoing executions
      */
     public static List<FFmpegExecution> listExecutions() {
-        return Config.listFFmpegExecutions();
+        return Cmd.listFFmpegExecutions();
     }
 
     /**

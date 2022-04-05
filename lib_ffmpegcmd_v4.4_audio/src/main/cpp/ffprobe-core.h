@@ -27,6 +27,6 @@
  * Method:    nativeFFprobeExecute
  * Signature: ([Ljava/lang/String;)I
  */
-JNIEXPORT jint JNICALL Java_lib_kalu_ffmpegcmd_config_Config_nativeFFprobeExecute(JNIEnv *, jclass, jobjectArray);
+JNIEXPORT jint JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFprobeExecute(JNIEnv *, jclass, jobjectArray);
 
 #endif /* MOBILE_FFPROBE_H */

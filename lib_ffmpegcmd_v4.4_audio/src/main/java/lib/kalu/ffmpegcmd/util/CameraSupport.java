@@ -1,22 +1,3 @@
-/*
- * Copyright (c) 2019 DevYK
- *
- * This file is part of MobileFFmpeg.
- *
- * MobileFFmpeg is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * MobileFFmpeg is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- *  You should have received a copy of the GNU Lesser General Public License
- *  along with MobileFFmpeg.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 package lib.kalu.ffmpegcmd.util;
 
 import android.content.Context;
@@ -32,13 +13,8 @@ import java.util.List;
 
 import static android.content.Context.CAMERA_SERVICE;
 
-import lib.kalu.ffmpegcmd.config.Config;
+import lib.kalu.ffmpegcmd.cmd.Cmd;
 
-/**
- * Utility class for camera devices.
- *
- * @author DevYK
- */
 public class CameraSupport {
 
     /**
@@ -61,14 +37,14 @@ public class CameraSupport {
                         final Integer cameraSupport = chars.get(CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL);
 
                         if (cameraSupport != null && cameraSupport == CameraMetadata.INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY) {
-                            Log.d(Config.TAG, "Detected camera with id " + cameraId + " has LEGACY hardware level which is not supported by Android Camera2 NDK API.");
+                            Log.d(Cmd.TAG, "Detected camera with id " + cameraId + " has LEGACY hardware level which is not supported by Android Camera2 NDK API.");
                         } else if (cameraSupport != null) {
                             detectedCameraIdList.add(cameraId);
                         }
                     }
                 }
             } catch (final CameraAccessException e) {
-                Log.w(Config.TAG, "Detecting camera ids failed.", e);
+                Log.w(Cmd.TAG, "Detecting camera ids failed.", e);
             }
         }
 

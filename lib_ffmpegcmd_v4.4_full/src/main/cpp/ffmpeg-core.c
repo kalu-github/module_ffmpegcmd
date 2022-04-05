@@ -109,20 +109,20 @@ int configuredLogLevel = AV_LOG_INFO;
 
 /** Prototypes of native functions defined by Config class. */
 JNINativeMethod configMethods[] = {
-        {"enableNativeRedirection",      "()V",                                     (void *) Java_lib_kalu_ffmpegcmd_config_Config_enableNativeRedirection},
-        {"disableNativeRedirection",     "()V",                                     (void *) Java_lib_kalu_ffmpegcmd_config_Config_disableNativeRedirection},
-        {"setNativeLogLevel",            "(I)V",                                    (void *) Java_lib_kalu_ffmpegcmd_config_Config_setNativeLogLevel},
-        {"getNativeLogLevel",            "()I",                                     (void *) Java_lib_kalu_ffmpegcmd_config_Config_getNativeLogLevel},
-        {"getNativeFFmpegVersion",       "()Ljava/lang/String;",                    (void *) Java_lib_kalu_ffmpegcmd_config_Config_getNativeFFmpegVersion},
-        {"getNativeVersion",             "()Ljava/lang/String;",                    (void *) Java_lib_kalu_ffmpegcmd_config_Config_getNativeVersion},
-        {"nativeFFmpegExecute",          "(J[Ljava/lang/String;)I",                 (void *) Java_lib_kalu_ffmpegcmd_config_Config_nativeFFmpegExecute},
-        {"nativeFFmpegCancel",           "(J)V",                                    (void *) Java_lib_kalu_ffmpegcmd_config_Config_nativeFFmpegCancel},
-        {"nativeFFprobeExecute",         "([Ljava/lang/String;)I",                  (void *) Java_lib_kalu_ffmpegcmd_config_Config_nativeFFprobeExecute},
-        {"registerNewNativeFFmpegPipe",  "(Ljava/lang/String;)I",                   (void *) Java_lib_kalu_ffmpegcmd_config_Config_registerNewNativeFFmpegPipe},
-        {"getNativeBuildDate",           "()Ljava/lang/String;",                    (void *) Java_lib_kalu_ffmpegcmd_config_Config_getNativeBuildDate},
-        {"setNativeEnvironmentVariable", "(Ljava/lang/String;Ljava/lang/String;)I", (void *) Java_lib_kalu_ffmpegcmd_config_Config_setNativeEnvironmentVariable},
-        {"getNativeLastCommandOutput",   "()Ljava/lang/String;",                    (void *) Java_lib_kalu_ffmpegcmd_config_Config_getNativeLastCommandOutput},
-        {"ignoreNativeSignal",           "(I)V",                                    (void *) Java_lib_kalu_ffmpegcmd_config_Config_ignoreNativeSignal}
+        {"enableNativeRedirection",      "()V",                                     (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_enableNativeRedirection},
+        {"disableNativeRedirection",     "()V",                                     (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_disableNativeRedirection},
+        {"setNativeLogLevel",            "(I)V",                                    (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_setNativeLogLevel},
+        {"getNativeLogLevel",            "()I",                                     (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeLogLevel},
+        {"getNativeFFmpegVersion",       "()Ljava/lang/String;",                    (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeFFmpegVersion},
+        {"getNativeVersion",             "()Ljava/lang/String;",                    (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeVersion},
+        {"nativeFFmpegExecute",          "(J[Ljava/lang/String;)I",                 (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegExecute},
+        {"nativeFFmpegCancel",           "(J)V",                                    (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegCancel},
+        {"nativeFFprobeExecute",         "([Ljava/lang/String;)I",                  (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFprobeExecute},
+        {"registerNewNativeFFmpegPipe",  "(Ljava/lang/String;)I",                   (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_registerNewNativeFFmpegPipe},
+        {"getNativeBuildDate",           "()Ljava/lang/String;",                    (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeBuildDate},
+        {"setNativeEnvironmentVariable", "(Ljava/lang/String;Ljava/lang/String;)I", (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_setNativeEnvironmentVariable},
+        {"getNativeLastCommandOutput",   "()Ljava/lang/String;",                    (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeLastCommandOutput},
+        {"ignoreNativeSignal",           "(I)V",                                    (void *) Java_lib_kalu_ffmpegcmd_cmd_Cmd_ignoreNativeSignal}
 };
 
 
@@ -737,7 +737,7 @@ jint JNI_OnLoad(JavaVM *vm, void *reserved) {
  * @param level log level
  */
 JNIEXPORT void JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_setNativeLogLevel(JNIEnv *env, jclass object, jint level) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_setNativeLogLevel(JNIEnv *env, jclass object, jint level) {
     configuredLogLevel = level;
 }
 
@@ -748,7 +748,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_setNativeLogLevel(JNIEnv *env, jclass obje
  * @param object reference to the class on which this method is invoked
  */
 JNIEXPORT jint JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_getNativeLogLevel(JNIEnv *env, jclass object) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeLogLevel(JNIEnv *env, jclass object) {
     return configuredLogLevel;
 }
 
@@ -759,7 +759,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_getNativeLogLevel(JNIEnv *env, jclass obje
  * @param object reference to the class on which this method is invoked
  */
 JNIEXPORT void JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_enableNativeRedirection(JNIEnv *env, jclass object) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_enableNativeRedirection(JNIEnv *env, jclass object) {
     mutexLock();
 
     if (redirectionEnabled != 0) {
@@ -787,7 +787,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_enableNativeRedirection(JNIEnv *env, jclas
  * @param object reference to the class on which this method is invoked
  */
 JNIEXPORT void JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_disableNativeRedirection(JNIEnv *env, jclass object) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_disableNativeRedirection(JNIEnv *env, jclass object) {
 
     mutexLock();
 
@@ -813,7 +813,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_disableNativeRedirection(JNIEnv *env, jcla
  * @return FFmpeg version string
  */
 JNIEXPORT jstring JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_getNativeFFmpegVersion(JNIEnv *env, jclass object) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeFFmpegVersion(JNIEnv *env, jclass object) {
 //    return (*env)->NewStringUTF(env, FFMPEG_VERSION);
     return (*env)->NewStringUTF(env, av_version_info());
 }
@@ -826,7 +826,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_getNativeFFmpegVersion(JNIEnv *env, jclass
  * @return MobileFFmpeg version string
  */
 JNIEXPORT jstring JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_getNativeVersion(JNIEnv *env, jclass object) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeVersion(JNIEnv *env, jclass object) {
     return (*env)->NewStringUTF(env, MOBILE_FFMPEG_VERSION);
 }
 
@@ -840,7 +840,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_getNativeVersion(JNIEnv *env, jclass objec
  * @return zero on successful execution, non-zero on error
  */
 JNIEXPORT jint JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_nativeFFmpegExecute(JNIEnv *env, jclass object, jlong id,
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegExecute(JNIEnv *env, jclass object, jlong id,
                                                            jobjectArray stringArray) {
 
 
@@ -913,7 +913,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_nativeFFmpegExecute(JNIEnv *env, jclass ob
  * @param id execution id
  */
 JNIEXPORT void JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_nativeFFmpegCancel(JNIEnv *env, jclass object, jlong id) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegCancel(JNIEnv *env, jclass object, jlong id) {
     cancel_operation(id);
 }
 
@@ -926,7 +926,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_nativeFFmpegCancel(JNIEnv *env, jclass obj
  * @return zero on successful creation, non-zero on error
  */
 JNIEXPORT int JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_registerNewNativeFFmpegPipe(JNIEnv *env, jclass object,
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_registerNewNativeFFmpegPipe(JNIEnv *env, jclass object,
                                                                    jstring ffmpegPipePath) {
     const char *ffmpegPipePathString = (*env)->GetStringUTFChars(env, ffmpegPipePath, 0);
 
@@ -941,7 +941,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_registerNewNativeFFmpegPipe(JNIEnv *env, j
  * @return MobileFFmpeg library build date
  */
 JNIEXPORT jstring JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_getNativeBuildDate(JNIEnv *env, jclass object) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeBuildDate(JNIEnv *env, jclass object) {
     char buildDate[10];
     sprintf(buildDate, "%d", MOBILE_FFMPEG_BUILD_DATE);
     return (*env)->NewStringUTF(env, buildDate);
@@ -957,7 +957,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_getNativeBuildDate(JNIEnv *env, jclass obj
  * @return zero on success, non-zero on error
  */
 JNIEXPORT int JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_setNativeEnvironmentVariable(JNIEnv *env, jclass object,
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_setNativeEnvironmentVariable(JNIEnv *env, jclass object,
                                                                     jstring variableName,
                                                                     jstring variableValue) {
     const char *variableNameString = (*env)->GetStringUTFChars(env, variableName, 0);
@@ -978,7 +978,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_setNativeEnvironmentVariable(JNIEnv *env, 
  * @return output of the last executed command
  */
 JNIEXPORT jstring JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_getNativeLastCommandOutput(JNIEnv *env, jclass object) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeLastCommandOutput(JNIEnv *env, jclass object) {
     int size = lastCommandOutput.len;
     if (size > 0) {
         jbyteArray byteArray = (*env)->NewByteArray(env, size);
@@ -999,7 +999,7 @@ Java_lib_kalu_ffmpegcmd_config_Config_getNativeLastCommandOutput(JNIEnv *env, jc
  * @param signum signal number
  */
 JNIEXPORT void JNICALL
-Java_lib_kalu_ffmpegcmd_config_Config_ignoreNativeSignal(JNIEnv *env, jclass object, jint signum) {
+Java_lib_kalu_ffmpegcmd_cmd_Cmd_ignoreNativeSignal(JNIEnv *env, jclass object, jint signum) {
     if (signum == SIGQUIT) {
         handleSIGQUIT = 0;
     } else if (signum == SIGINT) {

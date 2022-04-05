@@ -1,15 +1,6 @@
 package lib.kalu.ffmpegcmd.entity;
 
-/**
- * <pre>
- *     author  : devyk on 2020-09-30 14:48
- *     blog    : https://juejin.im/user/578259398ac2470061f3a3fb/posts
- *     github  : https://github.com/yangkun19921001
- *     mailbox : yang1001yk@gmail.com
- *     desc    : This is VideoInfo
- * </pre>
- */
- public class VideoInfo{
+public class VideoInfo {
 
     public String duration;
     public String keyTitle;

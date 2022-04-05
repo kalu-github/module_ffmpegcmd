@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import lib.kalu.ffmpegcmd.callback.ExecuteCallback;
+import lib.kalu.ffmpegcmd.cmd.Cmd;
 import lib.kalu.ffmpegcmd.entity.LogMessage;
 import lib.kalu.ffmpegcmd.ffmpeg.FFmpeg;
 
@@ -37,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String version = Cmd.getFFmpegVersion();
+        TextView textView = findViewById(R.id.info);
+        textView.setText("ffmpeg: " + version);
 
         init();
 

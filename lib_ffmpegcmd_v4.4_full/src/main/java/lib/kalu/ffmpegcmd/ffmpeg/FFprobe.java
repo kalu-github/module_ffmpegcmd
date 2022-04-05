@@ -1,45 +1,15 @@
-/*
- * Copyright (c) 2020 DevYK
- *
- * This file is part of MobileFFmpeg.
- *
- * MobileFFmpeg is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * MobileFFmpeg is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with MobileFFmpeg.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 package lib.kalu.ffmpegcmd.ffmpeg;
 
 import android.util.Log;
 
+import lib.kalu.ffmpegcmd.cmd.Cmd;
 import lib.kalu.ffmpegcmd.entity.MediaInformation;
 import lib.kalu.ffmpegcmd.entity.MediaInformationParser;
-import lib.kalu.ffmpegcmd.config.Config;
 
-/**
- * <p>Main class for FFprobe operations. Provides {@link #execute(String...)} method to execute
- * FFprobe commands.
- * <pre>
- *      int rc = FFprobe.execute("-hide_banner -v error -show_entries format=size -of default=noprint_wrappers=1 file1.mp4");
- *      Log.i(Config.TAG, String.format("Command execution %s.", (rc == 0?"completed successfully":"failed with rc=" + rc));
- * </pre>
- *
- * @author DevYK
- * @since v4.3.1
- */
 public class FFprobe {
 
     static {
-        Config.class.getName();
+        Cmd.class.getName();
     }
 
     /**
@@ -55,9 +25,9 @@ public class FFprobe {
      * @return zero on successful execution, 255 on user cancel and non-zero on error
      */
     public static int execute(final String[] arguments) {
-        final int lastReturnCode = Config.nativeFFprobeExecute(arguments);
+        final int lastReturnCode = Cmd.nativeFFprobeExecute(arguments);
 
-        Config.setLastReturnCode(lastReturnCode);
+        Cmd.setLastReturnCode(lastReturnCode);
 
         return lastReturnCode;
     }
@@ -126,9 +96,9 @@ public class FFprobe {
         final int rc = execute(arguments);
 
         if (rc == 0) {
-            return MediaInformationParser.from(Config.getLastCommandOutput());
+            return MediaInformationParser.from(Cmd.getLastCommandOutput());
         } else {
-            Log.w(Config.TAG, Config.getLastCommandOutput());
+            Log.w(Cmd.TAG, Cmd.getLastCommandOutput());
             return null;
         }
     }
