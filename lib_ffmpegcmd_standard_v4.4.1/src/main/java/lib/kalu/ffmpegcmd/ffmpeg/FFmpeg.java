@@ -113,7 +113,8 @@ public class FFmpeg {
      * @return 0 on successful execution, 255 on user cancel, other non-zero codes on error
      */
     public static int execute(final String command) {
-        return execute(parseArguments(command));
+        String[] arguments = format(command);
+        return execute(arguments);
     }
 
 //    /**
@@ -134,7 +135,8 @@ public class FFmpeg {
 
     public static long executeAsync(final String command, final ExecuteCallback executeCallback) {
         final long newExecutionId = executionIdCounter.incrementAndGet();
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, command, executeCallback);
+        String[] arguments = format(command);
+        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, arguments, executeCallback);
         asyncFFmpegExecuteTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         return newExecutionId;
     }
@@ -177,7 +179,8 @@ public class FFmpeg {
      */
     public static long executeAsync(final String command, final ExecuteCallback executeCallback, final Executor executor) {
         final long newExecutionId = executionIdCounter.incrementAndGet();
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, command,  executeCallback);
+        String[] arguments = format(command);
+        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, arguments, executeCallback);
         asyncFFmpegExecuteTask.executeOnExecutor(executor);
 
         return newExecutionId;
@@ -212,13 +215,7 @@ public class FFmpeg {
         return Cmd.listFFmpegExecutions();
     }
 
-    /**
-     * <p>Parses the given command into arguments.
-     *
-     * @param command string command
-     * @return array of arguments
-     */
-    public static String[] parseArguments(final String command) {
+    private static String[] format(final String command) {
         final List<String> argumentList = new ArrayList<>();
         StringBuilder currentArgument = new StringBuilder();
 
@@ -269,12 +266,6 @@ public class FFmpeg {
         return argumentList.toArray(new String[0]);
     }
 
-    /**
-     * <p>Combines arguments into a string.
-     *
-     * @param arguments arguments
-     * @return string containing all arguments
-     */
     public static String argumentsToString(final String[] arguments) {
         if (arguments == null) {
             return "null";
@@ -290,6 +281,4 @@ public class FFmpeg {
 
         return stringBuilder.toString();
     }
-
-
 }

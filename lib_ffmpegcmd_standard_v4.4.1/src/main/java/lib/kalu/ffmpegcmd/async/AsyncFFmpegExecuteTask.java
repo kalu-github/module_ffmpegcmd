@@ -29,14 +29,6 @@ public class AsyncFFmpegExecuteTask extends AsyncTask<Void, Integer, Integer> {
     // 时长
     private static long mDuration = -1L;
 
-    public AsyncFFmpegExecuteTask(final String command, final ExecuteCallback executeCallback) {
-        this(FFmpeg.DEFAULT_EXECUTION_ID, command, executeCallback);
-    }
-
-    public AsyncFFmpegExecuteTask(final long executionId, final String command, final ExecuteCallback executeCallback) {
-        this(executionId, FFmpeg.parseArguments(command), executeCallback);
-    }
-
     public AsyncFFmpegExecuteTask(final String[] arguments, final ExecuteCallback executeCallback) {
         this(FFmpeg.DEFAULT_EXECUTION_ID, arguments, executeCallback);
     }

@@ -16,6 +16,9 @@ android {
 
         externalNativeBuild {
             cmake {
+//                cFlags "-Wdeprecated-declarations"
+//                cppFlags "-Wdeprecated-declarations"
+//                cppFlags "-std=c++14", "-fno-exceptions", "-O2"
 //                abiFilters 'armeabi-v7a', 'arm64-v8a'
 //                abiFilters 'armeabi-v7a', 'x86'
                 abiFilters 'armeabi-v7a'

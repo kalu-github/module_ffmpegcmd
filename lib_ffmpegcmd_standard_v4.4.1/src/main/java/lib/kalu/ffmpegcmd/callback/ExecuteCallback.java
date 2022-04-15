@@ -16,5 +16,5 @@ public interface ExecuteCallback {
 
     void onMessage(LogMessage logMessage);
 
-    void onProgress(@NonNull long duration, @NonNull long position, @NonNull float pregress);
+    void onProgress(@NonNull long duration, @NonNull long position, @NonNull float progress);
 }
