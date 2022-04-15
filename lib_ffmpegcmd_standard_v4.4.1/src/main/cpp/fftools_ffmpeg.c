@@ -1899,7 +1899,7 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
     const char *hours_sign;
     int ret;
     float t;
-    float mss;
+    long mss;
 
     // FORWARD IT BEFORE PROCESSING
     forward_report(is_last_report, timer_start, cur_time);
@@ -2005,7 +2005,7 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
 
     secs = FFABS(pts) / AV_TIME_BASE;
     us = FFABS(pts) % AV_TIME_BASE;
-    mss = secs + ((float) us / AV_TIME_BASE);
+    mss = secs + ((long) us / AV_TIME_BASE);
     mins = secs / 60;
     secs %= 60;
     hours = mins / 60;
@@ -2021,8 +2021,7 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
     if (pts == AV_NOPTS_VALUE) {
         av_bprintf(&buf, "N/A ");
     } else {
-        av_bprintf(&buf, "%s%02d:%02d:%02d.%02d ",
-                   hours_sign, hours, mins, secs, (100 * us) / AV_TIME_BASE);
+        av_bprintf(&buf, "%s%02d:%02d:%02d.%02d ",hours_sign, hours, mins, secs, (100 * us) / AV_TIME_BASE);
     }
 
     ffmpeg_progress(mss*1000000);

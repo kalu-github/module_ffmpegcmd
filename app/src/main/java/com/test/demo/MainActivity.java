@@ -89,15 +89,15 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
 //                String cmds = "ffmpeg -y -f s16be -ac 1 -ar 16000 -acodec pcm_s16le -i " + pcm + " " + pcm_process;
                 Log.e("FFM", "cmd => " + cmds);
 
-                FFmpeg.executeAsync(asList, 0, new ExecuteCallback() {
+                FFmpeg.executeAsync(asList, new ExecuteCallback() {
                     @Override
                     public void onStart(Long executionId) {
                         Log.e("FFM", "onStart => executionId = " + executionId);
                     }
 
                     @Override
-                    public void onProgress(float v) {
-                        Log.e("FFM", "onProgress => v = " + v);
+                    public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
+                        Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
                     }
 
                     @Override
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                     }
 
                     @Override
-                    public void onFFmpegExecutionMessage(LogMessage logMessage) {
+                    public void onMessage(LogMessage logMessage) {
                         Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
                     }
                 });
@@ -184,8 +184,8 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                     }
 
                     @Override
-                    public void onProgress(float v) {
-                        Log.e("FFM", "onProgress => v = " + v);
+                    public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
+                        Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
                     }
 
                     @Override
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                     }
 
                     @Override
-                    public void onFFmpegExecutionMessage(LogMessage logMessage) {
+                    public void onMessage(LogMessage logMessage) {
                         Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
                     }
                 });
@@ -288,8 +288,8 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                     }
 
                     @Override
-                    public void onProgress(float v) {
-                        Log.e("FFM", "onProgress => v = " + v);
+                    public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
+                        Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
                     }
 
                     @Override
@@ -308,7 +308,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                     }
 
                     @Override
-                    public void onFFmpegExecutionMessage(LogMessage logMessage) {
+                    public void onMessage(LogMessage logMessage) {
                         Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
                     }
                 });
@@ -389,8 +389,8 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                     }
 
                     @Override
-                    public void onProgress(float v) {
-                        Log.e("FFM", "onProgress => v = " + v);
+                    public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
+                        Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
                     }
 
                     @Override
@@ -409,7 +409,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                     }
 
                     @Override
-                    public void onFFmpegExecutionMessage(LogMessage logMessage) {
+                    public void onMessage(LogMessage logMessage) {
                         Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
                     }
                 });

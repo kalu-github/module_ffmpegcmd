@@ -2,13 +2,13 @@ package lib.kalu.ffmpegcmd.entity;
 
 import android.util.Log;
 
-import lib.kalu.ffmpegcmd.cmd.Cmd;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import lib.kalu.ffmpegcmd.cmd.Cmd;
 
 public class MediaInformationParser {
 

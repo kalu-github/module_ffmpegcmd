@@ -2,9 +2,9 @@ package lib.kalu.ffmpegcmd.ffmpeg;
 
 import android.util.Log;
 
+import lib.kalu.ffmpegcmd.cmd.Cmd;
 import lib.kalu.ffmpegcmd.entity.MediaInformation;
 import lib.kalu.ffmpegcmd.entity.MediaInformationParser;
-import lib.kalu.ffmpegcmd.cmd.Cmd;
 
 public class FFprobe {
 

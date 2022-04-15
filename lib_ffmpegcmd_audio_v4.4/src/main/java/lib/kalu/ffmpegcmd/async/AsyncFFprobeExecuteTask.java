@@ -2,9 +2,12 @@ package lib.kalu.ffmpegcmd.async;
 
 import android.os.AsyncTask;
 
+import androidx.annotation.Keep;
+
 import lib.kalu.ffmpegcmd.ffmpeg.FFmpeg;
 import lib.kalu.ffmpegcmd.ffmpeg.FFprobe;
 
+@Keep
 public class AsyncFFprobeExecuteTask extends AsyncTask<Void, Integer, Integer> {
     private final String[] arguments;
     private final lib.kalu.ffmpegcmd.callback.ExecuteCallback ExecuteCallback;

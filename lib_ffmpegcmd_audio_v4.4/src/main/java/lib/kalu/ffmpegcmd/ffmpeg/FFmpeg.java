@@ -57,19 +57,19 @@ public class FFmpeg {
         return Cmd.ffmpegExecute(DEFAULT_EXECUTION_ID, arguments);
     }
 
-    /**
-     * <p>Asynchronously executes FFmpeg with arguments provided.
-     *
-     * @param arguments       FFmpeg command options/arguments as string array
-     * @param executeCallback callback that will be notified when execution is completed
-     * @return returns a unique id that represents this execution
-     */
-    public static long executeAsync(final String[] arguments, final ExecuteCallback executeCallback) {
-        final long newExecutionId = executionIdCounter.incrementAndGet();
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, arguments, -1, executeCallback);
-        asyncFFmpegExecuteTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        return newExecutionId;
-    }
+//    /**
+//     * <p>Asynchronously executes FFmpeg with arguments provided.
+//     *
+//     * @param arguments       FFmpeg command options/arguments as string array
+//     * @param executeCallback callback that will be notified when execution is completed
+//     * @return returns a unique id that represents this execution
+//     */
+//    public static long executeAsync(final String[] arguments, final ExecuteCallback executeCallback) {
+//        final long newExecutionId = executionIdCounter.incrementAndGet();
+//        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, arguments,  executeCallback);
+//        asyncFFmpegExecuteTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+//        return newExecutionId;
+//    }
 
     /**
      * <p>Asynchronously executes FFmpeg with arguments provided.
@@ -79,10 +79,10 @@ public class FFmpeg {
      * @param executor        executor that will be used to run this asynchronous operation
      * @return returns a unique id that represents this execution
      */
-    public static long executeAsync(final String[] arguments, long duration, final ExecuteCallback executeCallback, final Executor executor) {
+    public static long executeAsync(final String[] arguments, final ExecuteCallback executeCallback, final Executor executor) {
         final long newExecutionId = executionIdCounter.incrementAndGet();
 
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, arguments, duration, executeCallback);
+        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, arguments, executeCallback);
         asyncFFmpegExecuteTask.executeOnExecutor(executor);
 
         return newExecutionId;
@@ -116,37 +116,37 @@ public class FFmpeg {
         return execute(parseArguments(command));
     }
 
-    /**
-     * <p>Asynchronously executes FFmpeg command provided. Space character is used to split command
-     * into arguments. You can use single and double quote characters to specify arguments inside
-     * your command.
-     *
-     * @param command         FFmpeg command
-     * @param executeCallback callback that will be notified when execution is completed
-     * @return returns a unique id that represents this execution
-     */
+//    /**
+//     * <p>Asynchronously executes FFmpeg command provided. Space character is used to split command
+//     * into arguments. You can use single and double quote characters to specify arguments inside
+//     * your command.
+//     *
+//     * @param command         FFmpeg command
+//     * @param executeCallback callback that will be notified when execution is completed
+//     * @return returns a unique id that represents this execution
+//     */
+//    public static long executeAsync(final String command, final ExecuteCallback executeCallback) {
+//        final long newExecutionId = executionIdCounter.incrementAndGet();
+//        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, command,  executeCallback);
+//        asyncFFmpegExecuteTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+//        return newExecutionId;
+//    }
+
     public static long executeAsync(final String command, final ExecuteCallback executeCallback) {
         final long newExecutionId = executionIdCounter.incrementAndGet();
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, command, -1, executeCallback);
+        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, command, executeCallback);
         asyncFFmpegExecuteTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         return newExecutionId;
     }
 
-    public static long executeAsync(final String command, long videoduration, final ExecuteCallback executeCallback) {
+    public static long executeAsync(String[] cmds, ExecuteCallback executeCallback) {
         final long newExecutionId = executionIdCounter.incrementAndGet();
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, command, videoduration, executeCallback);
+        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, cmds, executeCallback);
         asyncFFmpegExecuteTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         return newExecutionId;
     }
 
-    public static long executeAsync(String[] cmds, long duration, ExecuteCallback executeCallback) {
-        final long newExecutionId = executionIdCounter.incrementAndGet();
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, cmds, duration, executeCallback);
-        asyncFFmpegExecuteTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        return newExecutionId;
-    }
-
-    public static long executeAsync(List<String> cmds, long duration, ExecuteCallback executeCallback) {
+    public static long executeAsync(List<String> cmds, ExecuteCallback executeCallback) {
 
         if (null == cmds || cmds.size() == 0)
             return -1;
@@ -160,7 +160,7 @@ public class FFmpeg {
         }
 
         final long newExecutionId = executionIdCounter.incrementAndGet();
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, list.toArray(new String[]{}), duration, executeCallback);
+        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, list.toArray(new String[]{}), executeCallback);
         asyncFFmpegExecuteTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         return newExecutionId;
     }
@@ -177,7 +177,7 @@ public class FFmpeg {
      */
     public static long executeAsync(final String command, final ExecuteCallback executeCallback, final Executor executor) {
         final long newExecutionId = executionIdCounter.incrementAndGet();
-        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, command, -1, executeCallback);
+        AsyncFFmpegExecuteTask asyncFFmpegExecuteTask = new AsyncFFmpegExecuteTask(newExecutionId, command,  executeCallback);
         asyncFFmpegExecuteTask.executeOnExecutor(executor);
 
         return newExecutionId;

@@ -2,10 +2,13 @@ package lib.kalu.ffmpegcmd.async;
 
 import android.os.AsyncTask;
 
+import androidx.annotation.Keep;
+
 import lib.kalu.ffmpegcmd.callback.GetMediaInformationCallback;
 import lib.kalu.ffmpegcmd.entity.MediaInformation;
 import lib.kalu.ffmpegcmd.ffmpeg.FFprobe;
 
+@Keep
 public class AsyncGetMediaInformationTask extends AsyncTask<String, MediaInformation, MediaInformation> {
     private final String path;
     private final GetMediaInformationCallback getMediaInformationCallback;

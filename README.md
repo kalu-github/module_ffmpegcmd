@@ -52,3 +52,10 @@ ffmpeg -y -i from.mp4 -i 1.mp3 -i 2.mp3 -i 3.mp3 -i 4.mp3 -filter_complex [1]ade
 1. https://www.videohelp.com/software/ffmpeg/old-versions
 2. http://www.ffmpeg.org/releases/
 ```
+
+## 更新记录
+```
+20220415
+自动获取媒资时长, 处理过程自动传递总时长、处理时长、处理进度百分比3个字段
+void onProgress(@NonNull long duration, @NonNull long position, @NonNull float progress);
+```

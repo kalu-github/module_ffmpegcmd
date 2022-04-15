@@ -4,18 +4,6 @@ import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 
-import androidx.annotation.Keep;
-
-import lib.kalu.ffmpegcmd.entity.FFmpegExecution;
-import lib.kalu.ffmpegcmd.entity.Level;
-import lib.kalu.ffmpegcmd.callback.LogCallback;
-import lib.kalu.ffmpegcmd.callback.StatisticsCallback;
-import lib.kalu.ffmpegcmd.entity.LogMessage;
-import lib.kalu.ffmpegcmd.entity.Packages;
-import lib.kalu.ffmpegcmd.entity.Signal;
-import lib.kalu.ffmpegcmd.entity.Statistics;
-import lib.kalu.ffmpegcmd.util.CameraSupport;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -25,7 +13,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
-@Keep
+import lib.kalu.ffmpegcmd.callback.LogCallback;
+import lib.kalu.ffmpegcmd.callback.StatisticsCallback;
+import lib.kalu.ffmpegcmd.entity.FFmpegExecution;
+import lib.kalu.ffmpegcmd.entity.Level;
+import lib.kalu.ffmpegcmd.entity.LogMessage;
+import lib.kalu.ffmpegcmd.entity.Packages;
+import lib.kalu.ffmpegcmd.entity.Signal;
+import lib.kalu.ffmpegcmd.entity.Statistics;
+import lib.kalu.ffmpegcmd.util.CameraSupport;
+
 public class Cmd {
 
     public static final int RETURN_CODE_SUCCESS = 0;
@@ -75,86 +72,6 @@ public class Cmd {
 
         executions = Collections.synchronizedList(new ArrayList<FFmpegExecution>());
     }
-
-/*    static {
-
-        Log.i(Config.TAG, "Loading mobile-ffmpeg.");
-
-        boolean nativeFFmpegLoaded = false;
-        boolean nativeFFmpegTriedAndFailed = false;
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-
-            *//* LOADING LIBRARIES MANUALLY ON API < 21 *//*
-            final List<String> externalLibrariesEnabled = getExternalLibraries();
-            if (externalLibrariesEnabled.contains("tesseract") || externalLibrariesEnabled.contains("x265") || externalLibrariesEnabled.contains("snappy") || externalLibrariesEnabled.contains("openh264") || externalLibrariesEnabled.contains("rubberband")) {
-                System.loadLibrary("c++_shared");
-            }
-
-//            if (AbiDetect.ARM_V7A.equals(AbiDetect.getNativeAbi())) {
-//                try {
-//                    System.loadLibrary("avutil_neon");
-//                    System.loadLibrary("swscale_neon");
-//                    System.loadLibrary("swresample_neon");
-//                    System.loadLibrary("avcodec_neon");
-//                    System.loadLibrary("avformat_neon");
-//                    System.loadLibrary("avfilter_neon");
-//                    System.loadLibrary("avdevice_neon");
-//                    nativeFFmpegLoaded = true;
-//                } catch (final UnsatisfiedLinkError e) {
-//                    Log.i(Config.TAG, "NEON supported armeabi-v7a ffmpeg library not found. Loading default armeabi-v7a library.", e);
-//                    nativeFFmpegTriedAndFailed = true;
-//                }
-//            }
-
-//            if (!nativeFFmpegLoaded) {
-            System.loadLibrary("avutil");
-            System.loadLibrary("swscale");
-            System.loadLibrary("swresample");
-            System.loadLibrary("avcodec");
-            System.loadLibrary("avformat");
-            System.loadLibrary("avfilter");
-            System.loadLibrary("avdevice");
-//            }
-        }
-
-        *//* ALL MOBILE-FFMPEG LIBRARIES LOADED AT STARTUP *//*
-        Abi.class.getName();
-        FFmpeg.class.getName();
-        FFprobe.class.getName();
-
-        boolean nativeMobileFFmpegLoaded = false;
-        if (!nativeFFmpegTriedAndFailed && AbiDetect.ARM_V7A.equals(AbiDetect.getNativeAbi())) {
-            try {
-
-                *//*
-     * THE TRY TO LOAD ARM-V7A-NEON FIRST. IF NOT LOAD DEFAULT ARM-V7A
-     *//*
-
-                System.loadLibrary("mobileffmpeg_armv7a_neon");
-                nativeMobileFFmpegLoaded = true;
-                AbiDetect.setArmV7aNeonLoaded(true);
-            } catch (final UnsatisfiedLinkError e) {
-                Log.i(Config.TAG, "NEON supported armeabi-v7a mobileffmpeg library not found. Loading default armeabi-v7a library.", e);
-            }
-        }
-
-        if (!nativeMobileFFmpegLoaded) {
-            System.loadLibrary("mobileffmpeg");
-        }
-
-        Log.i(Config.TAG, String.format("Loaded mobile-ffmpeg-%s-%s-%s-%s.", getPackageName(), AbiDetect.getAbi(), getVersion(), getBuildDate()));
-
-        *//* NATIVE LOG LEVEL IS RECEIVED ONLY ON STARTUP *//*
-        activeLogLevel = Level.from(getNativeLogLevel());
-
-        lastReceivedStatistics = new Statistics();
-
-        enableRedirection();
-
-        lastCreatedPipeIndex = 0;
-
-        executions = Collections.synchronizedList(new ArrayList<FFmpegExecution>());
-    }*/
 
     /**
      * Default constructor hidden.
@@ -256,30 +173,30 @@ public class Cmd {
                 break;
                 case AV_LOG_TRACE:
                 case AV_LOG_DEBUG: {
-                    android.util.Log.d(TAG, text);
+                    Log.d(TAG, text);
                 }
                 break;
                 case AV_LOG_STDERR:
                 case AV_LOG_VERBOSE: {
-                    android.util.Log.v(TAG, text);
+                    Log.v(TAG, text);
                 }
                 break;
                 case AV_LOG_INFO: {
-                    android.util.Log.i(TAG, text);
+                    Log.i(TAG, text);
                 }
                 break;
                 case AV_LOG_WARNING: {
-                    android.util.Log.w(TAG, text);
+                    Log.w(TAG, text);
                 }
                 break;
                 case AV_LOG_ERROR:
                 case AV_LOG_FATAL:
                 case AV_LOG_PANIC: {
-                    android.util.Log.e(TAG, text);
+                    Log.e(TAG, text);
                 }
                 break;
                 default: {
-                    android.util.Log.v(TAG, text);
+                    Log.v(TAG, text);
                 }
                 break;
             }

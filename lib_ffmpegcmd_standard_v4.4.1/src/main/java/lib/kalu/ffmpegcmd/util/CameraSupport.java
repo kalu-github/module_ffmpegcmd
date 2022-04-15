@@ -1,5 +1,7 @@
 package lib.kalu.ffmpegcmd.util;
 
+import static android.content.Context.CAMERA_SERVICE;
+
 import android.content.Context;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
@@ -10,8 +12,6 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.content.Context.CAMERA_SERVICE;
 
 import lib.kalu.ffmpegcmd.cmd.Cmd;
 

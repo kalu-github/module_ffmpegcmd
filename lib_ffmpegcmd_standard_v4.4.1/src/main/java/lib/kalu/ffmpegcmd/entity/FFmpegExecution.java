@@ -1,8 +1,8 @@
 package lib.kalu.ffmpegcmd.entity;
 
-import lib.kalu.ffmpegcmd.ffmpeg.FFmpeg;
-
 import java.util.Date;
+
+import lib.kalu.ffmpegcmd.ffmpeg.FFmpeg;
 
 public class FFmpegExecution {
     private final Date startTime;

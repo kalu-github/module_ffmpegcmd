@@ -6,9 +6,9 @@ import android.media.MediaFormat;
 import android.media.MediaMetadataRetriever;
 import android.os.Build;
 
-import lib.kalu.ffmpegcmd.entity.VideoInfo;
-
 import java.text.DecimalFormat;
+
+import lib.kalu.ffmpegcmd.entity.VideoInfo;
 
 public class VideoUitls {
 
