@@ -47,7 +47,7 @@ ffmpeg -y -i from.mp4 -i 1.mp3 -i 2.mp3 -i 3.mp3 -i 4.mp3 -filter_complex [1]ade
 "asendcmd=0.0 afftdn sn start,asendcmd=0.4 afftdn sn stop,afftdn=nr=20:nf=-40",
 ```
 
-## FFmpeg历史版本
+## 历史版本
 ```
 1. https://www.videohelp.com/software/ffmpeg/old-versions
 2. http://www.ffmpeg.org/releases/
