@@ -1,9 +1,11 @@
 package lib.kalu.ffmpegcmd.callback;
 
+import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 
 import lib.kalu.ffmpegcmd.entity.LogMessage;
 
+@Keep
 public interface ExecuteCallback {
 
     void onStart(Long executionId);

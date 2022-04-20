@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 
+import lib.kalu.ffmpegcmd.callback.ExecuteCallback;
 import lib.kalu.ffmpegcmd.entity.FFmpegExecution;
 import lib.kalu.ffmpegcmd.entity.Level;
 import lib.kalu.ffmpegcmd.callback.LogCallback;
@@ -49,7 +50,6 @@ public class Cmd {
     private static int lastCreatedPipeIndex;
 
     private static final List<FFmpegExecution> executions;
-
 
     static {
         System.loadLibrary("avutil");
@@ -613,14 +613,6 @@ public class Cmd {
      * @return zero on successful execution, 255 on user cancel and non-zero on error
      */
     private native static int nativeFFmpegExecute(final long executionId, final String[] arguments);
-
-
-    public static void onProgress(float progress) {
-//        float v = progress / (duration / 1000000) * 0.95f;
-//        if (v > 1.5f)return;
-//        float pro = v * 100;
-//        Log.e("mobile-ffmpeg-test", "onProgress:" + progress);
-    }
 
     /**
      * <p>Cancels an ongoing FFmpeg operation natively. This function does not wait for termination

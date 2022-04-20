@@ -13,11 +13,7 @@ import lib.kalu.ffmpegcmd.callback.ExecuteCallback;
 import lib.kalu.ffmpegcmd.callback.LogCallback;
 import lib.kalu.ffmpegcmd.cmd.Cmd;
 import lib.kalu.ffmpegcmd.entity.LogMessage;
-import lib.kalu.ffmpegcmd.entity.MediaInformation;
-import lib.kalu.ffmpegcmd.entity.MediaInformationParser;
 import lib.kalu.ffmpegcmd.ffmpeg.FFmpeg;
-import lib.kalu.ffmpegcmd.util.FFmpegLogUtil;
-import lib.kalu.ffmpegcmd.util.VideoUitls;
 
 @Keep
 public class AsyncFFmpegExecuteTask extends AsyncTask<Void, Integer, Integer> {
@@ -114,67 +110,6 @@ public class AsyncFFmpegExecuteTask extends AsyncTask<Void, Integer, Integer> {
         }
     }
 
-
-    /**
-     * C++ 调用
-     *
-     * @param second 秒
-     */
-    @Keep
-    public final static void onProgress(long second) {
-        FFmpegLogUtil.logE("onProgress => second = " + second);
-        if (null == sExecuteCallback)
-            return;
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                String output = Cmd.getLastCommandOutput();
-                String regex = "Duration: (.*?), start: (.*?), bitrate: (\\d*) kb\\/s";
-                Pattern pattern = Pattern.compile(regex);
-                Matcher m = pattern.matcher(output);
-                if (m.find()) {
-                    String group = m.group(1);
-                    int duration = 0;
-                    String[] strs = group.split(":");
-                    if (strs[0].compareTo("0") > 0) {
-                        duration += Integer.valueOf(strs[0]) * 60 * 60;//秒
-                    }
-                    if (strs[1].compareTo("0") > 0) {
-                        duration += Integer.valueOf(strs[1]) * 60;
-                    }
-                    if (strs[2].compareTo("0") > 0) {
-                        duration += Math.round(Float.valueOf(strs[2]));
-                    }
-
-                    long value = duration * 1000000;
-                    if (second >= value) {
-                        if (second - value > 1000000) {
-                            sExecuteCallback.onProgress(value, 0, 0f);
-                        } else {
-                            sExecuteCallback.onProgress(value, value, 100f);
-                        }
-                    } else {
-                        float rate = second * 100 / value;
-                        sExecuteCallback.onProgress(value, second, rate);
-                    }
-                } else {
-                    sExecuteCallback.onProgress(-1, second, -1f);
-                }
-
-//                FFmpegLogUtil.logE("jniProgress => output = " + output);
-//                if (mDuration == -1L) {
-//                    value = progress;
-//                } else {
-//                    value = progress * 100 / mDuration;
-//                    if (value > 100) {
-//                        value = 100F;
-//                    }
-//                }
-//
-            }
-        });
-    }
-
     /**
      * 判断是否存在字母
      *
@@ -212,6 +147,73 @@ public class AsyncFFmpegExecuteTask extends AsyncTask<Void, Integer, Integer> {
                                 @Override
                                 public void run() {
                                     sExecuteCallback.onFailure(executionId, message.getText());
+                                }
+                            });
+                        break;
+                    case AV_LOG_INFO:
+
+                        if (message.isProcess() && sExecuteCallback != null && mHandler != null)
+                            mHandler.post(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    int position = 0;
+                                    String trim = message.getText().trim();
+                                    Pattern pattern1 = Pattern.compile("time=(.*?)bitrate=");
+                                    Matcher m1 = pattern1.matcher(trim);
+                                    if (m1.find()) {
+                                        String group = m1.group(1);
+                                        String[] strs = group.split(":");
+                                        if (strs[0].compareTo("0") > 0) {
+                                            position += Integer.valueOf(strs[0]) * 60 * 60;//秒
+                                        }
+                                        if (strs[1].compareTo("0") > 0) {
+                                            position += Integer.valueOf(strs[1]) * 60;
+                                        }
+                                        if (strs[2].compareTo("0") > 0) {
+                                            position += Math.round(Float.valueOf(strs[2]));
+                                        }
+                                    }
+
+
+                                    int duration = 0;
+                                    String output = Cmd.getLastCommandOutput();
+                                    Pattern pattern2 = Pattern.compile("Duration: (.*?), start: (.*?), bitrate: (\\d*) kb\\/s");
+                                    Matcher m2 = pattern2.matcher(output);
+                                    if (m2.find()) {
+                                        String group = m2.group(1);
+                                        String[] strs = group.split(":");
+                                        if (strs[0].compareTo("0") > 0) {
+                                            duration += Integer.valueOf(strs[0]) * 60 * 60;//秒
+                                        }
+                                        if (strs[1].compareTo("0") > 0) {
+                                            duration += Integer.valueOf(strs[1]) * 60;
+                                        }
+                                        if (strs[2].compareTo("0") > 0) {
+                                            duration += Math.round(Float.valueOf(strs[2]));
+                                        }
+                                    }
+
+                                    if (position > 0 && duration > 0 && position <= duration) {
+                                        float rate = position * 100 / duration;
+                                        sExecuteCallback.onProgress(duration, position, rate);
+//                                        Log.e("onProgress1", "position = " + position + ", duration = " + duration);
+                                    } else {
+//                                        Log.e("onProgress1", "position =0, duration = " + duration);
+                                    }
+//                                    long value = duration * 1000000;
+//                                    if (second >= value) {
+//                                        if (second - value > 1000000) {
+//                                            sExecuteCallback.onProgress(value, 0, 0f);
+//                                        } else {
+//                                            sExecuteCallback.onProgress(value, value, 100f);
+//                                        }
+//                                    } else {
+//                                        float rate = second * 100 / value;
+//                                        sExecuteCallback.onProgress(value, second, rate);
+//                                    }
+
+//                                    sExecuteCallback.onProgress(executionId, message.getText());
                                 }
                             });
                         break;

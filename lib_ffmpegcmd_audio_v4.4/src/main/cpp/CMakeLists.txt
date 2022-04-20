@@ -50,16 +50,14 @@ include_directories(${CMAKE_SOURCE_DIR}/ffmpeg/include/)
 FILE(GLOB MOBILE_FFMPEG
         SHARED
         ${CMAKE_SOURCE_DIR}/ffmpeg-core.c
-        ${CMAKE_SOURCE_DIR}/ffprobe-core.c
-        ${CMAKE_SOURCE_DIR}/android_lts_support.c
         ${CMAKE_SOURCE_DIR}/ffmpeg_exception.c
+        ${CMAKE_SOURCE_DIR}/ffprobe-core.c
         ${CMAKE_SOURCE_DIR}/fftools_cmdutils.c
         ${CMAKE_SOURCE_DIR}/fftools_ffmpeg.c
-        ${CMAKE_SOURCE_DIR}/fftools_ffprobe.c
-        ${CMAKE_SOURCE_DIR}/fftools_ffmpeg_opt.c
-        ${CMAKE_SOURCE_DIR}/fftools_ffmpeg_hw.c
         ${CMAKE_SOURCE_DIR}/fftools_ffmpeg_filter.c
-        ${CMAKE_SOURCE_DIR}/ffmpeg_progress.c
+        ${CMAKE_SOURCE_DIR}/fftools_ffmpeg_hw.c
+        ${CMAKE_SOURCE_DIR}/fftools_ffmpeg_opt.c
+        ${CMAKE_SOURCE_DIR}/fftools_ffprobe.c
         )
 
 find_library(

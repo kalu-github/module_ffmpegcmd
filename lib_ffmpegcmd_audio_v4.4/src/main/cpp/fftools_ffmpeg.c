@@ -144,7 +144,6 @@
 #include "fftools_cmdutils.h"
 
 #include "libavutil/avassert.h"
-#include "ffmpeg_progress.h"
 #include "ffmpeg-core.h"
 
 static FILE *vstats_file;
@@ -1899,7 +1898,6 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
     const char *hours_sign;
     int ret;
     float t;
-    float mss;
 
     // FORWARD IT BEFORE PROCESSING
     forward_report(is_last_report, timer_start, cur_time);
@@ -2005,7 +2003,6 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
 
     secs = FFABS(pts) / AV_TIME_BASE;
     us = FFABS(pts) % AV_TIME_BASE;
-    mss = secs + ((float) us / AV_TIME_BASE);
     mins = secs / 60;
     secs %= 60;
     hours = mins / 60;
@@ -2024,13 +2021,6 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
         av_bprintf(&buf, "%s%02d:%02d:%02d.%02d ",
                    hours_sign, hours, mins, secs, (100 * us) / AV_TIME_BASE);
     }
-
-//    float duration;
-//    duration += (float) hours * 60 * 60;//秒
-//    duration += (float) mins * 60;
-//    duration += (float) secs;
-
-    ffmpeg_progress(mss * 1000000);
 
     if (bitrate < 0) {
         av_bprintf(&buf, "bitrate=N/A");

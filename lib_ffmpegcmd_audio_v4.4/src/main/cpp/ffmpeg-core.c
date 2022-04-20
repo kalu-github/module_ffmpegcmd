@@ -27,7 +27,6 @@
 #include "fftools_ffmpeg.h"
 #include "ffmpeg-core.h"
 #include "ffprobe-core.h"
-#include "ffmpeg_progress.h"
 
 #define MOBILE_FFMPEG_BUILD_DATE 20201004
 
@@ -842,9 +841,6 @@ Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeVersion(JNIEnv *env, jclass object) {
 JNIEXPORT jint JNICALL
 Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegExecute(JNIEnv *env, jclass object, jlong id,
                                                     jobjectArray stringArray) {
-
-
-    register_progress_call(env, object);
 
     jstring *tempArray = NULL;
     int argumentCount = 1;

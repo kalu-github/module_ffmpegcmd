@@ -24,6 +24,10 @@ public class LogMessage {
         return text;
     }
 
+    public final boolean isProcess() {
+        return null != text && text.contains("time=") && text.contains("bitrate=");
+    }
+
     @Override
     public String toString() {
         final StringBuilder stringBuilder = new StringBuilder();
