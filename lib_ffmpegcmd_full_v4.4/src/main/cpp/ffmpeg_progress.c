@@ -12,13 +12,13 @@ jmethodID methodID;
 int register_progress_call(JNIEnv *env, jclass pVoid) {
     m_clazz = (*env)->FindClass(env, "lib/kalu/ffmpegcmd/async/AsyncFFmpegExecuteTask");
 //    m_clazz = (*env)->NewGlobalRef(env, pVoid);
-    methodID = (*env)->GetStaticMethodID(env, m_clazz, "jniProgress", "(J)V");
+    methodID = (*env)->GetStaticMethodID(env, m_clazz, "onProgress", "(J)V");
     mEnv = env;
     return 0;
 }
 
 
-void callJavaMethodProgress(JNIEnv *env, jclass clazz, long ret) {
+void callJavaMethodProgress(JNIEnv *env, jclass clazz, long second) {
     if (clazz == NULL) {
         return;
     }
@@ -36,13 +36,13 @@ void callJavaMethodProgress(JNIEnv *env, jclass clazz, long ret) {
         return;
     }
     //调用该java方法
-    (*env)->CallStaticVoidMethod(mEnv, clazz, methodID, ret);
+    (*env)->CallStaticVoidMethod(mEnv, clazz, methodID, second);
 }
 
-int ffmpeg_progress(long progress) {
+int ffmpeg_progress(long second) {
 
 //    (*jvm)->AttachCurrentThread(jvm, (void **) &env, NULL);
-    callJavaMethodProgress(mEnv, m_clazz, progress);
+    callJavaMethodProgress(mEnv, m_clazz, second);
 //    (*jvm)->DetachCurrentThread(jvm);
 
     return 0;

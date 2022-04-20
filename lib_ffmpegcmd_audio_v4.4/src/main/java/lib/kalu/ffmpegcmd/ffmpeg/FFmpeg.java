@@ -215,7 +215,7 @@ public class FFmpeg {
         return Cmd.listFFmpegExecutions();
     }
 
-    private static String[] format(final String command) {
+    public static String[] format(final String command) {
         final List<String> argumentList = new ArrayList<>();
         StringBuilder currentArgument = new StringBuilder();
 

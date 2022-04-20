@@ -2,6 +2,9 @@ package lib.kalu.ffmpegcmd.util;
 
 import android.util.Log;
 
+import lib.kalu.ffmpegcmd.cmd.Cmd;
+import lib.kalu.ffmpegcmd.entity.Level;
+
 public class FFmpegLogUtil {
 
     private static final String TAG = "module_ffmpegcmd";

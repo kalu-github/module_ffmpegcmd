@@ -2025,7 +2025,12 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
                    hours_sign, hours, mins, secs, (100 * us) / AV_TIME_BASE);
     }
 
-    ffmpeg_progress(mss*1000000);
+//    float duration;
+//    duration += (float) hours * 60 * 60;//秒
+//    duration += (float) mins * 60;
+//    duration += (float) secs;
+
+    ffmpeg_progress(mss * 1000000);
 
     if (bitrate < 0) {
         av_bprintf(&buf, "bitrate=N/A");
@@ -5596,13 +5601,13 @@ int ffmpeg_execute(int argc, char **argv) {
              "disable data"},
 
 #if CONFIG_VAAPI
-    { "vaapi_device", HAS_ARG | OPT_EXPERT, { .func_arg = opt_vaapi_device },
-        "set VAAPI hardware device (DRM path or X11 display name)", "device" },
+            { "vaapi_device", HAS_ARG | OPT_EXPERT, { .func_arg = opt_vaapi_device },
+                "set VAAPI hardware device (DRM path or X11 display name)", "device" },
 #endif
 
 #if CONFIG_QSV
-    { "qsv_device", HAS_ARG | OPT_STRING | OPT_EXPERT, { &qsv_device },
-        "set QSV hardware device (DirectX adapter index, DRM path or X11 display name)", "device"},
+            { "qsv_device", HAS_ARG | OPT_STRING | OPT_EXPERT, { &qsv_device },
+                "set QSV hardware device (DirectX adapter index, DRM path or X11 display name)", "device"},
 #endif
 
             {"init_hw_device", HAS_ARG | OPT_EXPERT, {.func_arg = opt_init_hw_device},

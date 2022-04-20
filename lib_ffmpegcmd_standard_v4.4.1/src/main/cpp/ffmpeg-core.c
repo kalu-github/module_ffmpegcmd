@@ -841,7 +841,7 @@ Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeVersion(JNIEnv *env, jclass object) {
  */
 JNIEXPORT jint JNICALL
 Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegExecute(JNIEnv *env, jclass object, jlong id,
-                                                           jobjectArray stringArray) {
+                                                    jobjectArray stringArray) {
 
 
     register_progress_call(env, object);
@@ -927,7 +927,7 @@ Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegCancel(JNIEnv *env, jclass object, j
  */
 JNIEXPORT int JNICALL
 Java_lib_kalu_ffmpegcmd_cmd_Cmd_registerNewNativeFFmpegPipe(JNIEnv *env, jclass object,
-                                                                   jstring ffmpegPipePath) {
+                                                            jstring ffmpegPipePath) {
     const char *ffmpegPipePathString = (*env)->GetStringUTFChars(env, ffmpegPipePath, 0);
 
     return mkfifo(ffmpegPipePathString, S_IRWXU | S_IRWXG | S_IROTH);
@@ -958,8 +958,8 @@ Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeBuildDate(JNIEnv *env, jclass object) {
  */
 JNIEXPORT int JNICALL
 Java_lib_kalu_ffmpegcmd_cmd_Cmd_setNativeEnvironmentVariable(JNIEnv *env, jclass object,
-                                                                    jstring variableName,
-                                                                    jstring variableValue) {
+                                                             jstring variableName,
+                                                             jstring variableValue) {
     const char *variableNameString = (*env)->GetStringUTFChars(env, variableName, 0);
     const char *variableValueString = (*env)->GetStringUTFChars(env, variableValue, 0);
 

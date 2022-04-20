@@ -13,7 +13,7 @@ public class AsyncFFprobeExecuteTask extends AsyncTask<Void, Integer, Integer> {
     private final lib.kalu.ffmpegcmd.callback.ExecuteCallback ExecuteCallback;
 
     public AsyncFFprobeExecuteTask(final String command, final lib.kalu.ffmpegcmd.callback.ExecuteCallback executeCallback) {
-        this.arguments = FFmpeg.parseArguments(command);
+        this.arguments = FFmpeg.format(command);
         this.ExecuteCallback = executeCallback;
     }
 

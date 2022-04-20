@@ -1899,7 +1899,7 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
     const char *hours_sign;
     int ret;
     float t;
-    long mss;
+    float mss;
 
     // FORWARD IT BEFORE PROCESSING
     forward_report(is_last_report, timer_start, cur_time);
@@ -2005,7 +2005,7 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
 
     secs = FFABS(pts) / AV_TIME_BASE;
     us = FFABS(pts) % AV_TIME_BASE;
-    mss = secs + ((long) us / AV_TIME_BASE);
+    mss = secs + ((float) us / AV_TIME_BASE);
     mins = secs / 60;
     secs %= 60;
     hours = mins / 60;
@@ -2021,10 +2021,16 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
     if (pts == AV_NOPTS_VALUE) {
         av_bprintf(&buf, "N/A ");
     } else {
-        av_bprintf(&buf, "%s%02d:%02d:%02d.%02d ",hours_sign, hours, mins, secs, (100 * us) / AV_TIME_BASE);
+        av_bprintf(&buf, "%s%02d:%02d:%02d.%02d ",
+                   hours_sign, hours, mins, secs, (100 * us) / AV_TIME_BASE);
     }
 
-    ffmpeg_progress(mss*1000000);
+//    float duration;
+//    duration += (float) hours * 60 * 60;//秒
+//    duration += (float) mins * 60;
+//    duration += (float) secs;
+
+    ffmpeg_progress(mss * 1000000);
 
     if (bitrate < 0) {
         av_bprintf(&buf, "bitrate=N/A");
@@ -4231,7 +4237,7 @@ static int check_keyboard_interaction(int64_t cur_time) {
             if (!debug) debug = 1;
             while (debug & (FF_DEBUG_DCT_COEFF
 #if FF_API_DEBUG_MV
-                //    |FF_DEBUG_VIS_QP|FF_DEBUG_VIS_MB_TYPE
+                    |FF_DEBUG_VIS_QP|FF_DEBUG_VIS_MB_TYPE
 #endif
             )) //unsupported, would just crash
                 debug += debug;
@@ -5595,13 +5601,13 @@ int ffmpeg_execute(int argc, char **argv) {
              "disable data"},
 
 #if CONFIG_VAAPI
-    { "vaapi_device", HAS_ARG | OPT_EXPERT, { .func_arg = opt_vaapi_device },
-        "set VAAPI hardware device (DRM path or X11 display name)", "device" },
+            { "vaapi_device", HAS_ARG | OPT_EXPERT, { .func_arg = opt_vaapi_device },
+                "set VAAPI hardware device (DRM path or X11 display name)", "device" },
 #endif
 
 #if CONFIG_QSV
-    { "qsv_device", HAS_ARG | OPT_STRING | OPT_EXPERT, { &qsv_device },
-        "set QSV hardware device (DirectX adapter index, DRM path or X11 display name)", "device"},
+            { "qsv_device", HAS_ARG | OPT_STRING | OPT_EXPERT, { &qsv_device },
+                "set QSV hardware device (DirectX adapter index, DRM path or X11 display name)", "device"},
 #endif
 
             {"init_hw_device", HAS_ARG | OPT_EXPERT, {.func_arg = opt_init_hw_device},

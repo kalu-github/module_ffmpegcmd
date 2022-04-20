@@ -32,8 +32,20 @@ set_target_properties(avfilter PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/
 add_library(swscale SHARED IMPORTED)
 set_target_properties(swscale PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/jni/${CMAKE_ANDROID_ARCH_ABI}/libswscale.so)
 
-#头文件
+#cpp_shared
+#add_library(cpp_shared SHARED IMPORTED)
+#set_target_properties(swscale PROPERTIES IMPORTED_LOCATION ${FFMPEG_SHARED_PATH}/libc++_shared.so)
+
+#CPU
+#add_library(cpu_features STATIC IMPORTED)
+#set_target_properties(cpu_features PROPERTIES IMPORTED_LOCATION ${CPU-FEATURES_PATH}/libs/${CMAKE_ANDROID_ARCH_ABI}/libcpu_features.a)
+#
+#add_library(ndk_compat STATIC IMPORTED)
+#set_target_properties(ndk_compat PROPERTIES IMPORTED_LOCATION ${CPU-FEATURES_PATH}/libs/${CMAKE_ANDROID_ARCH_ABI}/libndk_compat.a)
+
 include_directories(${CMAKE_SOURCE_DIR}/ffmpeg/include/)
+#include_directories(${CMAKE_ANDROID_ARCH_ABI})
+#include_directories(${CPU-FEATURES_PATH}/include/ndk_compat)
 
 FILE(GLOB MOBILE_FFMPEG
         SHARED
@@ -79,3 +91,21 @@ target_link_libraries(
         swscale
         avdevice
 )
+
+#target_link_libraries(
+#        ffmpeg_abidetect
+#        ${log-lib}
+#        ${cpu_features}
+#        ${ndk_compat}
+#        avutil
+#        #        ndk_compat
+#        #        cpu_features
+#)
+
+#target_link_libraries(
+#        ffmpeg_abidetect
+#        ${log-lib}
+#        avutil
+#        ndk_compat
+#        #        cpu_features
+#)

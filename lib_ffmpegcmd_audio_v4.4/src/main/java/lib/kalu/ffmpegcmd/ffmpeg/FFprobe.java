@@ -41,7 +41,7 @@ public class FFprobe {
      * @return zero on successful execution, 255 on user cancel and non-zero on error
      */
     public static int execute(final String command) {
-        return execute(FFmpeg.parseArguments(command));
+        return execute(FFmpeg.format(command));
     }
 
     /**
@@ -71,7 +71,7 @@ public class FFprobe {
      * @since 4.3.3
      */
     public static MediaInformation getMediaInformationFromCommand(final String command) {
-        return getMediaInformationFromCommandArguments(FFmpeg.parseArguments(command));
+        return getMediaInformationFromCommandArguments(FFmpeg.format(command));
     }
 
     /**
