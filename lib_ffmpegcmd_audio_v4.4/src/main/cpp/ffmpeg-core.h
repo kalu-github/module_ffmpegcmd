@@ -26,9 +26,6 @@
 #include "libavutil/log.h"
 #include "libavutil/ffversion.h"
 
-/** Library version string */
-#define MOBILE_FFMPEG_VERSION "4.4"
-
 /** Defines tag used for Android logging. */
 #define LIB_NAME "ffmpeg-cmd"
 
@@ -47,104 +44,40 @@
 /** Error Android logging macro. */
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LIB_NAME, __VA_ARGS__)
 
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    enableNativeRedirection
- * Signature: ()V
- */
-JNIEXPORT void JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_enableNativeRedirection(JNIEnv *, jclass);
+JNIEXPORT void JNICALL Java_lib_kalu_ffmpegcmd_FFcmd_enableNativeRedirection(JNIEnv *, jclass);
 
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    disableNativeRedirection
- * Signature: ()V
- */
-JNIEXPORT void JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_disableNativeRedirection(JNIEnv *, jclass);
+JNIEXPORT void JNICALL Java_lib_kalu_ffmpegcmd_FFcmd_disableNativeRedirection(JNIEnv *, jclass);
 
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    setNativeLogLevel
- * Signature: (I)V
- */
-JNIEXPORT void JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_setNativeLogLevel(JNIEnv *, jclass, jint);
+JNIEXPORT void JNICALL Java_lib_kalu_ffmpegcmd_FFcmd_setNativeLogLevel(JNIEnv *, jclass, jint);
 
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    getNativeLogLevel
- * Signature: ()I
- */
-JNIEXPORT jint JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeLogLevel(JNIEnv *, jclass);
+JNIEXPORT jint JNICALL Java_lib_kalu_ffmpegcmd_FFcmd_getNativeLogLevel(JNIEnv *, jclass);
 
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    getNativeFFmpegVersion
- * Signature: ()Ljava/lang/String;
- */
-JNIEXPORT jstring JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeFFmpegVersion(JNIEnv *, jclass);
+JNIEXPORT jstring JNICALL Java_lib_kalu_ffmpegcmd_FFcmd_getNativeFFmpegVersion(JNIEnv *, jclass);
 
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    getNativeVersion
- * Signature: ()Ljava/lang/String;
- */
-JNIEXPORT jstring JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeVersion(JNIEnv *, jclass);
+JNIEXPORT jstring JNICALL Java_lib_kalu_ffmpegcmd_FFcmd_getNativeVersion(JNIEnv *, jclass);
 
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    nativeFFmpegExecute
- * Signature: (J[Ljava/lang/String;)I
- */
 JNIEXPORT jint JNICALL
-Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegExecute(JNIEnv *, jclass, jlong id, jobjectArray);
+Java_lib_kalu_ffmpegcmd_FFcmd_nativeFFmpegExecute(JNIEnv *, jclass, jlong id, jobjectArray);
 
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    nativeFFmpegCancel
- * Signature: (J)V
- */
-JNIEXPORT void JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFmpegCancel(JNIEnv *, jclass, jlong);
-
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    registerNewNativeFFmpegPipe
- * Signature: (Ljava/lang/String;)I
- */
-JNIEXPORT int JNICALL
-Java_lib_kalu_ffmpegcmd_cmd_Cmd_registerNewNativeFFmpegPipe(JNIEnv *env, jclass object,
-                                                            jstring ffmpegPipePath);
-
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    getNativeBuildDate
- * Signature: ()Ljava/lang/String;
- */
-JNIEXPORT jstring JNICALL
-Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeBuildDate(JNIEnv *env, jclass object);
-
-/**
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    setNativeEnvironmentVariable
- * Signature: (Ljava/lang/String;Ljava/lang/String;)I
- */
-JNIEXPORT int JNICALL
-Java_lib_kalu_ffmpegcmd_cmd_Cmd_setNativeEnvironmentVariable(JNIEnv *env, jclass object,
-                                                             jstring variableName,
-                                                             jstring variableValue);
-
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    getNativeLastCommandOutput
- * Signature: ()Ljava/lang/String;
- */
-JNIEXPORT jstring JNICALL
-Java_lib_kalu_ffmpegcmd_cmd_Cmd_getNativeLastCommandOutput(JNIEnv *env, jclass object);
-
-/*
- * Class:     com_devyk_ffmpeglib_config_Config
- * Method:    ignoreNativeSignal
- * Signature: (I)V
- */
 JNIEXPORT void JNICALL
-Java_lib_kalu_ffmpegcmd_cmd_Cmd_ignoreNativeSignal(JNIEnv *env, jclass object, jint signum);
+Java_lib_kalu_ffmpegcmd_FFcmd_nativeFFmpegCancel(JNIEnv *, jclass, jlong);
 
-#endif /* MOBILE_FFMPEG_H */
+JNIEXPORT int JNICALL
+Java_lib_kalu_ffmpegcmd_FFcmd_registerNewNativeFFmpegPipe(JNIEnv *env, jclass object,
+                                                          jstring ffmpegPipePath);
+
+JNIEXPORT jstring JNICALL
+Java_lib_kalu_ffmpegcmd_FFcmd_getNativeBuildDate(JNIEnv *env, jclass object);
+
+JNIEXPORT int JNICALL
+Java_lib_kalu_ffmpegcmd_FFcmd_setNativeEnvironmentVariable(JNIEnv *env, jclass object,
+                                                           jstring variableName,
+                                                           jstring variableValue);
+
+JNIEXPORT jstring JNICALL
+Java_lib_kalu_ffmpegcmd_FFcmd_getNativeLastCommandOutput(JNIEnv *env, jclass object);
+
+JNIEXPORT void JNICALL
+Java_lib_kalu_ffmpegcmd_FFcmd_ignoreNativeSignal(JNIEnv *env, jclass object, jint signum);
+
+#endif

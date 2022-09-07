@@ -42,7 +42,7 @@ extern int configuredLogLevel;
  * @param stringArray reference to the object holding FFprobe command arguments
  * @return zero on successful execution, non-zero on error
  */
-JNIEXPORT jint JNICALL Java_lib_kalu_ffmpegcmd_cmd_Cmd_nativeFFprobeExecute(JNIEnv *env, jclass object, jobjectArray stringArray) {
+JNIEXPORT jint JNICALL Java_lib_kalu_ffmpegcmd_FFcmd_nativeFFprobeExecute(JNIEnv *env, jclass object, jobjectArray stringArray) {
     jstring *tempArray = NULL;
     int argumentCount = 1;
     char **argv = NULL;

@@ -1,6 +1,6 @@
 package lib.kalu.ffmpegcmd.entity;
 
-import lib.kalu.ffmpegcmd.ffmpeg.FFmpeg;
+import lib.kalu.ffmpegcmd.FFmpeg;
 
 import java.util.Date;
 

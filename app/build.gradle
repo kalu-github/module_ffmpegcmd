@@ -31,7 +31,6 @@ android {
             zipAlignEnabled false
             shrinkResources false
             minifyEnabled false
-            proguardFiles 'proguard-rules.pro'
         }
     }
 }
@@ -49,9 +48,7 @@ repositories {
 }
 
 dependencies {
-//    implementation files('libs/lib_ffmpegcmd_standard_v4.4.1_release_20220420.aar')
-//    implementation files('libs/lib_ffmpegcmd_full_v4.4_release_20220405.aar')
-    implementation files('libs/lib_ffmpegcmd_audio_v4.4_release_20220420.aar')
+    implementation files('libs/lib_ffmpegcmd_audio_v4.4_release_20220907.aar')
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.android.support:multidex:1.0.3'
 }

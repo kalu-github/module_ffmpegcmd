@@ -1,4 +1,2 @@
 include ':app'
-//include ':lib_ffmpegcmd_full_v4.4'
 include ':lib_ffmpegcmd_audio_v4.4'
-//include ':lib_ffmpegcmd_standard_v4.4.1'

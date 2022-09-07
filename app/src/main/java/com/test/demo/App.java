@@ -4,9 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import androidx.multidex.MultiDex;
 
-import lib.kalu.ffmpegcmd.callback.LogCallback;
-import lib.kalu.ffmpegcmd.cmd.Cmd;
-import lib.kalu.ffmpegcmd.entity.LogMessage;
 import lib.kalu.ffmpegcmd.util.FFmpegLogUtil;
 
 /**

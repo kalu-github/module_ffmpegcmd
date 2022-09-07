@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.4.1)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wdeprecated-declarations")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wdeprecated-declarations")
 
 #设置静态库和动态库的输出路径
 #set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/../../../libs/${ANDROID_ABI})
@@ -64,22 +66,15 @@ find_library(
         log-lib
         log)
 
-#add_library(
-#        ffmpeg_abidetect
-#        SHARED
-#        ${CMAKE_SOURCE_DIR}/ffmpeg_abidetect.c
-#        ${log-lib}
-#)
-
 add_library(
-        ffcmd
+        avcmd
         SHARED
         ${MOBILE_FFMPEG}
         ${log-lib}
 )
 
 target_link_libraries(
-        ffcmd
+        avcmd
         android z ${log-lib} atomic m
         avcodec
         avfilter
@@ -89,21 +84,3 @@ target_link_libraries(
         swscale
         avdevice
 )
-
-#target_link_libraries(
-#        ffmpeg_abidetect
-#        ${log-lib}
-#        ${cpu_features}
-#        ${ndk_compat}
-#        avutil
-#        #        ndk_compat
-#        #        cpu_features
-#)
-
-#target_link_libraries(
-#        ffmpeg_abidetect
-#        ${log-lib}
-#        avutil
-#        ndk_compat
-#        #        cpu_features
-#)

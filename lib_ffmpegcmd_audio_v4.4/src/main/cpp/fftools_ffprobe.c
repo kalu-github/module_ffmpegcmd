@@ -397,7 +397,7 @@ static char *value_string(char *buf, int buf_size, struct unit_value uv)
             long long int index;
 
             if (uv.unit == unit_byte_str && use_byte_value_binary_prefix) {
-                index = (long long int) (log2(vald)) / 10;
+                index = (long long int) (log(vald)) / 10;
                 index = av_clip(index, 0, FF_ARRAY_ELEMS(si_prefixes) - 1);
                 vald /= si_prefixes[index].bin_val;
                 prefix_string = si_prefixes[index].bin_str;
