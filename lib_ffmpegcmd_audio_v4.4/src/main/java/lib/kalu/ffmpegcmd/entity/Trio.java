@@ -1,4 +1,4 @@
-package lib.kalu.ffmpegcmd.util;
+package lib.kalu.ffmpegcmd.entity;
 
 public class Trio<A, B, C> {
 

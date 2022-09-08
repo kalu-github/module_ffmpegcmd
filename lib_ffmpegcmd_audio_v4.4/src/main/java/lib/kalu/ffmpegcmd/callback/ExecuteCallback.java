@@ -16,7 +16,8 @@ public interface ExecuteCallback {
 
     void onCancel(long executionId);
 
-    void onMessage(LogMessage logMessage);
-
     void onProgress(@NonNull long duration, @NonNull long position, @NonNull float progress);
+
+    default void onMessage(LogMessage logMessage){
+    }
 }

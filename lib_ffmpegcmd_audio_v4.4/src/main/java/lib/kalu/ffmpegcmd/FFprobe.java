@@ -2,11 +2,8 @@ package lib.kalu.ffmpegcmd;
 
 import androidx.annotation.Keep;
 
-import java.util.ArrayList;
-
 import lib.kalu.ffmpegcmd.entity.MediaInformation;
 import lib.kalu.ffmpegcmd.entity.MediaInformationParser;
-import lib.kalu.ffmpegcmd.util.LogUtil;
 
 @Keep
 public class FFprobe {
@@ -30,7 +27,7 @@ public class FFprobe {
         if (v == 0) {
             return MediaInformationParser.from(FFcmd.getLastCommandOutput());
         } else {
-            LogUtil.e(FFcmd.getLastCommandOutput());
+            FFutil.e(FFcmd.getLastCommandOutput());
             return null;
         }
     }
@@ -78,7 +75,7 @@ public class FFprobe {
         if (rc == 0) {
             return MediaInformationParser.from(FFcmd.getLastCommandOutput());
         } else {
-            LogUtil.e(FFcmd.getLastCommandOutput());
+            FFutil.e(FFcmd.getLastCommandOutput());
             return null;
         }
     }

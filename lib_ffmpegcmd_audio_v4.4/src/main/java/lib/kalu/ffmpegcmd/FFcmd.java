@@ -1,8 +1,6 @@
 package lib.kalu.ffmpegcmd;
 
 import android.content.Context;
-import android.os.Build;
-import android.util.Log;
 
 import androidx.annotation.Keep;
 
@@ -14,7 +12,6 @@ import lib.kalu.ffmpegcmd.entity.LogMessage;
 import lib.kalu.ffmpegcmd.entity.Packages;
 import lib.kalu.ffmpegcmd.entity.Signal;
 import lib.kalu.ffmpegcmd.entity.Statistics;
-import lib.kalu.ffmpegcmd.util.LogUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -138,10 +135,10 @@ class FFcmd {
             try {
                 logCallbackFunction.apply(new LogMessage(executionId, level, text));
             } catch (Exception e) {
-                LogUtil.e("Exception thrown inside LogCallback block", e);
+                FFutil.e("Exception thrown inside LogCallback block", e);
             }
         } else {
-            LogUtil.e(text);
+            FFutil.e(text);
         }
     }
 
@@ -167,7 +164,7 @@ class FFcmd {
             try {
                 statisticsCallbackFunction.apply(lastReceivedStatistics);
             } catch (Exception e) {
-                LogUtil.e("Exception thrown inside StatisticsCallback block", e);
+                FFutil.e("Exception thrown inside StatisticsCallback block", e);
             }
         }
     }
@@ -215,13 +212,13 @@ class FFcmd {
         File tempConfigurationDirectory = new File(cacheDir, ".mobileffmpeg");
         if (!tempConfigurationDirectory.exists()) {
             boolean tempFontConfDirectoryCreated = tempConfigurationDirectory.mkdirs();
-            LogUtil.e(String.format("Created temporary font conf directory: %s.", tempFontConfDirectoryCreated));
+            FFutil.e(String.format("Created temporary font conf directory: %s.", tempFontConfDirectoryCreated));
         }
 
         File fontConfiguration = new File(tempConfigurationDirectory, "fonts.conf");
         if (fontConfiguration.exists()) {
             boolean fontConfigurationDeleted = fontConfiguration.delete();
-            LogUtil.e(String.format("Deleted old temporary font configuration: %s.", fontConfigurationDeleted));
+            FFutil.e(String.format("Deleted old temporary font configuration: %s.", fontConfigurationDeleted));
         }
 
         /* PROCESS MAPPINGS FIRST */
@@ -263,14 +260,14 @@ class FFcmd {
             outputStream.write(fontConfig.getBytes());
             outputStream.flush();
 
-            LogUtil.e(String.format("Saved new temporary font configuration with %d font name mappings.", validFontNameMappingCount));
+            FFutil.e(String.format("Saved new temporary font configuration with %d font name mappings.", validFontNameMappingCount));
 
             setFontconfigConfigurationPath(tempConfigurationDirectory.getAbsolutePath());
 
-            LogUtil.e(String.format("Font directory %s registered successfully.", fontDirectoryPath));
+            FFutil.e(String.format("Font directory %s registered successfully.", fontDirectoryPath));
 
         } catch (IOException e) {
-            LogUtil.e(String.format("Failed to set font directory: %s.", fontDirectoryPath), e);
+            FFutil.e(String.format("Failed to set font directory: %s.", fontDirectoryPath), e);
         } finally {
             if (reference.get() != null) {
                 try {
@@ -324,7 +321,7 @@ class FFcmd {
         if (rc == 0) {
             return newFFmpegPipePath;
         } else {
-            LogUtil.e(String.format("Failed to register new FFmpeg pipe %s. Operation failed with rc=%d.", newFFmpegPipePath, rc));
+            FFutil.e(String.format("Failed to register new FFmpeg pipe %s. Operation failed with rc=%d.", newFFmpegPipePath, rc));
             return null;
         }
     }

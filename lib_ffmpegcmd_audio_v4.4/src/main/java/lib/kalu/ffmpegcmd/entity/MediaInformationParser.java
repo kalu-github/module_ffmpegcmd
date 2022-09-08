@@ -1,14 +1,10 @@
 package lib.kalu.ffmpegcmd.entity;
 
-import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
-import lib.kalu.ffmpegcmd.util.LogUtil;
 
 public class MediaInformationParser {
 
@@ -22,7 +18,7 @@ public class MediaInformationParser {
         try {
             return fromWithError(ffprobeJsonOutput);
         } catch (JSONException e) {
-            LogUtil.e("MediaInformation parsing failed.", e);
+            e.printStackTrace();
             return null;
         }
     }
