@@ -15,6 +15,10 @@ add_library(avformat SHARED IMPORTED)
 set_target_properties(avformat PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/jni/${CMAKE_ANDROID_ARCH_ABI}/libavformat.so)
 
 #重采样
+add_library(avdevice SHARED IMPORTED)
+set_target_properties(avdevice PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/jni/${CMAKE_ANDROID_ARCH_ABI}/libavdevice.so)
+
+#重采样
 add_library(swresample SHARED IMPORTED)
 set_target_properties(swresample PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/jni/${CMAKE_ANDROID_ARCH_ABI}/libswresample.so)
 
@@ -78,4 +82,5 @@ target_link_libraries(
         avutil
         swresample
         swscale
+        avdevice
 )

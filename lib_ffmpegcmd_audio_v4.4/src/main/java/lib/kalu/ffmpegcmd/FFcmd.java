@@ -46,6 +46,7 @@ class FFcmd {
         System.loadLibrary("avcodec");
         System.loadLibrary("avformat");
         System.loadLibrary("avfilter");
+        System.loadLibrary("avdevice");
         System.loadLibrary("avcmd");
 
         lastReceivedStatistics = new Statistics();
