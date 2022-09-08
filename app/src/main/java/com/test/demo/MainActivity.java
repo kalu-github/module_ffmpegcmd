@@ -19,6 +19,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -28,8 +30,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import lib.kalu.ffmpegcmd.FFmpeg;
+import lib.kalu.ffmpegcmd.FFprobe;
 import lib.kalu.ffmpegcmd.callback.ExecuteCallback;
 import lib.kalu.ffmpegcmd.entity.LogMessage;
+import lib.kalu.ffmpegcmd.entity.MediaInformation;
 
 public class MainActivity extends AppCompatActivity implements Handler.Callback {
 
@@ -41,6 +45,11 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
         String version = FFmpeg.getFFmpegVersion();
         TextView textView = findViewById(R.id.info);
         textView.setText("ffmpeg: " + version);
+
+        String absolutePath = getApplicationContext().getCacheDir().getAbsolutePath();
+        String v25Path = absolutePath + "/v25.mp4";
+        MediaInformation information = FFprobe.getMediaInfo(v25Path);
+        Log.e("FFM", new Gson().toJson(information));
 
         init();
 
@@ -85,41 +94,8 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                 }
 
                 String cmds = builder.toString();
-//                String cmds = "ffmpeg -y -f s16be -ac 1 -ar 16000 -acodec pcm_s16le -i " + pcm + " " + pcm_process;
                 Log.e("FFM", "cmd => " + cmds);
-
-                FFmpeg.executeAsync(asList, new ExecuteCallback() {
-                    @Override
-                    public void onStart(Long executionId) {
-                        Log.e("FFM", "onStart => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
-                        Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
-                    }
-
-                    @Override
-                    public void onSuccess(long executionId) {
-                        Log.e("FFM", "onSuccess => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onFailure(long executionId, String error) {
-                        Log.e("FFM", "onFailure => executionId = " + executionId + ", error = " + error);
-                    }
-
-                    @Override
-                    public void onCancel(long executionId) {
-                        Log.e("FFM", "onCancel => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onMessage(LogMessage logMessage) {
-                        Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
-                    }
-                });
-                Log.e("FFM", "cmd => " + cmds);
+                startFFmpeg(asList);
             }
         });
         findViewById(R.id.button_process_pcm1_1).setOnClickListener(new View.OnClickListener() {
@@ -175,39 +151,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                 String cmds = builder.toString();
 //                String cmds = "ffmpeg -y -f s16be -ac 1 -ar 16000 -acodec pcm_s16le -i " + pcm + " " + pcm_process;
                 Log.e("FFM", "cmd => " + cmds);
-
-                FFmpeg.executeAsync(asList.toArray(new String[]{}), new ExecuteCallback() {
-                    @Override
-                    public void onStart(Long executionId) {
-                        Log.e("FFM", "onStart => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
-                        Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
-                    }
-
-                    @Override
-                    public void onSuccess(long executionId) {
-                        Log.e("FFM", "onSuccess => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onFailure(long executionId, String error) {
-                        Log.e("FFM", "onFailure => executionId = " + executionId + ", error = " + error);
-                    }
-
-                    @Override
-                    public void onCancel(long executionId) {
-                        Log.e("FFM", "onCancel => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onMessage(LogMessage logMessage) {
-                        Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
-                    }
-                });
-                Log.e("FFM", "cmd => " + cmds);
+                startFFmpeg(asList);
             }
         });
         findViewById(R.id.button_process_pcm2_1).setOnClickListener(new View.OnClickListener() {
@@ -276,42 +220,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                 String cmds = builder.toString();
 //                String cmds = "ffmpeg -y -i " + mp3_1 + " -i " + mp3_2 + " -filter_complex amix=inputs=2:duration=shortest " + mp3_process;
                 Log.e("FFM", "cmd => " + cmds);
-
-//                String[] strings = FFmpegUtils.mixAudio(mp3_1, mp3_2, mp3_process);
-//                Log.e("FFM", "strings => " + strings.toString());
-
-                FFmpeg.executeAsync(asList.toArray(new String[]{}), new ExecuteCallback() {
-                    @Override
-                    public void onStart(Long executionId) {
-                        Log.e("FFM", "onStart => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
-                        Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
-                    }
-
-                    @Override
-                    public void onSuccess(long executionId) {
-                        Log.e("FFM", "onSuccess => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onFailure(long executionId, String error) {
-                        Log.e("FFM", "onFailure => executionId = " + executionId + ", error = " + error);
-                    }
-
-                    @Override
-                    public void onCancel(long executionId) {
-                        Log.e("FFM", "onCancel => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onMessage(LogMessage logMessage) {
-                        Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
-                    }
-                });
-                Log.e("FFM", "cmd => " + cmds);
+                startFFmpeg(asList);
             }
         });
         findViewById(R.id.button_process_mp3_1).setOnClickListener(new View.OnClickListener() {
@@ -377,42 +286,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                 String cmds = builder.toString();
 //                String cmds = "ffmpeg -y -i " + mp3_1 + " -i " + mp3_2 + " -filter_complex amix=inputs=2:duration=shortest " + mp3_process;
                 Log.e("FFM", "cmd => " + cmds);
-
-//                String[] strings = FFmpegUtils.mixAudio(mp3_1, mp3_2, mp3_process);
-//                Log.e("FFM", "strings => " + strings.toString());
-
-                FFmpeg.executeAsync(asList.toArray(new String[]{}), new ExecuteCallback() {
-                    @Override
-                    public void onStart(Long executionId) {
-                        Log.e("FFM", "onStart => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
-                        Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
-                    }
-
-                    @Override
-                    public void onSuccess(long executionId) {
-                        Log.e("FFM", "onSuccess => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onFailure(long executionId, String error) {
-                        Log.e("FFM", "onFailure => executionId = " + executionId + ", error = " + error);
-                    }
-
-                    @Override
-                    public void onCancel(long executionId) {
-                        Log.e("FFM", "onCancel => executionId = " + executionId);
-                    }
-
-                    @Override
-                    public void onMessage(LogMessage logMessage) {
-                        Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
-                    }
-                });
-                Log.e("FFM", "cmd => " + cmds);
+                startFFmpeg(asList);
             }
         });
         findViewById(R.id.button_process_mp4_1).setOnClickListener(new View.OnClickListener() {
@@ -618,5 +492,44 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
         videoView.pause();
         videoView.setVideoURI(Uri.parse(path));
         videoView.start();
+    }
+
+    private void startFFmpeg(List<String> strings) {
+
+        FFmpeg.executeAsync(strings, new ExecuteCallback() {
+            @Override
+            public void onStart(Long executionId) {
+                Log.e("FFM", "onStart => executionId = " + executionId);
+            }
+
+            @Override
+            public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
+                Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
+                Message message = Message.obtain();
+                message.arg1 = (int) v;
+                message.what = 1000;
+                mHandle.sendMessage(message);
+            }
+
+            @Override
+            public void onSuccess(long executionId) {
+                Log.e("FFM", "onSuccess => executionId = " + executionId);
+            }
+
+            @Override
+            public void onFailure(long executionId, String error) {
+                Log.e("FFM", "onFailure => executionId = " + executionId + ", error = " + error);
+            }
+
+            @Override
+            public void onCancel(long executionId) {
+                Log.e("FFM", "onCancel => executionId = " + executionId);
+            }
+
+            @Override
+            public void onMessage(LogMessage logMessage) {
+//                Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
+            }
+        });
     }
 }

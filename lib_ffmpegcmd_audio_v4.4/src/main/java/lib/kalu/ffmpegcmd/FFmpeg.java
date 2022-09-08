@@ -20,11 +20,6 @@ public class FFmpeg {
 
     private static final AtomicLong executionIdCounter = new AtomicLong(3000);
 
-//    static {
-//        AbiDetect.class.getName();
-//        Config.class.getName();
-//    }
-
     /**
      * Default constructor hidden.
      */

@@ -30,7 +30,7 @@ class FFcmd {
 
     private static int lastReturnCode = 0;
 
-     static String MOBILE_FFMPEG_PIPE_PREFIX = "mf_pipe_";
+    static String MOBILE_FFMPEG_PIPE_PREFIX = "mf_pipe_";
 
     private static LogCallback logCallbackFunction;
 
@@ -49,7 +49,6 @@ class FFcmd {
         System.loadLibrary("avcodec");
         System.loadLibrary("avformat");
         System.loadLibrary("avfilter");
-        System.loadLibrary("avdevice");
         System.loadLibrary("avcmd");
 
         lastReceivedStatistics = new Statistics();
@@ -79,20 +78,20 @@ class FFcmd {
      * <p>Note that redirection is enabled by default. If you do not want to use its functionality
      * please use {@link #disableRedirection()} to disable it.
      */
-     static void enableRedirection() {
+    static void enableRedirection() {
         enableNativeRedirection();
     }
 
-     static void disableRedirection() {
+    static void disableRedirection() {
         disableNativeRedirection();
     }
 
-     static Level getLogLevel() {
+    static Level getLogLevel() {
         int v = getNativeLogLevel();
         return Level.from(v);
     }
 
-     static void setLogLevel(Level level) {
+    static void setLogLevel(Level level) {
         if (level != null) {
             setNativeLogLevel(level.getValue());
         }
@@ -104,7 +103,7 @@ class FFcmd {
      * @param newLogCallback new log callback function or NULL to disable a previously defined callback
      * @
      */
-     static void enableLogCallback(LogCallback newLogCallback) {
+    static void enableLogCallback(LogCallback newLogCallback) {
         logCallbackFunction = newLogCallback;
     }
 
@@ -113,7 +112,7 @@ class FFcmd {
      *
      * @param statisticsCallback new statistics callback function or NULL to disable a previously defined callback
      */
-     static void enableStatisticsCallback(StatisticsCallback statisticsCallback) {
+    static void enableStatisticsCallback(StatisticsCallback statisticsCallback) {
         statisticsCallbackFunction = statisticsCallback;
     }
 
@@ -178,14 +177,14 @@ class FFcmd {
      *
      * @return last received statistics data
      */
-     static Statistics getLastReceivedStatistics() {
+    static Statistics getLastReceivedStatistics() {
         return lastReceivedStatistics;
     }
 
     /**
      * <p>Resets last received statistics. It is recommended to call it before starting a new execution.
      */
-     static void resetStatistics() {
+    static void resetStatistics() {
         lastReceivedStatistics = new Statistics();
     }
 
@@ -195,7 +194,7 @@ class FFcmd {
      * @param path directory which contains fontconfig configuration (fonts.conf)
      * @return zero on success, non-zero on error
      */
-     static int setFontconfigConfigurationPath(String path) {
+    static int setFontconfigConfigurationPath(String path) {
         return setNativeEnvironmentVariable("FONTCONFIG_PATH", path);
     }
 
@@ -209,7 +208,7 @@ class FFcmd {
      * @param fontDirectoryPath directory which contains fonts (.ttf and .otf files)
      * @param fontNameMapping   custom font name mappings, useful to access your fonts with more friendly names
      */
-     static void setFontDirectory(Context context, String fontDirectoryPath, Map<String, String> fontNameMapping) {
+    static void setFontDirectory(Context context, String fontDirectoryPath, Map<String, String> fontNameMapping) {
         File cacheDir = context.getCacheDir();
         int validFontNameMappingCount = 0;
 
@@ -289,7 +288,7 @@ class FFcmd {
      * @return guessed package name according to supported external libraries
      * @since 3.0
      */
-     static String getPackageName() {
+    static String getPackageName() {
         return Packages.getPackageName();
     }
 
@@ -299,7 +298,7 @@ class FFcmd {
      * @return list of supported external libraries
      * @since 3.0
      */
-     static List<String> getExternalLibraries() {
+    static List<String> getExternalLibraries() {
         return Packages.getExternalLibraries();
     }
 
@@ -311,7 +310,7 @@ class FFcmd {
      * @param context application context
      * @return the full path of named pipe
      */
-     static String registerNewFFmpegPipe(Context context) {
+    static String registerNewFFmpegPipe(Context context) {
 
         // PIPES ARE CREATED UNDER THE CACHE DIRECTORY
         File cacheDir = context.getCacheDir();
@@ -335,7 +334,7 @@ class FFcmd {
      *
      * @param ffmpegPipePath full path of ffmpeg pipe
      */
-     static void closeFFmpegPipe(String ffmpegPipePath) {
+    static void closeFFmpegPipe(String ffmpegPipePath) {
         File file = new File(ffmpegPipePath);
         if (file.exists()) {
             file.delete();
@@ -347,7 +346,7 @@ class FFcmd {
      *
      * @return FFmpeg version
      */
-     static String getFFmpegVersion() {
+    static String getFFmpegVersion() {
         return getNativeFFmpegVersion();
     }
 
@@ -356,7 +355,7 @@ class FFcmd {
      *
      * @return MobileFFmpeg version
      */
-     static String getVersion() {
+    static String getVersion() {
         return getNativeVersion();
     }
 
@@ -365,7 +364,7 @@ class FFcmd {
      *
      * @return MobileFFmpeg library build date
      */
-     static String getBuildDate() {
+    static String getBuildDate() {
         return getNativeBuildDate();
     }
 
@@ -375,62 +374,8 @@ class FFcmd {
      * @return return code of last executed command
      * @since 3.0
      */
-     static int getLastReturnCode() {
+    static int getLastReturnCode() {
         return lastReturnCode;
-    }
-
-    /**
-     * <p>Returns log output of last executed single FFmpeg/FFprobe command.
-     *
-     * <p>This method does not support executing multiple concurrent commands. If you execute
-     * multiple commands at the same time, this method will return output from all executions.
-     *
-     * <p>Please note that disabling redirection using {@link FFcmd#disableRedirection()} method
-     * also disables this functionality.
-     *
-     * @return output of the last executed command
-     * @since 3.0
-     */
-     static String getLastCommandOutput() {
-        String nativeLastCommandOutput = getNativeLastCommandOutput();
-        if (nativeLastCommandOutput != null) {
-
-            // REPLACING CH(13) WITH CH(10)
-            nativeLastCommandOutput = nativeLastCommandOutput.replace('\r', '\n');
-        }
-        return nativeLastCommandOutput;
-    }
-
-    /**
-     * <p>Prints the output of the last executed FFmpeg/FFprobe command to the Logcat at the
-     * specified priority.
-     *
-     * <p>This method does not support executing multiple concurrent commands. If you execute
-     * multiple commands at the same time, this method will print output from all executions.
-     *
-     * @param logPriority one of {@link Log#VERBOSE}, {@link Log#DEBUG}, {@link Log#INFO},
-     *                    {@link Log#WARN}, {@link Log#ERROR}, {@link Log#ASSERT}
-     * @since 4.3
-     */
-     static void printLastCommandOutput(int logPriority) {
-        int LOGGER_ENTRY_MAX_LEN = 4 * 1000;
-
-        String buffer = getLastCommandOutput();
-        do {
-            if (buffer.length() <= LOGGER_ENTRY_MAX_LEN) {
-                LogUtil.e(buffer);
-                buffer = "";
-            } else {
-                int index = buffer.substring(0, LOGGER_ENTRY_MAX_LEN).lastIndexOf('\n');
-                if (index < 0) {
-                    LogUtil.e(buffer.substring(0, LOGGER_ENTRY_MAX_LEN));
-                    buffer = buffer.substring(LOGGER_ENTRY_MAX_LEN);
-                } else {
-                    LogUtil.e(buffer.substring(0, index));
-                    buffer = buffer.substring(index);
-                }
-            }
-        } while (buffer.length() > 0);
     }
 
     /**
@@ -440,7 +385,7 @@ class FFcmd {
      * @param variableValue environment variable value
      * @return zero on success, non-zero on error
      */
-     static int setEnvironmentVariable(String variableName, String variableValue) {
+    static int setEnvironmentVariable(String variableName, String variableValue) {
         return setNativeEnvironmentVariable(variableName, variableValue);
     }
 
@@ -449,7 +394,7 @@ class FFcmd {
      *
      * @param signal signal number to ignore
      */
-     static void ignoreSignal(Signal signal) {
+    static void ignoreSignal(Signal signal) {
         ignoreNativeSignal(signal.getValue());
     }
 
@@ -458,7 +403,7 @@ class FFcmd {
      *
      * @param newLastReturnCode new last return code value
      */
-     static void setLastReturnCode(int newLastReturnCode) {
+    static void setLastReturnCode(int newLastReturnCode) {
         lastReturnCode = newLastReturnCode;
     }
 
@@ -467,7 +412,7 @@ class FFcmd {
      *
      * @return list of ongoing FFmpeg executions
      */
-     static List<FFmpegExecution> listFFmpegExecutions() {
+    static List<FFmpegExecution> listFFmpegExecutions() {
         return new ArrayList<>(executions);
     }
 
@@ -537,18 +482,13 @@ class FFcmd {
     private native static int setNativeEnvironmentVariable(String variableName, String variableValue);
 
     /**
-     * <p>Returns log output of the last executed single command natively.
-     *
-     * @return output of the last executed single command
-     */
-    private native static String getNativeLastCommandOutput();
-
-    /**
      * <p>Registers a new ignored signal natively. Ignored signals are not handled by the library.
      *
      * @param signum signal number
      */
     private native static void ignoreNativeSignal(int signum);
+
+    /******/
 
     static int ffmpegExecute(long executionId, String[] arguments) {
         FFmpegExecution currentFFmpegExecution = new FFmpegExecution(executionId, arguments);
@@ -566,15 +506,31 @@ class FFcmd {
 
     private native static int nativeFFmpegExecute(long executionId, String[] arguments);
 
+    /******/
+
     static void ffmpegCancel(long executionId) {
         nativeFFmpegCancel(executionId);
     }
 
     private native static void nativeFFmpegCancel(long executionId);
 
+    /******/
+
     static int ffprobeExecute(String[] arguments) {
         return nativeFFprobeExecute(arguments);
     }
 
     private native static int nativeFFprobeExecute(String[] arguments);
+
+    /******/
+
+    static String getLastCommandOutput() {
+        String output = getNativeLastCommandOutput();
+        if (null != output && output.length() > 0) {
+            output = output.replace('\r', '\n');
+        }
+        return output;
+    }
+
+    private native static String getNativeLastCommandOutput();
 }
