@@ -31,9 +31,8 @@ import java.util.List;
 
 import lib.kalu.ffmpegcmd.FFmpeg;
 import lib.kalu.ffmpegcmd.FFprobe;
-import lib.kalu.ffmpegcmd.callback.ExecuteCallback;
-import lib.kalu.ffmpegcmd.entity.LogMessage;
-import lib.kalu.ffmpegcmd.entity.MediaInformation;
+import lib.kalu.ffmpegcmd.bean.LogMessage;
+import lib.kalu.ffmpegcmd.listener.OnFFmpegChangeListener;
 
 public class MainActivity extends AppCompatActivity implements Handler.Callback {
 
@@ -46,12 +45,12 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
         TextView textView = findViewById(R.id.info);
         textView.setText("ffmpeg: " + version);
 
+        init();
+
         String absolutePath = getApplicationContext().getCacheDir().getAbsolutePath();
         String v25Path = absolutePath + "/v25.mp4";
-        MediaInformation information = FFprobe.getMediaInfo(v25Path);
-        Log.e("FFM", new Gson().toJson(information));
-
-        init();
+        String info = FFprobe.getMediaFramatOutputCommand(v25Path);
+        Log.e("FFM", info);
 
         // 初始化
         findViewById(R.id.button_process_init).setOnClickListener(new View.OnClickListener() {
@@ -496,7 +495,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
 
     private void startFFmpeg(List<String> strings) {
 
-        FFmpeg.executeAsync(strings, new ExecuteCallback() {
+        FFmpeg.executeAsync(strings, new OnFFmpegChangeListener() {
             @Override
             public void onStart(Long executionId) {
                 Log.e("FFM", "onStart => executionId = " + executionId);
@@ -512,18 +511,23 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
             }
 
             @Override
-            public void onSuccess(long executionId) {
-                Log.e("FFM", "onSuccess => executionId = " + executionId);
+            public void onSucc(long executionId) {
+                Log.e("FFM", "onSucc => executionId = " + executionId);
             }
 
             @Override
-            public void onFailure(long executionId, String error) {
-                Log.e("FFM", "onFailure => executionId = " + executionId + ", error = " + error);
+            public void onFail(long executionId, String error) {
+                Log.e("FFM", "onFail => executionId = " + executionId + ", error = " + error);
             }
 
             @Override
             public void onCancel(long executionId) {
                 Log.e("FFM", "onCancel => executionId = " + executionId);
+            }
+
+            @Override
+            public void onWarning(long executionId, String error) {
+                Log.e("FFM", "onWarning => executionId = " + executionId + ", error = " + error);
             }
 
             @Override
