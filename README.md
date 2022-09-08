@@ -56,3 +56,38 @@ ffmpeg -y -i from.mp4 -i 1.mp3 -i 2.mp3 -i 3.mp3 -i 4.mp3 -filter_complex [1]ade
 自动获取媒资时长, 处理过程自动传递总时长、处理时长、处理进度百分比3个字段
 void onProgress(@NonNull long duration, @NonNull long position, @NonNull float progress);
 ```
+
+#
+#### 模块
+```
+libavutil：
+核心工具库，该模块是最基本的模块之一，其它这么多模块会依赖此模块做一些音视频处理操作。
+```
+```
+libavformat： 
+文件格式和协议库，该模块是最重要的模块之一，封装了Protocol层、Demuxer层、muxer层，使用协议和格式对于开发者是透明的。
+```
+```
+libavcodec: 
+编解码库，该模块也是最重要模块之一，封装了Codec层，但是有一些Codec是具备自己的License的，FFmpeg是不会默认添加，例如libx264,FDK-AAC, lame等库，但FFmpeg就像一个平台一样，可以将其它的第三方的Codec以插件的方式添加进来，然后为开发者提供统一的接口。
+```
+```
+libswrsample：
+音频重采样库，可以对数字音频进行声道数、数据格式、采样率等多种基本信息的转换。
+```
+```
+libswscale：
+视频压缩和格式转换库，可以进行视频分辨率修改、YUV格式数据与RGB格式数据互换。
+```
+```
+libavdevice：
+输入输出设备库，编译ffplay就需要确保该模块是打开的，时时也需要libSDL预先编译，因为该设备播放声音和播放视频使用的都是libSDL库。
+```
+```
+libavfilter:
+音视频滤镜库，该模块包含了音频特效和视频特效的处理，在使用FFmpeg的API进行编解码的过程中，直接使用该模块为音视频数据做特效物理非常方便同时也非常高效的一种方式。
+```
+```
+libpostproc:
+音视频后期处理库，当使用libavfilter的时候需要打开该模块开关，因为Filter中会使用该库中的一些基础函数。
+```

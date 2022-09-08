@@ -5,3 +5,5 @@
 /app/release/
 /lib_ffmpegcmd_audio_v4.4/.cxx/
 /lib_ffmpegcmd_audio_v4.4/build/
+/lib_ffmpegcmd_audio_v4.4_mini/.cxx/
+/lib_ffmpegcmd_audio_v4.4_mini/build/
