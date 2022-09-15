@@ -19,8 +19,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.gson.Gson;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -30,9 +28,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import lib.kalu.ffmpegcmd.FFmpeg;
-import lib.kalu.ffmpegcmd.FFprobe;
-import lib.kalu.ffmpegcmd.bean.LogMessage;
-import lib.kalu.ffmpegcmd.listener.OnFFmpegChangeListener;
+import lib.kalu.ffmpegcmd.OnFFmpegChangeListener;
 
 public class MainActivity extends AppCompatActivity implements Handler.Callback {
 
@@ -41,7 +37,9 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String version = FFmpeg.getFFmpegVersion();
+        FFmpeg.setLogger(true);
+//        String version = FFmpeg.getFFmpegVersion();
+        String version = "5.1.1";
         TextView textView = findViewById(R.id.info);
         textView.setText("ffmpeg: " + version);
 
@@ -49,8 +47,8 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
 
         String absolutePath = getApplicationContext().getCacheDir().getAbsolutePath();
         String v25Path = absolutePath + "/v25.mp4";
-        String info = FFprobe.getMediaFramatOutputCommand(v25Path);
-        Log.e("FFM", info);
+        long duration = FFmpeg.getDuration(v25Path);
+        Log.e("FFM", "duration = " + duration);
 
         // 初始化
         findViewById(R.id.button_process_init).setOnClickListener(new View.OnClickListener() {
@@ -60,7 +58,16 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
             }
         });
 
-        // pcm to mp3
+        // button_create_null_mp3
+        findViewById(R.id.button_create_null_mp3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String path = getCacheDir().getAbsolutePath() + "/null_" + System.nanoTime() + ".mp3";
+                FFmpegUtils.createNullMusic(10, path);
+            }
+        });
+
+        // pcm to aac
         // ffmpeg -y -f s16be -ac 1 -ar 16000 -acodec pcm_s16le -i /data/user/0/com.hw.hear/files/a6.pcm /data/user/0/com.hw.hear/files/new_mp3.mp3
         findViewById(R.id.button_process_pcm1).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                         "ffmpeg",
                         "-y",
                         "-f",
-                        "s16be",
+                        "s16le",
                         "-ac",
                         "1",
                         "-ar",
@@ -124,33 +131,9 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                 String absolutePath = getApplicationContext().getCacheDir().getAbsolutePath();
 //                String absolutePath = "/storage/emulated/0";
                 String a7 = absolutePath + "/a7.pcm";
-                String a7_cmd = absolutePath + "/a7_cmd.mp3";
-
-                List<String> asList = Arrays.asList(
-//                        "ffmpeg",
-                        "-y",
-                        "-f",
-                        "s16be",
-                        "-ac",
-                        "1",
-                        "-ar",
-                        "16000",
-                        "-acodec",
-                        "pcm_s16le",
-                        "-i",
-                        a7,
-                        a7_cmd);
-
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < asList.size(); i++) {
-                    builder.append(asList.get(i));
-                    builder.append(" ");
-                }
-
-                String cmds = builder.toString();
-//                String cmds = "ffmpeg -y -f s16be -ac 1 -ar 16000 -acodec pcm_s16le -i " + pcm + " " + pcm_process;
-                Log.e("FFM", "cmd => " + cmds);
-                startFFmpeg(asList);
+                String a7_cmd = absolutePath + "/a7_" + System.nanoTime() + ".mp3";
+                FFmpegUtils.pcmToMp3(a7, a7_cmd);
+//                startFFmpeg(asList);
             }
         });
         findViewById(R.id.button_process_pcm2_1).setOnClickListener(new View.OnClickListener() {
@@ -495,44 +478,24 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
 
     private void startFFmpeg(List<String> strings) {
 
-        FFmpeg.executeAsync(strings, new OnFFmpegChangeListener() {
-            @Override
-            public void onStart(Long executionId) {
-                Log.e("FFM", "onStart => executionId = " + executionId);
-            }
+        FFmpeg.executeCmd(strings, new OnFFmpegChangeListener() {
 
             @Override
-            public void onProgress(@NonNull long l, @NonNull long l1, @NonNull float v) {
-                Log.e("FFM", "onProgress => duration = " + l + ", position = " + l1 + ", pb = " + v);
+            public void progress(float progress) {
                 Message message = Message.obtain();
-                message.arg1 = (int) v;
+                message.arg1 = (int) progress;
                 message.what = 1000;
                 mHandle.sendMessage(message);
             }
 
             @Override
-            public void onSucc(long executionId) {
-                Log.e("FFM", "onSucc => executionId = " + executionId);
+            public void fail() {
+
             }
 
             @Override
-            public void onFail(long executionId, String error) {
-                Log.e("FFM", "onFail => executionId = " + executionId + ", error = " + error);
-            }
+            public void success() {
 
-            @Override
-            public void onCancel(long executionId) {
-                Log.e("FFM", "onCancel => executionId = " + executionId);
-            }
-
-            @Override
-            public void onWarning(long executionId, String error) {
-                Log.e("FFM", "onWarning => executionId = " + executionId + ", error = " + error);
-            }
-
-            @Override
-            public void onMessage(LogMessage logMessage) {
-//                Log.e("FFM", "onFFmpegExecutionMessage => logMessage = " + logMessage.toString());
             }
         });
     }

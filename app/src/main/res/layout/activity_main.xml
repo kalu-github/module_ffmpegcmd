@@ -38,6 +38,18 @@
         android:textColor="@android:color/white"
         android:textSize="14sp" />
 
+    <com.test.demo.FocusButton
+        android:id="@+id/button_create_null_mp3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/darker_gray"
+        android:focusable="true"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true"
+        android:text="生成空白MP3"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

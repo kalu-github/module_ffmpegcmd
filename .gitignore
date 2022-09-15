@@ -3,5 +3,7 @@
 /.gradle/
 /app/build/
 /app/release/
-/lib_ffmpegcmd_audio_v4.4/.cxx/
-/lib_ffmpegcmd_audio_v4.4/build/
+/lib_ffmpegcmd_audio_v4.4-dev-3015-gc0d0b1c4f6/.cxx/
+/lib_ffmpegcmd_audio_v4.4-dev-3015-gc0d0b1c4f6/build/
+/lib_ffmpegcmd_v5.1.1/.cxx/
+/lib_ffmpegcmd_v5.1.1/build/
