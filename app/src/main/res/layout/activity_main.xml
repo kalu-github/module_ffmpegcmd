@@ -27,7 +27,7 @@
         android:layout_marginBottom="10dp"
         android:background="@android:color/black" />
 
-    <com.test.demo.FocusButton
+    <com.kalu.ffmpeg.FocusButton
         android:id="@+id/button_process_init"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -38,7 +38,7 @@
         android:textColor="@android:color/white"
         android:textSize="14sp" />
 
-    <com.test.demo.FocusButton
+    <com.kalu.ffmpeg.FocusButton
         android:id="@+id/button_create_null_mp3"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -46,7 +46,7 @@
         android:focusable="true"
         android:layout_marginTop="10dp"
         android:focusableInTouchMode="true"
-        android:text="生成空白MP3"
+        android:text="生成5min空白MP3"
         android:textColor="@android:color/white"
         android:textSize="14sp" />
 
@@ -64,7 +64,7 @@
         android:focusableInTouchMode="false"
         android:orientation="horizontal">
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_pcm1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/black" />
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_pcm1_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/black" />
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_pcm1_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
         android:focusableInTouchMode="false"
         android:orientation="horizontal">
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_pcm2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/black" />
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_pcm2_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -168,7 +168,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/black" />
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_pcm2_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
         android:focusableInTouchMode="false"
         android:orientation="horizontal">
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_mp3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/black" />
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_mp3_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -234,7 +234,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/black" />
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_mp3_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -263,7 +263,7 @@
         android:focusableInTouchMode="false"
         android:orientation="horizontal">
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_mp4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -282,7 +282,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/black" />
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_mp4_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -301,7 +301,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/black" />
 
-        <com.test.demo.FocusButton
+        <com.kalu.ffmpeg.FocusButton
             android:id="@+id/button_process_mp4_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

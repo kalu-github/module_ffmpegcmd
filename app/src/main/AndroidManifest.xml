@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.test.demo">
+    package="com.kalu.ffmpeg">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.test.demo.App"
+        android:name="com.kalu.ffmpeg.App"
         android:allowBackup="true"
         android:debuggable="false"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +19,7 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,HardcodedDebugMode,UnusedAttribute">
 
         <activity
-            android:name="com.test.demo.MainActivity"
+            android:name="com.kalu.ffmpeg.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
             android:launchMode="singleInstance"
