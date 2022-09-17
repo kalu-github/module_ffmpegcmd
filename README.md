@@ -1,17 +1,18 @@
-#
-####  ffmpegcmd-so => 编译源码 => [链接](https://www.baidu.com)
 
 #
-####  v4.4.2 => 支持模块 => [链接](https://www.baidu.com)
+####  ffmpegcmd-so => 编译源码 => [链接](https://github.com/kalu-github/ffmpegcmd-android)
 
 #
-####  v4.4.2-mini => 支持模块 => [链接](https://www.baidu.com)
+####  v4.4.2 => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2.md)
 
 #
-####  v5.1.1 => 支持模块 => [链接](https://www.baidu.com)
+####  v4.4.2-mini => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2_mini.md)
 
 #
-####  v5.1.1-mini => 支持模块 => [链接](https://www.baidu.com)
+####  v5.1.1 => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v5.1.1.md)
+
+#
+####  v5.1.1-mini => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v5.1.1_mini.md)
 
 #
 ## FFmpeg常用命令
