@@ -48,9 +48,9 @@ repositories {
 }
 
 dependencies {
-//    implementation files('libs/lib_ffmpegcmd_v4.4.2_release_20220917.aar')
+    implementation files('libs/lib_ffmpegcmd_v4.4.2_release_20220917.aar')
 //    implementation files('libs/lib_ffmpegcmd_v4.4.2_mini_release_20220917.aar')
-    implementation files('libs/lib_ffmpegcmd_v5.1.1_mini_release_20220917.aar')
+//    implementation files('libs/lib_ffmpegcmd_v5.1.1_mini_release_20220917.aar')
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.google.code.gson:gson:2.9.1'
