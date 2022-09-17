@@ -1,6 +1,6 @@
 
 #
-####  ffmpegcmd-so => 编译源码 => [链接](https://www.baidu.com)
+####  ffmpegcmd-so => 编译源码 => [链接](https://github.com/kalu-github/ffmpegcmd-android)
 
 #
 ####  v4.4.2 => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2.md)
