@@ -1,24 +1,20 @@
 
 #
-####  ffmpegcmd-so => 编译源码
-[链接](https://www.baidu.com)
+####  ffmpegcmd-so => 编译源码 => [链接](https://www.baidu.com)
 
 #
-####  v4.4.2 => 支持模块
-[链接](https://www.baidu.com)
+####  v4.4.2 => 支持模块 => [链接](https://www.baidu.com)
 
 #
-####  v4.4.2-mini => 支持模块
-[链接](https://www.baidu.com)
+####  v4.4.2-mini => 支持模块 => [链接](https://www.baidu.com)
 
 #
-####  v5.1.1 => 支持模块
-[链接](https://www.baidu.com)
+####  v5.1.1 => 支持模块 => [链接](https://www.baidu.com)
 
 #
-####  v5.1.1-mini => 支持模块
-[链接](https://www.baidu.com)
+####  v5.1.1-mini => 支持模块 => [链接](https://www.baidu.com)
 
+#
 ## FFmpeg常用命令
 ```
 ## 音频转码
