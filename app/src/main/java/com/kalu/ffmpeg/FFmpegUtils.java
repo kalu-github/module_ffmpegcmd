@@ -130,8 +130,8 @@ public final class FFmpegUtils {
             List<String> arrays = Arrays.asList(
                     "ffmpeg",
                     "-y",
-                    "-vol",
-                    "2000",
+//                    "-vol",
+//                    "2000",
                     "-f",
                     "s16le",
                     "-ac",
@@ -146,6 +146,10 @@ public final class FFmpegUtils {
                     "44100",
                     "-b:a", // 音频码率
                     "48000",
+//                    "-af",
+//                    "highpass=f=200,lowpass=f=3000",
+//                    "-vf",
+//                    "nlmeans=h=2:range=3:temporal=1",
 //                    "-af",
 //                    "asendcmd=0.0 afftdn sn start,asendcmd=0.4 afftdn sn stop,afftdn=nr=20:nf=-40",
                     savePath);

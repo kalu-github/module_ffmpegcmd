@@ -1,10 +1,10 @@
-## FFmpeg-v4.4.2-External libraries
+## FFmpeg-v5.1.1-External libraries
 ```
 ```
-## FFmpeg-v4.4.2-External libraries providing hardware acceleration
+## FFmpeg-v5.1.1-External libraries providing hardware acceleration
 ```
 ```
-## FFmpeg-v4.4.2-Enabled decoders
+## FFmpeg-v5.1.1-Enabled decoders
 ```
 ```
 

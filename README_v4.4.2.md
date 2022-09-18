@@ -171,7 +171,7 @@ ffvhuff                 pcm_vidc                zmbv
 ffwavesynth             pcx
 ```
 
-## FFmpeg-v5.1.1-Enabled encoders
+## FFmpeg-v4.4.2-Enabled encoders
 ```
 a64multi                huffyuv                 pgmyuv
 a64multi5               jpeg2000                png
@@ -231,7 +231,7 @@ h263                    pfm                     zlib
 h263p                   pgm                     zmbv
 ```
 
-## FFmpeg-v5.1.1-Enabled parsers
+## FFmpeg-v4.4.2-Enabled parsers
 ```
 aac                     dvd_nav                 opus
 aac_latm                dvdsub                  png
@@ -253,7 +253,7 @@ dvaudio                 mpegaudio
 dvbsub                  mpegvideo
 ```
 
-## FFmpeg-v5.1.1-Enabled demuxers
+## FFmpeg-v4.4.2-Enabled demuxers
 ```
 aa                      hnm                     pcm_f64be
 aac                     ico                     pcm_f64le
@@ -364,7 +364,7 @@ hevc                    pcm_f32be               yuv4mpegpipe
 hls                     pcm_f32le
 ```
 
-## FFmpeg-v5.1.1-Enabled muxers
+## FFmpeg-v4.4.2-Enabled muxers
 ```
 a64                     hash                    pcm_s24be
 ac3                     hds                     pcm_s24le
@@ -424,7 +424,7 @@ h263                    pcm_s16be               yuv4mpegpipe
 h264                    pcm_s16le
 ```
 
-## FFmpeg-v5.1.1-Enabled protocols
+## FFmpeg-v4.4.2-Enabled protocols
 ```
 async                   data                    pipe
 cache                   file                    prompeg
@@ -432,7 +432,7 @@ concat                  hls                     subfile
 crypto                  md5                     tee
 ```
 
-## FFmpeg-v5.1.1-Enabled filters
+## FFmpeg-v4.4.2-Enabled filters
 ```
 abench                  dctdnoiz                pal100bars
 abitscope               deband                  pal75bars
@@ -577,7 +577,7 @@ dblur                   owdenoise               zoompan
 dcshift                 pad
 ```
 
-## FFmpeg-v5.1.1-Enabled bsfs
+## FFmpeg-v4.4.2-Enabled bsfs
 ```
 aac_adtstoasc           hapqa_extract           pcm_rechunk
 av1_frame_merge         hevc_metadata           prores_metadata
@@ -594,12 +594,12 @@ h264_mp4toannexb        null
 h264_redundant_pps      opus_metadata
 ```
 
-## FFmpeg-v5.1.1-Enabled indevs
+## FFmpeg-v4.4.2-Enabled indevs
 ```
 fbdev                   lavfi                   v4l2
 ```
 
-## FFmpeg-v5.1.1-Enabled outdevs
+## FFmpeg-v4.4.2-Enabled outdevs
 ```
 fbdev                   v4l2
 ```

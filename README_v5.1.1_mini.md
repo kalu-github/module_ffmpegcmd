@@ -1,15 +1,15 @@
-## FFmpeg-v4.4.2-External libraries
+## FFmpeg-v5.1.1-mini-External libraries
 ```
 jni                     libx264                 zlib
 libmp3lame              mediacodec
 ```
-## FFmpeg-v4.4.2-External libraries providing hardware acceleration
+## FFmpeg-v5.1.1-mini-External libraries providing hardware acceleration
 ```
 avcodec                 avformat                swresample
 avdevice                avutil                  swscale
 avfilter                postproc
 ```
-## FFmpeg-v4.4.2-Enabled decoders
+## FFmpeg-v5.1.1-mini-Enabled decoders
 ```
 aac                     indeo4                  pcm_s16be
 ac3                     mjpeg                   pcm_s16le
@@ -22,20 +22,20 @@ h264                    msmpeg4v2               wmav2
 hevc                    msmpeg4v3
 ```
 
-## FFmpeg-v5.1.1-Enabled encoders
+## FFmpeg-v5.1.1-mini-Enabled encoders
 ```
 aac                     libx264                 pcm_s16le
 gif                     mjpeg                   pcm_u8
 libmp3lame              pcm_s16be               png
 ```
 
-## FFmpeg-v5.1.1-Enabled parsers
+## FFmpeg-v5.1.1-mini-Enabled parsers
 ```
 ac3                     mpeg4video
 h263                    mpegaudio
 ```
 
-## FFmpeg-v5.1.1-Enabled demuxers
+## FFmpeg-v5.1.1-mini-Enabled demuxers
 ```
 asf                     matroska                pcm_s16le
 avi                     mov                     pcm_u8
@@ -44,19 +44,19 @@ gif                     mpegts                  webm_dash_manifest
 image2                  pcm_s16be
 ```
 
-## FFmpeg-v5.1.1-Enabled muxers
+## FFmpeg-v5.1.1-mini-Enabled muxers
 ```
 gif                     mov                     pcm_s16be
 image2                  mp3                     pcm_s16le
 ipod                    mp4                     pcm_u8
 ```
 
-## FFmpeg-v5.1.1-Enabled protocols
+## FFmpeg-v5.1.1-mini-Enabled protocols
 ```
 concat                  file
 ```
 
-## FFmpeg-v5.1.1-Enabled filters
+## FFmpeg-v5.1.1-mini-Enabled filters
 ```
 adelay                  atempo                  paletteuse
 afade                   atrim                   pan
@@ -70,16 +70,16 @@ apad                    overlay                 vflip
 aresample               palettegen              volume
 ```
 
-## FFmpeg-v5.1.1-Enabled bsfs
+## FFmpeg-v5.1.1-mini-Enabled bsfs
 ```
 aac_adtstoasc           vp9_superframe
 ```
 
-## FFmpeg-v5.1.1-Enabled indevs
+## FFmpeg-v5.1.1-mini-Enabled indevs
 ```
 lavfi
 ```
 
-## FFmpeg-v5.1.1-Enabled outdevs
+## FFmpeg-v5.1.1-mini-Enabled outdevs
 ```
 ```

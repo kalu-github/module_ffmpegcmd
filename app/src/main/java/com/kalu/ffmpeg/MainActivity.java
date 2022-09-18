@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import lib.kalu.ffmpegcmd.FFmpeg;
+import lib.kalu.ffmpegcmd.OnFFmpegChangeListener;
 
 public class MainActivity extends AppCompatActivity implements Handler.Callback {
 
@@ -157,7 +158,8 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                 String absolutePath = getApplicationContext().getCacheDir().getAbsolutePath();
 //                String absolutePath = "/storage/emulated/0";
                 String a7 = absolutePath + "/a7.pcm";
-                String a7_cmd = absolutePath + "/a7_" + System.nanoTime() + ".mp3";
+//                String a7_cmd = absolutePath + "/a7_" + System.nanoTime() + ".mp3";
+                String a7_cmd = absolutePath + "/a7_cmd.mp3";
                 FFmpegUtils.pcmToMp3(a7, a7_cmd);
 //                startFFmpeg(asList);
             }
@@ -169,7 +171,6 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
                 String absolutePath = getApplicationContext().getCacheDir().getAbsolutePath();
 //                String absolutePath = "/storage/emulated/0";
                 String a7 = absolutePath + "/a7.pcm";
-                String a7_cmd = absolutePath + "/a7_cmd.mp3";
                 playPCM(a7);
             }
         });
@@ -179,7 +180,6 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
 
                 String absolutePath = getApplicationContext().getCacheDir().getAbsolutePath();
 //                String absolutePath = "/storage/emulated/0";
-                String a7 = absolutePath + "/a7.pcm";
                 String a7_cmd = absolutePath + "/a7_cmd.mp3";
                 playMP3(a7_cmd);
             }
@@ -455,8 +455,8 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
             @Override
             public void run() {
 
-                int bufferSize = AudioTrack.getMinBufferSize(16000, AudioFormat.CHANNEL_OUT_MONO, AudioFormat.ENCODING_PCM_16BIT);
-                AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC, 16000, AudioFormat.CHANNEL_OUT_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize, AudioTrack.MODE_STREAM);
+                int bufferSize = AudioTrack.getMinBufferSize(48000, AudioFormat.CHANNEL_OUT_MONO, AudioFormat.ENCODING_PCM_16BIT);
+                AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC, 48000, AudioFormat.CHANNEL_OUT_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize, AudioTrack.MODE_STREAM);
                 FileInputStream fis = null;
                 try {
                     audioTrack.play();
@@ -499,25 +499,25 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
 
     private void startFFmpeg(List<String> strings) {
 
-//        FFmpeg.executeCmd(strings, new OnFFmpegChangeListener() {
-//
-//            @Override
-//            public void progress(float progress) {
-//                Message message = Message.obtain();
-//                message.arg1 = (int) progress;
-//                message.what = 1000;
-//                mHandle.sendMessage(message);
-//            }
-//
-//            @Override
-//            public void fail() {
-//
-//            }
-//
-//            @Override
-//            public void success() {
-//
-//            }
-//        });
+        FFmpeg.executeCmd(strings, new OnFFmpegChangeListener() {
+
+            @Override
+            public void progress(float progress) {
+                Message message = Message.obtain();
+                message.arg1 = (int) progress;
+                message.what = 1000;
+                mHandle.sendMessage(message);
+            }
+
+            @Override
+            public void fail() {
+
+            }
+
+            @Override
+            public void success() {
+
+            }
+        });
     }
 }
