@@ -1,5 +1,5 @@
 #
-####  ffmpegcmd-so => 编译源码 => [链接](https://github.com/kalu-github/ffmpegcmd-android)
+####  deepin => 编译源码 => [链接](https://github.com/kalu-github/ffmpegcmd-android)
 
 #
 ####  v4.4.2 => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2.md)
@@ -12,6 +12,12 @@
 
 #
 ####  v5.1.1-mini => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v5.1.1_mini.md)
+
+#
+####  编译环境
+```
+deepin + gcc + ndk14b + ffmepg
+```
 
 #
 ####  已知问题
