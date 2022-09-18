@@ -1,21 +1,43 @@
+#
+#### 源码文档
+[源码 => linux](https://github.com/kalu-github/ffmpegcmd-android)
+<br>
+<br>
+[文档 => v4.4.2](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2.md)
+<br>
+<br>
+[文档 => v4.4.2-mini](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2_mini.md)
+<br>
+<br>
+[文档 => v5.1.1](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v5.1.1.md)
+<br>
+<br>
+[文档 => v5.1.1-mini](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v5.1.1_mini.md)
 
 #
-####  ffmpegcmd-so => 编译源码 => [链接](https://github.com/kalu-github/ffmpegcmd-android)
+#### 编译环境
+```
+deepin + gcc + ndk14b + ffmepg
+```
 
 #
-####  v4.4.2 => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2.md)
+#### 已知问题
+```
+1. 5.1.1版本不支持 -f -lavfi命令【编译问题 => ？？】
+```
+```
+2. progress传递处理进度数据不准确【超过100% => bug】
+```
 
 #
-####  v4.4.2-mini => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2_mini.md)
+#### 更新记录
+```
+20220918 =>
+更新ffmpeg4.4.2、ffmpeg5.1.1版本
+```
 
 #
-####  v5.1.1 => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v5.1.1.md)
-
-#
-####  v5.1.1-mini => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v5.1.1_mini.md)
-
-#
-## FFmpeg常用命令
+#### 常用命令
 ```
 ## 音频转码
 1.pcm => wav
@@ -58,14 +80,6 @@ ffmpeg -y -i from.mp4 -i 1.mp3 -i 2.mp3 -i 3.mp3 -i 4.mp3 -filter_complex [1]ade
 ```
 1. https://www.videohelp.com/software/ffmpeg/old-versions
 2. http://www.ffmpeg.org/releases/
-```
-
-#
-## 更新记录
-```
-20220415
-自动获取媒资时长, 处理过程自动传递总时长、处理时长、处理进度百分比3个字段
-void onProgress(@NonNull long duration, @NonNull long position, @NonNull float progress);
 ```
 
 #
