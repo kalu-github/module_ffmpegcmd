@@ -1,4 +1,3 @@
-
 #
 ####  ffmpegcmd-so => 编译源码 => [链接](https://github.com/kalu-github/ffmpegcmd-android)
 
@@ -13,6 +12,12 @@
 
 #
 ####  v5.1.1-mini => 支持模块 => [链接](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v5.1.1_mini.md)
+
+#
+####  已知问题
+```
+1. 5.1.1版本不支持 -f -lavfi命令【编译问题？？】
+```
 
 #
 ## FFmpeg常用命令
