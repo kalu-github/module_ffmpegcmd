@@ -12,10 +12,11 @@ import java.util.Map;
 import java.util.Set;
 
 import lib.kalu.ffmpegcmd.FFmpeg;
+import lib.kalu.ffmpegcmd.OnFFmpegChangeListener;
 
 public final class FFmpegUtils {
 
-    public static boolean createNullMusic(@NonNull int second, @NonNull String savePath) {
+    public static boolean createNullMusic(@NonNull float second, @NonNull String savePath) {
         try {
             Log.e("FFmpegUtils", "createNullMusic[1] => second = " + second + ", savePath = " + savePath);
 
@@ -38,7 +39,33 @@ public final class FFmpegUtils {
 //            arrays.add("-af"); // 降噪
 //            arrays.add("asendcmd=0.0 afftdn sn start,asendcmd=0.4 afftdn sn stop,afftdn=nr=20:nf=-40");
             arrays.add(savePath);
-            int execute = FFmpeg.executeCmd(arrays);
+            int execute = FFmpeg.executeCmd(arrays, new OnFFmpegChangeListener() {
+
+                @Override
+                public void start() {
+                    Log.e("FFmpegUtils", "start =>");
+                }
+
+                @Override
+                public void complete() {
+                    Log.e("FFmpegUtils", "complete =>");
+                }
+
+                @Override
+                public void progress(float progress) {
+                    Log.e("FFmpegUtils", "progress =>");
+                }
+
+                @Override
+                public void fail() {
+                    Log.e("FFmpegUtils", "fail =>");
+                }
+
+                @Override
+                public void success() {
+                    Log.e("FFmpegUtils", "success =>");
+                }
+            });
             if (execute != 0)
                 throw new IllegalArgumentException("ffmpeg fail");
             Log.e("FFmpegUtils", "createNullMusic[2] => second = " + second + ", savePath = " + savePath);
@@ -153,7 +180,17 @@ public final class FFmpegUtils {
 //                    "-af",
 //                    "asendcmd=0.0 afftdn sn start,asendcmd=0.4 afftdn sn stop,afftdn=nr=20:nf=-40",
                     savePath);
-            int execute = FFmpeg.executeCmd(arrays);
+            int execute = FFmpeg.executeCmd(arrays, new OnFFmpegChangeListener() {
+                @Override
+                public void fail() {
+
+                }
+
+                @Override
+                public void success() {
+
+                }
+            });
             if (execute != 0)
                 throw new IllegalArgumentException("ffmpeg fail");
             Log.e("FFmpegUtils", "pcmToMp3[2] => pcmPath = " + pcmPath + ", savePath = " + savePath);

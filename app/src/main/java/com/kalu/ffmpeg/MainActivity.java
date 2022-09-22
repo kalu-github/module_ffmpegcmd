@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String CPU_ABI = android.os.Build.CPU_ABI;//查看Android设备的ABI
+        Log.e("ABI", "CPU_ABI = " + CPU_ABI);
+
         FFmpeg.setLogger(true);
         String version = FFmpeg.getVersion();
         TextView textView = findViewById(R.id.info);
@@ -90,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
             @Override
             public void onClick(View view) {
                 String path = getCacheDir().getAbsolutePath() + "/null_" + System.nanoTime() + ".mp3";
-                FFmpegUtils.createNullMusic(5 * 60, path);
+                FFmpegUtils.createNullMusic(300.456F, path);
             }
         });
 
