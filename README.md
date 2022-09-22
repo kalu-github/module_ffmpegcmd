@@ -1,6 +1,6 @@
 #
 #### 源码文档
-[源码 => linux](https://github.com/kalu-github/ffmpegcmd-android)
+[源码 => ffmpeg](https://github.com/kalu-github/ffmpegcmd-android)
 <br>
 <br>
 [文档 => v4.4.2](https://github.com/kalu-github/ffmpeg_command/blob/master/README_v4.4.2.md)
