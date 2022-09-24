@@ -8,12 +8,13 @@ find_library(log-lib log)
 find_library(m-lib m)
 find_library(z-lib z)
 
+configure_file(${Project_SOURCE_DIR}/jniLibs/${ANDROID_ABI}/libffmpegcmd.so ${Project_BINARY_DIR}/libffmpegcmd.so COPYONLY)
 add_library(ffmpegcmd-lib
         SHARED
         IMPORTED)
 set_target_properties(ffmpegcmd-lib
         PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_SOURCE_DIR}/jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libffmpegcmd.so)
+        libffmpegcmd.so)
 
 include_directories(
         ffmpegcmd
