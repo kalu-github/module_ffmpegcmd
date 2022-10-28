@@ -138,6 +138,16 @@ Java_lib_kalu_ffmpegcmd_FFmpeg_executeJNI(JNIEnv *env, jclass type, jstring comm
 
 JNIEXPORT jstring JNICALL
 Java_lib_kalu_ffmpegcmd_FFmpeg_getVersionJNI(JNIEnv *env, jclass clazz) {
+
+//    libavutil      56. 70.100
+//    libavcodec     58.134.100
+//    libavformat    58. 76.100
+//    libavdevice    58. 13.100
+//    libavfilter     7.110.100
+//    libswscale      5.  9.100
+//    libswresample   3.  9.100
+//    libpostproc    55.  9.100
+//    return (*env)->NewStringUTF(env, av_version_info());
     return (*env)->NewStringUTF(env, FFMPEG_VERSION);
 }
 
