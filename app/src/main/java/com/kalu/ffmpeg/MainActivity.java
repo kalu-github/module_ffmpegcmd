@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
         TextView textView = findViewById(R.id.info);
         textView.setText("ffmpeg: " + version);
 
+        String avCodecs = FFmpeg.getAVCodecs();
+        Log.e("ABI", "avCodecs = " + avCodecs);
+
         new Thread(new Runnable() {
             @Override
             public void run() {

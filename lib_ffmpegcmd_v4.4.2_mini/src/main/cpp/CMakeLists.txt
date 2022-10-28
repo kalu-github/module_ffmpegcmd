@@ -19,6 +19,7 @@ set_target_properties(ffmpegcmd-lib
 include_directories(
         ffmpegcmd
         include
+        include/${ANDROID_ABI}
 )
 
 

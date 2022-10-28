@@ -46,6 +46,7 @@ android {
             path file('src/main/cpp/CMakeLists.txt')
         }
     }
+    namespace 'lib.kalu.ffmpegcmd'
 
 //    sourceSets {
 //        main {

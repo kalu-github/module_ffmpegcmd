@@ -18,8 +18,8 @@ set_target_properties(ffmpegcmd-lib
 
 include_directories(
         ffmpegcmd
-        cmdutilt/api_cmd.h
         include
+        include/${ANDROID_ABI}
 )
 
 

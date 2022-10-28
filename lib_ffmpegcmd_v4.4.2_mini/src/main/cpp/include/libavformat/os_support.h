@@ -27,7 +27,7 @@
  * miscellaneous OS support macros and functions.
  */
 
-#include "config.h"
+#include "armeabi-v7a/config.h"
 
 #include <sys/stat.h>
 

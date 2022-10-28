@@ -37,7 +37,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <assert.h>
-#include "config.h"
+#include "armeabi-v7a/config.h"
 #include "attributes.h"
 #include "ffmpeg_time.h"
 #include "cpu.h"

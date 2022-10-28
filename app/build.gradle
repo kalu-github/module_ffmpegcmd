@@ -33,6 +33,7 @@ android {
             minifyEnabled false
         }
     }
+    namespace 'com.kalu.ffmpeg'
 }
 
 repositories {

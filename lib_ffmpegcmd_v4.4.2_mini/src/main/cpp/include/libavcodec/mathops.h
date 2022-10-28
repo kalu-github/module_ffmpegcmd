@@ -26,7 +26,7 @@
 
 #include "libavutil/common.h"
 #include "libavutil/reverse.h"
-#include "config.h"
+#include "armeabi-v7a/config.h"
 
 #define MAX_NEG_CROP 1024
 
