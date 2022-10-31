@@ -11,7 +11,7 @@ bool hasRegistered = false;
 int executeCommand(int64_t handle, const char *command,
                                    void (*callback)(int64_t, int, float),
                                    int64_t totalTime) {
-    av_log(NULL, AV_LOG_ERROR, "executeCommand => command = %s", command);
+    av_log(NULL, AV_LOG_ERROR, "executeJNI => command = %s", command);
 
     if (NULL == command) {
         return -1;

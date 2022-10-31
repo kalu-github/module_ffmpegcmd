@@ -36,23 +36,18 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        String CPU_ABI = android.os.Build.CPU_ABI;//查看Android设备的ABI
-        Log.e("ABI", "CPU_ABI = " + CPU_ABI);
-
         FFmpeg.setLogger(true);
-        String version = FFmpeg.getVersion();
-        TextView textView = findViewById(R.id.info);
-        textView.setText("ffmpeg: " + version);
 
-        String avCodecs = FFmpeg.getAVCodecs();
-        Log.e("ABI", "avCodecs = " + avCodecs);
+        String version = FFmpeg.getVersion();
+        ((TextView) findViewById(R.id.ffmpeg_version)).setText(version);
+        String information = FFmpeg.getInformation();
+        ((TextView) findViewById(R.id.information_version)).setText(information);
+        String details = FFmpeg.getDetails();
+        ((TextView) findViewById(R.id.details_version)).setText(details);
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-
-                FFmpeg.setLogger(true);
 
                 // 1
                 init();
@@ -96,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
             @Override
             public void onClick(View view) {
                 String path = getCacheDir().getAbsolutePath() + "/null_" + System.nanoTime() + ".mp3";
-                FFmpegUtils.createNullMusic(300.456F, path);
+                FFmpegUtils.createNullMusic(getApplicationContext(), 300.456F, path);
             }
         });
 
@@ -430,7 +425,7 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
     @Override
     public boolean handleMessage(@NonNull Message msg) {
         if (msg.what == 1000) {
-            TextView textView = findViewById(R.id.info);
+            TextView textView = findViewById(R.id.ffmpeg_version);
             textView.setText("进度 => " + msg.arg1);
         }
         return false;

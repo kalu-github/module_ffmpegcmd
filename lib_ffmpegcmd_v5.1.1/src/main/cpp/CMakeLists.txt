@@ -28,7 +28,8 @@ add_library( # Sets the name of the library.
 
         SHARED
 
-        ffmpegcmd/api_main.c;
+        ffmpegcmd/api_execute.c;
+        ffmpegcmd/api_version.c;
         ffmpegcmd/api_cmd.c;
         ffmpegcmd/ffmpeg_hw.c;
         ffmpegcmd/cmdutils.c;

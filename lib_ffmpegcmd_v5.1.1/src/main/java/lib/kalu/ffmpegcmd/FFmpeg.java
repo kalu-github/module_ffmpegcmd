@@ -1,20 +1,11 @@
 package lib.kalu.ffmpegcmd;
 
-import android.util.Log;
-
 import androidx.annotation.Keep;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 @Keep
 public final class FFmpeg {
-
-    private static final String TAG = "ffmpeg-cmd-java";
-    private static boolean ENABLE = false;
 
     static {
         System.loadLibrary("ffmpegcmd");
@@ -23,63 +14,26 @@ public final class FFmpeg {
 
     /*****************/
 
-    private static native int setLoggerJNI(boolean enable);
+    public static native String getVersion();
 
-    private static native long getDurationJNI(String mediaPath);
+    public static native String getInformation();
 
-    private static native int cancelJNI();
-
-    private static native int executeJNI(String command, long totalTime, OnFFmpegChangeListener listener);
-
-    private static native String getVersionJNI();
-
-    private static native String getAVInputFormatsJNI();
-
-    private static native String getAVCodecsJNI();
-
-    private static native String getProtocolsJNI();
-
-    private static native String getFiltersJNI();
-
-    private static native String getBSFJNI();
+    public static native String getDetails();
 
     /*****************/
 
-    public static String getVersion() {
-        return getVersionJNI();
-    }
+    public static native int setLogger(boolean enable);
 
-    public static String getAVInputFormats() {
-        return getAVInputFormatsJNI();
-    }
+    public static native long getDuration(String mediaPath);
 
-    public static String getAVCodecs() {
-        return getAVCodecsJNI();
-    }
+    public static native int cancel();
 
-    public static String getProtocols() {
-        return getProtocolsJNI();
-    }
+    private static native int execute(String command, long totalTime, OnFFmpegChangeListener listener);
 
-    public static String getBSF() {
-        return getBSFJNI();
-    }
+    /*****************/
 
-    public static String getFilters() {
-        return getFiltersJNI();
-    }
-
-    public static int setLogger(boolean v) {
-        ENABLE = v;
-        return setLoggerJNI(ENABLE);
-    }
-
-    public static long getDuration(String v) {
-        return getDurationJNI(v);
-    }
-
-    public static int cancle() {
-        return cancelJNI();
+    public static String getABI() {
+        return android.os.Build.CPU_ABI;
     }
 
     public static int executeCmd(List<String> list) {
@@ -121,9 +75,7 @@ public final class FFmpeg {
     }
 
     public static int executeCmd(String command, long totalTime, OnFFmpegChangeListener listener) {
-        if (ENABLE) {
-            Log.e(TAG, "executeCmd => " + command);
-        }
-        return executeJNI(command, totalTime, listener);
+        cancel();
+        return execute(command, totalTime, listener);
     }
 }

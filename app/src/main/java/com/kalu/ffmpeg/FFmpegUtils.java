@@ -1,9 +1,12 @@
 package com.kalu.ffmpeg;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import java.io.Console;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +19,7 @@ import lib.kalu.ffmpegcmd.OnFFmpegChangeListener;
 
 public final class FFmpegUtils {
 
-    public static boolean createNullMusic(@NonNull float second, @NonNull String savePath) {
+    public static boolean createNullMusic(Context context, @NonNull float second, @NonNull String savePath) {
         try {
             Log.e("FFmpegUtils", "createNullMusic[1] => second = " + second + ", savePath = " + savePath);
 
@@ -43,27 +46,26 @@ public final class FFmpegUtils {
 
                 @Override
                 public void start() {
-                    Log.e("FFmpegUtils", "start =>");
+                    Toast.makeText(context, "开始", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void complete() {
-                    Log.e("FFmpegUtils", "complete =>");
                 }
 
                 @Override
                 public void progress(float progress) {
-                    Log.e("FFmpegUtils", "progress =>");
+                    Log.e("FFmpegUtils", "progress => progress = "+progress);
                 }
 
                 @Override
                 public void fail() {
-                    Log.e("FFmpegUtils", "fail =>");
+                    Toast.makeText(context, "失败", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void success() {
-                    Log.e("FFmpegUtils", "success =>");
+                    Toast.makeText(context, "成功", Toast.LENGTH_SHORT).show();
                 }
             });
             if (execute != 0)

@@ -6,19 +6,62 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-    <TextView
-        android:id="@+id/info"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@android:color/darker_gray"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:gravity="center"
-        android:lineHeight="24dp"
-        android:text="信息"
-        android:textColor="@android:color/white"
-        android:textSize="14sp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical|left"
+            android:padding="10dp"
+            android:text="FFmpeg版本"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/ffmpeg_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical|left"
+            android:padding="10dp"
+            android:text="-"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/information_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical|left"
+            android:padding="10dp"
+            android:text="-"
+            android:textColor="#ffffff" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/details_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:padding="10dp"
+                android:text="-"
+                android:textColor="#ffffff" />
+
+        </ScrollView>
+
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -42,9 +85,9 @@
         android:id="@+id/button_create_null_mp3"
         android:layout_width="match_parent"
         android:layout_height="45dp"
+        android:layout_marginTop="10dp"
         android:background="@android:color/darker_gray"
         android:focusable="true"
-        android:layout_marginTop="10dp"
         android:focusableInTouchMode="true"
         android:text="生成5min空白MP3"
         android:textColor="@android:color/white"
