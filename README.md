@@ -21,6 +21,14 @@ deepin + gcc + ndk14b + ffmepg
 ```
 
 #
+#### 编译方法
+```
+1. apt-get update、apt-get install git、apt-get install yasm
+2. ./configure
+3. ./*.sh
+```
+
+#
 #### 已知问题
 ```
 1. 5.1.1版本不支持 -f -lavfi命令【编译问题 => ？？】
