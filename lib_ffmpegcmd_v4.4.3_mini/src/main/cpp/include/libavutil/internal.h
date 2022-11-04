@@ -39,7 +39,6 @@
 #include <assert.h>
 #include "config.h"
 #include "attributes.h"
-#include "ffmpeg_time.h"
 #include "cpu.h"
 #include "dict.h"
 #include "macros.h"

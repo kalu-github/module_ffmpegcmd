@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
 
+    namespace 'lib.kalu.ffmpegcmd'
     compileSdkVersion 31
     buildToolsVersion "31.0.0"
 
@@ -11,13 +12,16 @@ android {
 
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++11"
                 version "3.18.1"
+//                cppFlags "-std=c++11"
+                abiFilters 'armeabi-v7a','arm64-v8a'
+//                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
             }
-            ndk {
-                abiFilters 'armeabi-v7a'
-//                abiFilters 'armeabi-v7a','arm64-v8a'
-            }
+        }
+
+        ndk {
+            abiFilters 'armeabi-v7a','arm64-v8a'
+//            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
         }
     }
 
@@ -41,17 +45,6 @@ android {
             path file('src/main/cpp/CMakeLists.txt')
         }
     }
-    namespace 'lib.kalu.ffmpegcmd'
-
-//    sourceSets {
-//        main {
-//            jniLibs.srcDirs = ["libs"]
-//        }
-//    }
-//
-//    packagingOptions {
-//        pickFirst 'lib/armeabi-v7a/libavcodec.so'
-//    }
 }
 
 dependencies {

@@ -17,9 +17,9 @@ set_target_properties(ffmpegcmd-lib
         libffmpegcmd.so)
 
 include_directories(
-        ffmpegcmd
         include
-        include/${ANDROID_ABI}
+        ffmpegcmd
+        config/${ANDROID_ABI}
 )
 
 

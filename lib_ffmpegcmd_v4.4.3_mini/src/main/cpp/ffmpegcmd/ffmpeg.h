@@ -19,7 +19,7 @@
 #ifndef FFTOOLS_FFMPEG_H
 #define FFTOOLS_FFMPEG_H
 
-#include "armeabi-v7a/config.h"
+//#include "config/armeabi-v7a/config.h"
 
 #include <stdint.h>
 #include <stdio.h>

@@ -24,7 +24,7 @@
 
 #include <stdint.h>
 
-#include "armeabi-v7a/config.h"
+#include "../config/armeabi-v7a/config.h"
 #include "libavcodec/avcodec.h"
 #include "libavfilter/avfilter.h"
 #include "libavformat/avformat.h"

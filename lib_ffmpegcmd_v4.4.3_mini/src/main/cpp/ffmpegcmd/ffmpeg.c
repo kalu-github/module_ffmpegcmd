@@ -23,7 +23,7 @@
  * multimedia converter based on the FFmpeg libraries
  */
 
-#include "armeabi-v7a/config.h"
+#include "../config/armeabi-v7a/config.h"
 #include <ctype.h>
 #include <string.h>
 #include <math.h>
