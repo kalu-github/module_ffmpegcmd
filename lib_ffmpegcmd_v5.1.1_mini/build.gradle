@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+
+android {
+
+//    compileSdkVersion 29
+    compileSdkVersion 31
+    buildToolsVersion "31.0.0"
+
+//    compileOptions.encoding = "UTF-8"
+//    ndkPath "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499"
+//    ndkVersion "16.1.4479499"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 31
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+                version "3.18.1"
+            }
+            ndk {
+                abiFilters 'armeabi-v7a'
+//                abiFilters 'armeabi-v7a','arm64-v8a'
+            }
+        }
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all {
+            def type = new String(buildType.name).toLowerCase()
+            def time = new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+08"))
+            outputFileName = "lib_ffmpegcmd_v5.1.1_mini_" + type + "_" + time + ".aar"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ["libs"]
+//        }
+//    }
+//
+//    packagingOptions {
+//        pickFirst 'lib/armeabi-v7a/libavcodec.so'
+//    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+}

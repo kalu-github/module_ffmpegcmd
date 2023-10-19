@@ -1,0 +1,8 @@
+include ':app'
+include ':lib_ffmpegcmd_v4.4.4_mini'
+//include ':lib_ffmpegcmd_v4.4.3_mini'
+//include ':lib_ffmpegcmd_v4.4.3_lite'
+//include ':lib_ffmpegcmd_v4.4.2'
+//include ':lib_ffmpegcmd_v4.4.2_mini'
+//include ':lib_ffmpegcmd_v5.1.1'
+//include ':lib_ffmpegcmd_v5.1.1_mini'

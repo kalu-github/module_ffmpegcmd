@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 31
+    buildToolsVersion "31.0.0"
+
+    defaultConfig {
+        applicationId "com.kalu.ffmpeg"
+        minSdkVersion 19
+        targetSdkVersion 31
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi-v7a'
+//            abiFilters 'arm64-v8a'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            shrinkResources true
+            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+        }
+        debug {
+            zipAlignEnabled true
+            shrinkResources true
+            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+        }
+    }
+    namespace 'com.kalu.ffmpeg'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation files('libs/lib_ffmpegcmd_v4.4.4_mini_release_20231017.aar')
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.code.gson:gson:2.9.1'
+}
