@@ -16,13 +16,15 @@ android {
                 cppFlags "-Wl,-Bsymbolic"
                 version "3.18.1"
 //                abiFilters 'armeabi-v7a'
-                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
+//                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
             }
         }
 
         ndk {
 //            abiFilters 'armeabi-v7a'
-            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
+//            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
         }
     }
 
