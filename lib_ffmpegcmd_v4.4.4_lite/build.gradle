@@ -3,25 +3,27 @@ apply plugin: 'com.android.library'
 android {
 
     namespace 'lib.kalu.ffmpegcmd'
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 31
+        minSdkVersion 21
+        targetSdkVersion 34
 
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"
                 cppFlags "-Wl,-Bsymbolic"
                 version "3.18.1"
-                abiFilters 'armeabi-v7a', 'arm64-v8a'
+//                abiFilters 'armeabi-v7a'
+                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
 //                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
             }
         }
 
         ndk {
-            abiFilters 'armeabi-v7a', 'arm64-v8a'
+//            abiFilters 'armeabi-v7a'
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
 //            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
         }
     }
