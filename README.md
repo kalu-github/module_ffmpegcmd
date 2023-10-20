@@ -3,7 +3,7 @@
 ```
 **_full.aar => ffmpeg+lamemp3+x246[全量]
 **_lite.aar => ffmpeg+lamemp3+x246[精简]
-**_full.aar => ffmpeg+lamemp3
+**_full.aar => ffmpeg+lamemp3[精简]
 ```
 
 #
