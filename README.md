@@ -7,18 +7,6 @@
 ```
 
 #
-#### libffmepgcmd.so编译源码
-```
-https://github.com/kalu-github/ffmpegcmd_android_build
-```
-
-#
-#### 编译环境
-```
-deepin + ndk14b
-```
-
-#
 #### 更新记录
 ```
 2023-10-20
