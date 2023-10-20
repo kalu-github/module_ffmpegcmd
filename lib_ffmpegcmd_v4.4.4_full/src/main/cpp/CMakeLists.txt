@@ -46,7 +46,7 @@ add_library( # Sets the name of the library.
         ${ffmpegcmd-sources})
 
 # ffmpeg-libx264
-configure_file(${CMAKE_SOURCE_DIR}/lame/${ANDROID_ABI}/lib/libx264.a ${Project_BINARY_DIR}/libx264.a COPYONLY)
+configure_file(${CMAKE_SOURCE_DIR}/x264/${ANDROID_ABI}/lib/libx264.a ${Project_BINARY_DIR}/libx264.a COPYONLY)
 add_library(ffmpeg-libx264
         STATIC
         IMPORTED)
