@@ -1,4 +1,12 @@
 #
+#### 说明
+```
+**_full.aar => ffmpeg+lamemp3+x246[全量]
+**_lite.aar => ffmpeg+lamemp3+x246[精简]
+**_full.aar => ffmpeg+lamemp3
+```
+
+#
 #### libffmepgcmd.so编译源码
 ```
 https://github.com/kalu-github/ffmpegcmd_android_build
