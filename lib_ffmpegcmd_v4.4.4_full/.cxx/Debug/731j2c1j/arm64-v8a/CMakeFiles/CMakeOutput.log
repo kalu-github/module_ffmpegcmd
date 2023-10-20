@@ -1,0 +1,291 @@
+The target system is: Android - 1 - aarch64
+The host system is: Windows - 10.0.19044 - AMD64
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_full/.cxx/Debug/731j2c1j/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:\Users\kalu\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_5c7c3 && [1/2] Building C object CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o
+Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)
+Target: aarch64-none-linux-android21
+Thread model: posix
+InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android\4.9.x
+Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe" -cc1 -triple aarch64-none-linux-android21 -emit-obj -mrelax-all -mnoexecstack -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu generic -target-feature +neon -target-abi aapcs -mllvm -aarch64-fix-cortex-a53-835769=1 -fallow-half-arguments-and-returns -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -coverage-notes-file "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_full\\.cxx\\Debug\\731j2c1j\\arm64-v8a\\CMakeFiles\\CMakeTmp\\CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.gcno" -resource-dir "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2" -dependency-file "CMakeFiles\\cmTC_5c7c3.dir\\CMakeCCompilerABI.c.o.d" -sys-header-deps -MT CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o -D ANDROID -isysroot C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-isystem "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\include" -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_full\\.cxx\\Debug\\731j2c1j\\arm64-v8a\\CMakeFiles\\CMakeTmp" -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fno-signed-char -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o -x c C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCCompilerABI.c
+clang -cc1 version 8.0.2 based upon LLVM 8.0.2svn default target x86_64-w64-windows-gnu
+ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include
+ C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\8.0.2\include
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include
+End of search list.
+[2/2] Linking C executable cmTC_5c7c3
+Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)
+Target: aarch64-none-linux-android21
+Thread model: posix
+InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android\4.9.x
+Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin\\ld" --sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_5c7c3 "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtbegin_dynamic.o" "-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64" -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtend_android.o"
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/include]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  end of search list found
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/include]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  implicit include dirs: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/include;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(aarch64-linux-android-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_full/.cxx/Debug/731j2c1j/arm64-v8a/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):C:\Users\kalu\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_5c7c3 && [1/2] Building C object CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)]
+  ignore line: [Target: aarch64-none-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android\4.9.x]
+  ignore line: [Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe" -cc1 -triple aarch64-none-linux-android21 -emit-obj -mrelax-all -mnoexecstack -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu generic -target-feature +neon -target-abi aapcs -mllvm -aarch64-fix-cortex-a53-835769=1 -fallow-half-arguments-and-returns -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -coverage-notes-file "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_full\\.cxx\\Debug\\731j2c1j\\arm64-v8a\\CMakeFiles\\CMakeTmp\\CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.gcno" -resource-dir "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2" -dependency-file "CMakeFiles\\cmTC_5c7c3.dir\\CMakeCCompilerABI.c.o.d" -sys-header-deps -MT CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o -D ANDROID -isysroot C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-isystem "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\include" -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_full\\.cxx\\Debug\\731j2c1j\\arm64-v8a\\CMakeFiles\\CMakeTmp" -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fno-signed-char -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o -x c C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 8.0.2 based upon LLVM 8.0.2svn default target x86_64-w64-windows-gnu]
+  ignore line: [ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+  ignore line: [ C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\8.0.2\include]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking C executable cmTC_5c7c3]
+  ignore line: [Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)]
+  ignore line: [Target: aarch64-none-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android\4.9.x]
+  ignore line: [Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin\\ld" --sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_5c7c3 "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtbegin_dynamic.o" "-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64" -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtend_android.o"]
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin\\ld] ==> ignore
+    arg [--sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [--fix-cortex-a53-843419] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_5c7c3] ==> ignore
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtbegin_dynamic.o] ==> ignore
+    arg [-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64] ==> dir [C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+    arg [--exclude-libs] ==> ignore
+    arg [libgcc.a] ==> ignore
+    arg [--exclude-libs] ==> ignore
+    arg [libatomic.a] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_5c7c3.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtend_android.o] ==> ignore
+  collapse library dir [C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/lib/linux/aarch64]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/aarch64-linux-android/lib64]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/aarch64-linux-android/lib]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+  implicit libs: [gcc;dl;c;gcc;dl]
+  implicit dirs: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/lib/linux/aarch64;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/aarch64-linux-android/lib64;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/aarch64-linux-android/lib;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_full/.cxx/Debug/731j2c1j/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:\Users\kalu\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_bd752 && [1/2] Building CXX object CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o
+Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)
+Target: aarch64-none-linux-android21
+Thread model: posix
+InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android\4.9.x
+Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+clang++.exe: warning: -Wl,-Bsymbolic: 'linker' input unused [-Wunused-command-line-argument]
+ "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe" -cc1 -triple aarch64-none-linux-android21 -emit-obj -mrelax-all -mnoexecstack -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu generic -target-feature +neon -target-abi aapcs -mllvm -aarch64-fix-cortex-a53-835769=1 -fallow-half-arguments-and-returns -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -coverage-notes-file "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_full\\.cxx\\Debug\\731j2c1j\\arm64-v8a\\CMakeFiles\\CMakeTmp\\CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.gcno" -resource-dir "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2" -dependency-file "CMakeFiles\\cmTC_bd752.dir\\CMakeCXXCompilerABI.cpp.o.d" -sys-header-deps -MT CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o -D ANDROID -isysroot C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-isystem "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\include" -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -std=c++11 -fdeprecated-macro -fdebug-compilation-dir "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_full\\.cxx\\Debug\\731j2c1j\\arm64-v8a\\CMakeFiles\\CMakeTmp" -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fno-signed-char -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 8.0.2 based upon LLVM 8.0.2svn default target x86_64-w64-windows-gnu
+ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include
+ C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\8.0.2\include
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include
+End of search list.
+[2/2] Linking CXX executable cmTC_bd752
+Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)
+Target: aarch64-none-linux-android21
+Thread model: posix
+InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android\4.9.x
+Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin\\ld" --sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_bd752 "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtbegin_dynamic.o" "-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64" -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib -Bsymbolic --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtend_android.o"
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/include]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  end of search list found
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/include]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  implicit include dirs: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/include;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(aarch64-linux-android-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_full/.cxx/Debug/731j2c1j/arm64-v8a/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):C:\Users\kalu\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_bd752 && [1/2] Building CXX object CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)]
+  ignore line: [Target: aarch64-none-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android\4.9.x]
+  ignore line: [Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [clang++.exe: warning: -Wl -Bsymbolic: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe" -cc1 -triple aarch64-none-linux-android21 -emit-obj -mrelax-all -mnoexecstack -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu generic -target-feature +neon -target-abi aapcs -mllvm -aarch64-fix-cortex-a53-835769=1 -fallow-half-arguments-and-returns -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -coverage-notes-file "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_full\\.cxx\\Debug\\731j2c1j\\arm64-v8a\\CMakeFiles\\CMakeTmp\\CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.gcno" -resource-dir "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2" -dependency-file "CMakeFiles\\cmTC_bd752.dir\\CMakeCXXCompilerABI.cpp.o.d" -sys-header-deps -MT CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o -D ANDROID -isysroot C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-isystem "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\include" -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -std=c++11 -fdeprecated-macro -fdebug-compilation-dir "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_full\\.cxx\\Debug\\731j2c1j\\arm64-v8a\\CMakeFiles\\CMakeTmp" -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fno-signed-char -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 8.0.2 based upon LLVM 8.0.2svn default target x86_64-w64-windows-gnu]
+  ignore line: [ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include]
+  ignore line: [ C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\8.0.2\include]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking CXX executable cmTC_bd752]
+  ignore line: [Android (5058415 based on r339409) clang version 8.0.2 (https://android.googlesource.com/toolchain/clang 40173bab62ec746213857d083c0e8b0abb568790) (https://android.googlesource.com/toolchain/llvm 7a6618d69e7e8111e1d49dc9e7813767c5ca756a) (based on LLVM 8.0.2svn)]
+  ignore line: [Target: aarch64-none-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\19.2.5345600\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android\4.9.x]
+  ignore line: [Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin\\ld" --sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --fix-cortex-a53-843419 --enable-new-dtags --eh-frame-hdr -m aarch64linux -dynamic-linker /system/bin/linker64 -o cmTC_bd752 "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtbegin_dynamic.o" "-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64" -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21 -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib -Bsymbolic --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtend_android.o"]
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/bin\\ld] ==> ignore
+    arg [--sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [--fix-cortex-a53-843419] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_bd752] ==> ignore
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtbegin_dynamic.o] ==> ignore
+    arg [-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64] ==> dir [C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+    arg [-Bsymbolic] ==> ignore
+    arg [--exclude-libs] ==> ignore
+    arg [libgcc.a] ==> ignore
+    arg [--exclude-libs] ==> ignore
+    arg [libatomic.a] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_bd752.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-Bstatic] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-Bdynamic] ==> ignore
+    arg [-lm] ==> lib [m]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21\\crtend_android.o] ==> ignore
+  collapse library dir [C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\19.2.5345600\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\8.0.2\\lib\\linux\\aarch64] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/lib/linux/aarch64]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/aarch64-linux-android/lib64]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/aarch64-linux-android/lib]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+  implicit libs: [c++;m;gcc;gcc;dl;c;gcc;gcc;dl]
+  implicit dirs: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/8.0.2/lib/linux/aarch64;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/lib/gcc/aarch64-linux-android/4.9.x;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/aarch64-linux-android/lib64;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/21;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/aarch64-linux-android/lib;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/19.2.5345600/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib]
+  implicit fwks: []
+
+

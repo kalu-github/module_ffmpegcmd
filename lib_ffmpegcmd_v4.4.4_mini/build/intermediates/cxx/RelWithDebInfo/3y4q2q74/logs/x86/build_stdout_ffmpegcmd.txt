@@ -1,0 +1,10 @@
+ninja: Entering directory `D:\Android\Huan_Component\ffmpeg_command\lib_ffmpegcmd_v4.4.4_mini\.cxx\RelWithDebInfo\3y4q2q74\x86'
+[1/9] Building C object CMakeFiles/ffmpegcmd.dir/cmd/api_cmd.c.o
+[2/9] Building C object CMakeFiles/ffmpegcmd.dir/cmd/api_execute.c.o
+[3/9] Building C object CMakeFiles/ffmpegcmd.dir/cmd/api_version.c.o
+[4/9] Building C object CMakeFiles/ffmpegcmd.dir/cmd/ffmpeg_hw.c.o
+[5/9] Building C object CMakeFiles/ffmpegcmd.dir/cmd/ffmpeg_filter.c.o
+[6/9] Building C object CMakeFiles/ffmpegcmd.dir/cmd/cmdutils.c.o
+[7/9] Building C object CMakeFiles/ffmpegcmd.dir/cmd/ffmpeg_opt.c.o
+[8/9] Building C object CMakeFiles/ffmpegcmd.dir/cmd/ffmpeg.c.o
+[9/9] Linking C shared library D:\Android\Huan_Component\ffmpeg_command\lib_ffmpegcmd_v4.4.4_mini\build\intermediates\cxx\RelWithDebInfo\3y4q2q74\obj\x86\libffmpegcmd.so

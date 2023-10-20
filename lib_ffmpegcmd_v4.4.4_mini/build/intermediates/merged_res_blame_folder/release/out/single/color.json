@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_tint_spinner.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_primary_text_material_light.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_tint_edittext.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_hint_foreground_material_light.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_tint_seek_thumb.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_background_cache_hint_selector_material_light.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_secondary_text_material_dark.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_search_url_text.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/switch_thumb_material_dark.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_tint_default.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_primary_text_material_dark.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_btn_colored_text_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/switch_thumb_material_light.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_secondary_text_material_light.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_tint_switch_track.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_hint_foreground_material_dark.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/color/abc_tint_btn_checkable.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/color/abc_tint_btn_checkable.xml"
+    }
+]

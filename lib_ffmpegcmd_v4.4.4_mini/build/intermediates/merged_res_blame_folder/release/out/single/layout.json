@@ -1,0 +1,142 @@
+[
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_action_bar_up_container.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_action_mode_bar.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_popup_menu_item_layout.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_list_menu_item_radio.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_select_dialog_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/select_dialog_multichoice_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_alert_dialog_title_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/notification_template_part_chronometer.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-core-1.7.0-3:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_action_menu_item_layout.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/custom_dialog.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-core-1.7.0-3:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_action_bar_title_item.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_action_mode_close_item_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_list_menu_item_layout.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_list_menu_item_checkbox.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_alert_dialog_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_dialog_title_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_expanded_menu_layout.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/select_dialog_item_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_screen_simple.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_screen_toolbar.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_screen_content_include.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/select_dialog_singlechoice_material.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_search_view.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_list_menu_item_icon.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_activity_chooser_view.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_action_menu_layout.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_cascading_menu_item_layout.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_cascading_menu_item_layout.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/abc_tooltip.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-appcompat-1.4.0-11:/layout/abc_tooltip.xml"
+    },
+    {
+        "merged": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/layout/notification_template_part_time.xml",
+        "source": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-core-1.7.0-3:/layout/notification_template_part_time.xml"
+    }
+]

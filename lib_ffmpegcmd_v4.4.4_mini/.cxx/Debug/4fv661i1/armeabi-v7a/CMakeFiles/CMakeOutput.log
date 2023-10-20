@@ -1,0 +1,335 @@
+The target system is: Android - 1 - armv7-a
+The host system is: Windows - 10.0.19044 - AMD64
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_mini/.cxx/Debug/4fv661i1/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:\Users\kalu\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_09758 && [1/2] Building C object CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o
+Android clang version 5.0.300080  (based on LLVM 5.0.300080)
+Target: armv7-none-linux-android
+Thread model: posix
+InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi\4.9.x
+Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x
+Candidate multilib: thumb;@thumb
+Candidate multilib: armv7-a;@armv7
+Candidate multilib: armv7-a/thumb;@armv7@thumb
+Candidate multilib: .;
+Selected multilib: armv7-a/thumb;@armv7@thumb
+ "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe" -cc1 -triple thumbv7-none-linux-android -S -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -no-integrated-as -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu cortex-a8 -target-feature +soft-float-abi -target-feature -fp-only-sp -target-feature +d16 -target-feature +vfp3 -target-feature -fp16 -target-feature -vfp4 -target-feature -fp-armv8 -target-feature -neon -target-feature -crypto -target-abi aapcs-linux -mfloat-abi soft -target-linker-version 2.24 -v -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -ffunction-sections -coverage-notes-file "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_mini\\.cxx\\Debug\\4fv661i1\\armeabi-v7a\\CMakeFiles\\CMakeTmp\\CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.gcno" -resource-dir "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080" -dependency-file "CMakeFiles\\cmTC_09758.dir\\CMakeCCompilerABI.c.o.d" -sys-header-deps -MT CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi -D __ANDROID_API__=21 -D ANDROID -isysroot C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/local/include -internal-isystem "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\include" -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/include -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include -Wformat -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_mini\\.cxx\\Debug\\4fv661i1\\armeabi-v7a\\CMakeFiles\\CMakeTmp" -ferror-limit 19 -fmessage-length 0 -femulated-tls -stack-protector 2 -fallow-half-arguments-and-returns -fno-signed-char -fobjc-runtime=gcc -fdiagnostics-show-option -o "C:\\Users\\kalu\\AppData\\Local\\Temp\\CMakeCCompilerABI-85c611.s" -x c C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCCompilerABI.c
+clang -cc1 version 5.0.300080 based upon LLVM 5.0.300080 default target x86_64-unknown-linux
+ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/local/include"
+ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi
+ C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\5.0.300080\include
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include
+End of search list.
+ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\as" -mfpu=neon -mfloat-abi=softfp -march=armv7-a -mfpu=vfpv3-d16 --noexecstack -o CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o "C:\\Users\\kalu\\AppData\\Local\\Temp\\CMakeCCompilerABI-85c611.s"
+[2/2] Linking C executable cmTC_09758
+Android clang version 5.0.300080  (based on LLVM 5.0.300080)
+Target: armv7-none-linux-android
+Thread model: posix
+InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi\4.9.x
+Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x
+Candidate multilib: thumb;@thumb
+Candidate multilib: armv7-a;@armv7
+Candidate multilib: armv7-a/thumb;@armv7@thumb
+Candidate multilib: .;
+Selected multilib: armv7-a/thumb;@armv7@thumb
+ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\ld" --sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_09758 "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtbegin_dynamic.o" "-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm" -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtend_android.o"
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/include]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include]
+  end of search list found
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/include]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include]
+  implicit include dirs: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/include;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_mini/.cxx/Debug/4fv661i1/armeabi-v7a/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):C:\Users\kalu\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_09758 && [1/2] Building C object CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Android clang version 5.0.300080  (based on LLVM 5.0.300080)]
+  ignore line: [Target: armv7-none-linux-android]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi\4.9.x]
+  ignore line: [Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [Candidate multilib: thumb]
+  ignore line: [@thumb]
+  ignore line: [Candidate multilib: armv7-a]
+  ignore line: [@armv7]
+  ignore line: [Candidate multilib: armv7-a/thumb]
+  ignore line: [@armv7@thumb]
+  ignore line: [Candidate multilib: .]
+  ignore line: []
+  ignore line: [Selected multilib: armv7-a/thumb]
+  ignore line: [@armv7@thumb]
+  ignore line: [ "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe" -cc1 -triple thumbv7-none-linux-android -S -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -no-integrated-as -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu cortex-a8 -target-feature +soft-float-abi -target-feature -fp-only-sp -target-feature +d16 -target-feature +vfp3 -target-feature -fp16 -target-feature -vfp4 -target-feature -fp-armv8 -target-feature -neon -target-feature -crypto -target-abi aapcs-linux -mfloat-abi soft -target-linker-version 2.24 -v -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -ffunction-sections -coverage-notes-file "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_mini\\.cxx\\Debug\\4fv661i1\\armeabi-v7a\\CMakeFiles\\CMakeTmp\\CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.gcno" -resource-dir "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080" -dependency-file "CMakeFiles\\cmTC_09758.dir\\CMakeCCompilerABI.c.o.d" -sys-header-deps -MT CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi -D __ANDROID_API__=21 -D ANDROID -isysroot C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/local/include -internal-isystem "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\include" -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/include -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include -Wformat -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_mini\\.cxx\\Debug\\4fv661i1\\armeabi-v7a\\CMakeFiles\\CMakeTmp" -ferror-limit 19 -fmessage-length 0 -femulated-tls -stack-protector 2 -fallow-half-arguments-and-returns -fno-signed-char -fobjc-runtime=gcc -fdiagnostics-show-option -o "C:\\Users\\kalu\\AppData\\Local\\Temp\\CMakeCCompilerABI-85c611.s" -x c C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 5.0.300080 based upon LLVM 5.0.300080 default target x86_64-unknown-linux]
+  ignore line: [ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi]
+  ignore line: [ C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\5.0.300080\include]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\as" -mfpu=neon -mfloat-abi=softfp -march=armv7-a -mfpu=vfpv3-d16 --noexecstack -o CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o "C:\\Users\\kalu\\AppData\\Local\\Temp\\CMakeCCompilerABI-85c611.s"]
+  ignore line: [[2/2] Linking C executable cmTC_09758]
+  ignore line: [Android clang version 5.0.300080  (based on LLVM 5.0.300080)]
+  ignore line: [Target: armv7-none-linux-android]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi\4.9.x]
+  ignore line: [Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [Candidate multilib: thumb]
+  ignore line: [@thumb]
+  ignore line: [Candidate multilib: armv7-a]
+  ignore line: [@armv7]
+  ignore line: [Candidate multilib: armv7-a/thumb]
+  ignore line: [@armv7@thumb]
+  ignore line: [Candidate multilib: .]
+  ignore line: []
+  ignore line: [Selected multilib: armv7-a/thumb]
+  ignore line: [@armv7@thumb]
+  link line: [ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\ld" --sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_09758 "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtbegin_dynamic.o" "-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm" -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtend_android.o"]
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\ld] ==> ignore
+    arg [--sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-X] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_09758] ==> ignore
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtbegin_dynamic.o] ==> ignore
+    arg [-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm] ==> dir [C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+    arg [--exclude-libs] ==> ignore
+    arg [libgcc.a] ==> ignore
+    arg [--exclude-libs] ==> ignore
+    arg [libatomic.a] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--fix-cortex-a8] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [-znocopyreloc] ==> ignore
+    arg [CMakeFiles/cmTC_09758.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtend_android.o] ==> ignore
+  collapse library dir [C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/lib/linux/arm]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a/thumb]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a/thumb]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+  implicit libs: [gcc;dl;c;gcc;dl]
+  implicit dirs: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/lib/linux/arm;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a/thumb;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_mini/.cxx/Debug/4fv661i1/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:\Users\kalu\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_f880a && [1/2] Building CXX object CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o
+Android clang version 5.0.300080  (based on LLVM 5.0.300080)
+Target: armv7-none-linux-android
+Thread model: posix
+InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi\4.9.x
+Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x
+Candidate multilib: thumb;@thumb
+Candidate multilib: armv7-a;@armv7
+Candidate multilib: armv7-a/thumb;@armv7@thumb
+Candidate multilib: .;
+Selected multilib: armv7-a/thumb;@armv7@thumb
+clang++.exe: warning: -Wl,-Bsymbolic: 'linker' input unused [-Wunused-command-line-argument]
+ "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe" -cc1 -triple thumbv7-none-linux-android -S -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -no-integrated-as -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu cortex-a8 -target-feature +soft-float-abi -target-feature -fp-only-sp -target-feature +d16 -target-feature +vfp3 -target-feature -fp16 -target-feature -vfp4 -target-feature -fp-armv8 -target-feature -neon -target-feature -crypto -target-abi aapcs-linux -mfloat-abi soft -target-linker-version 2.24 -v -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -ffunction-sections -coverage-notes-file "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_mini\\.cxx\\Debug\\4fv661i1\\armeabi-v7a\\CMakeFiles\\CMakeTmp\\CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.gcno" -resource-dir "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080" -dependency-file "CMakeFiles\\cmTC_f880a.dir\\CMakeCXXCompilerABI.cpp.o.d" -sys-header-deps -MT CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi -D __ANDROID_API__=21 -D ANDROID -isysroot C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/local/include -internal-isystem "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\include" -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/include -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include -Wformat -std=c++11 -fdeprecated-macro -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_mini\\.cxx\\Debug\\4fv661i1\\armeabi-v7a\\CMakeFiles\\CMakeTmp" -ferror-limit 19 -fmessage-length 0 -femulated-tls -stack-protector 2 -fallow-half-arguments-and-returns -fno-signed-char -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o "C:\\Users\\kalu\\AppData\\Local\\Temp\\CMakeCXXCompilerABI-813405.s" -x c++ C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 5.0.300080 based upon LLVM 5.0.300080 default target x86_64-unknown-linux
+ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/local/include"
+ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include/backward
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi
+ C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\5.0.300080\include
+ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include
+End of search list.
+ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\as" -mfpu=neon -mfloat-abi=softfp -march=armv7-a -mfpu=vfpv3-d16 --noexecstack -o CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o "C:\\Users\\kalu\\AppData\\Local\\Temp\\CMakeCXXCompilerABI-813405.s"
+[2/2] Linking CXX executable cmTC_f880a
+Android clang version 5.0.300080  (based on LLVM 5.0.300080)
+Target: armv7-none-linux-android
+Thread model: posix
+InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi\4.9.x
+Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x
+Candidate multilib: thumb;@thumb
+Candidate multilib: armv7-a;@armv7
+Candidate multilib: armv7-a/thumb;@armv7@thumb
+Candidate multilib: .;
+Selected multilib: armv7-a/thumb;@armv7@thumb
+ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\ld" --sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_f880a "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtbegin_dynamic.o" "-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm" -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib -Bsymbolic --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtend_android.o"
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include/backward]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/include]
+    add: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include]
+  end of search list found
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include/backward] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include/backward]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/include]
+  collapse include dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include]
+  implicit include dirs: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include/backward;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/include;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_mini/.cxx/Debug/4fv661i1/armeabi-v7a/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):C:\Users\kalu\AppData\Local\Android\Sdk\cmake\3.18.1\bin\ninja.exe cmTC_f880a && [1/2] Building CXX object CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Android clang version 5.0.300080  (based on LLVM 5.0.300080)]
+  ignore line: [Target: armv7-none-linux-android]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi\4.9.x]
+  ignore line: [Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [Candidate multilib: thumb]
+  ignore line: [@thumb]
+  ignore line: [Candidate multilib: armv7-a]
+  ignore line: [@armv7]
+  ignore line: [Candidate multilib: armv7-a/thumb]
+  ignore line: [@armv7@thumb]
+  ignore line: [Candidate multilib: .]
+  ignore line: []
+  ignore line: [Selected multilib: armv7-a/thumb]
+  ignore line: [@armv7@thumb]
+  ignore line: [clang++.exe: warning: -Wl -Bsymbolic: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe" -cc1 -triple thumbv7-none-linux-android -S -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -no-integrated-as -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu cortex-a8 -target-feature +soft-float-abi -target-feature -fp-only-sp -target-feature +d16 -target-feature +vfp3 -target-feature -fp16 -target-feature -vfp4 -target-feature -fp-armv8 -target-feature -neon -target-feature -crypto -target-abi aapcs-linux -mfloat-abi soft -target-linker-version 2.24 -v -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -ffunction-sections -coverage-notes-file "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_mini\\.cxx\\Debug\\4fv661i1\\armeabi-v7a\\CMakeFiles\\CMakeTmp\\CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.gcno" -resource-dir "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080" -dependency-file "CMakeFiles\\cmTC_f880a.dir\\CMakeCXXCompilerABI.cpp.o.d" -sys-header-deps -MT CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include/backward -isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi -D __ANDROID_API__=21 -D ANDROID -isysroot C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot -internal-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/local/include -internal-isystem "C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\include" -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/include -internal-externc-isystem C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include -Wformat -std=c++11 -fdeprecated-macro -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\Android\\Huan_Component\\ffmpeg_command\\lib_ffmpegcmd_v4.4.4_mini\\.cxx\\Debug\\4fv661i1\\armeabi-v7a\\CMakeFiles\\CMakeTmp" -ferror-limit 19 -fmessage-length 0 -femulated-tls -stack-protector 2 -fallow-half-arguments-and-returns -fno-signed-char -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o "C:\\Users\\kalu\\AppData\\Local\\Temp\\CMakeCXXCompilerABI-813405.s" -x c++ C:/Users/kalu/AppData/Local/Android/Sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 5.0.300080 based upon LLVM 5.0.300080 default target x86_64-unknown-linux]
+  ignore line: [ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sources/cxx-stl/gnu-libstdc++/4.9/include/backward]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include/arm-linux-androideabi]
+  ignore line: [ C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\5.0.300080\include]
+  ignore line: [ C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\as" -mfpu=neon -mfloat-abi=softfp -march=armv7-a -mfpu=vfpv3-d16 --noexecstack -o CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o "C:\\Users\\kalu\\AppData\\Local\\Temp\\CMakeCXXCompilerABI-813405.s"]
+  ignore line: [[2/2] Linking CXX executable cmTC_f880a]
+  ignore line: [Android clang version 5.0.300080  (based on LLVM 5.0.300080)]
+  ignore line: [Target: armv7-none-linux-android]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: C:\Users\kalu\AppData\Local\Android\Sdk\ndk\16.1.4479499\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi\4.9.x]
+  ignore line: [Selected GCC installation: C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x]
+  ignore line: [Candidate multilib: thumb]
+  ignore line: [@thumb]
+  ignore line: [Candidate multilib: armv7-a]
+  ignore line: [@armv7]
+  ignore line: [Candidate multilib: armv7-a/thumb]
+  ignore line: [@armv7@thumb]
+  ignore line: [Candidate multilib: .]
+  ignore line: []
+  ignore line: [Selected multilib: armv7-a/thumb]
+  ignore line: [@armv7@thumb]
+  link line: [ "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\ld" --sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm -pie -X --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_f880a "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtbegin_dynamic.o" "-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm" -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib -Bsymbolic --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --fix-cortex-a8 --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtend_android.o"]
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin\\ld] ==> ignore
+    arg [--sysroot=C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-X] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_f880a] ==> ignore
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtbegin_dynamic.o] ==> ignore
+    arg [-LC:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm] ==> dir [C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb]
+    arg [-LC:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib] ==> dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+    arg [-Bsymbolic] ==> ignore
+    arg [--exclude-libs] ==> ignore
+    arg [libgcc.a] ==> ignore
+    arg [--exclude-libs] ==> ignore
+    arg [libatomic.a] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--fix-cortex-a8] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [-znocopyreloc] ==> ignore
+    arg [CMakeFiles/cmTC_f880a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib\\crtend_android.o] ==> ignore
+  collapse library dir [C:\\Users\\kalu\\AppData\\Local\\Android\\Sdk\\ndk\\16.1.4479499\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib64\\clang\\5.0.300080\\lib\\linux\\arm] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/lib/linux/arm]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a/thumb]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/../lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib/arm-linux-androideabi/../../lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a/thumb]
+  collapse library dir [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib] ==> [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+  implicit libs: [stdc++;m;gcc;gcc;dl;c;gcc;gcc;dl]
+  implicit dirs: [C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/5.0.300080/lib/linux/arm;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/arm-linux-androideabi/lib/armv7-a/thumb;C:/Users/kalu/AppData/Local/Android/Sdk/ndk/16.1.4479499/platforms/android-21/arch-arm/usr/lib]
+  implicit fwks: []
+
+

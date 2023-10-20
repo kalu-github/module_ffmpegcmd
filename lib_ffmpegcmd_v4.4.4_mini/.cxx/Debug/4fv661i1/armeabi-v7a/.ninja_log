@@ -1,0 +1,11 @@
+# ninja log v5
+3	247	719480573	CMakeFiles/ffmpegcmd.dir/cmd/api_cmd.c.o	93f340a1c1819ad
+0	257	719480573	CMakeFiles/ffmpegcmd.dir/cmd/api_execute.c.o	7c35b741567c9400
+14	280	719480573	CMakeFiles/ffmpegcmd.dir/cmd/api_version.c.o	b7142b41824cb193
+28	308	719480573	CMakeFiles/ffmpegcmd.dir/cmd/ffmpeg_hw.c.o	e45c2a568e12e8c1
+10	344	719480573	CMakeFiles/ffmpegcmd.dir/cmd/ffmpeg_filter.c.o	3f15eb6f5b4263cb
+18	427	719480573	CMakeFiles/ffmpegcmd.dir/cmd/cmdutils.c.o	32fc608082fa3f8b
+21	644	719480573	CMakeFiles/ffmpegcmd.dir/cmd/ffmpeg_opt.c.o	2d5f958c8658830
+7	684	719480573	CMakeFiles/ffmpegcmd.dir/cmd/ffmpeg.c.o	5e1a8b83d192b3bd
+684	998	719480573	D:/Android/Huan_Component/ffmpeg_command/lib_ffmpegcmd_v4.4.4_mini/build/intermediates/cxx/Debug/4fv661i1/obj/armeabi-v7a/libffmpegcmd.so	88c21598c8da8035
+0	8	0	clean	848883b1a888d55e

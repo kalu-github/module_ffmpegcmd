@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-mergeReleaseResources-14:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\kalu\\.gradle\\caches\\transforms-3\\fce9da61607754ed9406a3abcfe5c1b0\\transformed\\appcompat-1.4.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "lib.kalu.ffmpegcmd.lib_ffmpegcmd_v4.4.4_mini-merged_res-16:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\kalu\\.gradle\\caches\\transforms-3\\fce9da61607754ed9406a3abcfe5c1b0\\transformed\\appcompat-1.4.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
