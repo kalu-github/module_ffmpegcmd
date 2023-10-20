@@ -3,10 +3,31 @@
 # value of 3.4.0 or lower.
 
 cmake_minimum_required(VERSION 3.4.1)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 #set(BEGIN_WHOLE_ARCHIVE -Wl,--whole-archive)
 #set(END_WHOLE_ARCHIVE -Wl,--no-whole-archive)
+add_definitions(-fPIC)
+add_definitions(-pie)
 add_definitions(-w)
 add_definitions(-DNDEBUG)
+#set(CMAKE_SHARED_LINKER_FLAGS "-Wl,-Bsymbolic")
+#-fpic
+#-mno-pic-data-is-text-relative
+#-msingle-pic-base
+#-mpic-register=r11
+#-fno-jump-tables
+#linker flags
+
+#-pie
+
+if (${ANDROID_ABI} STREQUAL "x86")
+    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-warn-shared-textrel")
+endif ()
+
+#if (${ANDROID_ABI} STREQUAL "x86_64")
+#    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+#endif ()
 
 set(ffmpegcmd-sources
         cmd/api_cmd.c;
