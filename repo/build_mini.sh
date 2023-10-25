@@ -30,55 +30,34 @@ export COMMON_SET="--enable-static \
   --disable-outdevs \
   --disable-protocols \
   --enable-protocol=file \
-  --enable-protocol=concat \
   --disable-parsers \
   --disable-muxers \
   --enable-muxer=pcm_u8 \
   --enable-muxer=pcm_s16le \
   --enable-muxer=pcm_s16be \
   --enable-muxer=mp3 \
-  --enable-muxer=mov \
-  --enable-muxer=mp4 \
-  --enable-muxer=image2 \
-  --enable-muxer=ipod \
   --disable-demuxers \
   --enable-demuxer=pcm_u8 \
   --enable-demuxer=pcm_s16le \
   --enable-demuxer=pcm_s16be \
   --enable-demuxer=mp3 \
-  --enable-demuxer=mov \
-  --enable-demuxer=image2 \
-  --enable-demuxer=wav \
-  --enable-demuxer=asf \
-  --enable-demuxer=flv \
-  --enable-demuxer=avi \
-  --enable-demuxer=webm_dash_manifest \
-  --enable-demuxer=matroska \
   --enable-demuxer=mpegts \
   --disable-decoders \
   --enable-decoder=pcm_u8 \
   --enable-decoder=pcm_s16le \
   --enable-decoder=pcm_s16be \
-  --enable-decoder=adpcm_swf \
-  --enable-decoder=amrnb \
-  --enable-decoder=ac3 \
-  --enable-decoder=aac \
   --enable-decoder=mp3 \
-  --enable-decoder=wmav1 \
-  --enable-decoder=wmav2 \
-  --enable-decoder=mp2 \
-  --enable-decoder=h264 \
-  --enable-decoder=mpeg4 \
-  --enable-decoder=msmpeg4v1 \
-  --enable-decoder=msmpeg4v2 \
-  --enable-decoder=msmpeg4v3 \
+  --enable-decoder=mpeg1_v4l2m2m \
+  --enable-decoder=mpeg1video \
+  --enable-decoder=mpeg2_v4l2m2m \
   --enable-decoder=mpeg2video \
-  --enable-decoder=indeo4 \
+  --enable-decoder=mpeg4 \
+  --enable-decoder=mpeg4_v4l2m2m \
+  --enable-decoder=mpegvideo \
   --disable-encoders \
   --enable-encoder=pcm_u8 \
   --enable-encoder=pcm_s16le \
   --enable-encoder=pcm_s16be \
-  --enable-encoder=aac \
   --enable-encoder=libmp3lame \
   --enable-swscale \
   --disable-filters \
