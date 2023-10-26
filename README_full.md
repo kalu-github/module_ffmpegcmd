@@ -1,100 +1,69 @@
-#
-#### libffmepgcmd.so编译源码
+External libraries:
 ```
-https://github.com/kalu-github/ffmpegcmd_android_build
-```
-
-#
-#### 编译环境
-```
-deepin + ndk14b
+libmp3lame              zlib
 ```
 
-#
-#### 更新记录
+Libraries:
 ```
-2022-1-04
-1. 新增ffmpeg4.4.3 arm64
-```
-```
-2022-10-31
-1. 新增ffmpeg4.4.3
-```
-```
-2022-09-18
-1. 新增ffmpeg4.4.2、ffmpeg5.1.1
+avcodec                 avfilter                avresample              postproc                swscale
+avdevice                avformat                avutil                  swresample
 ```
 
-#
-#### 已知问题
+Enabled decoders:
 ```
-1. 5.1.1版本不支持 -f -lavfi命令【编译问题 => ？？】
-```
-```
-2. progress传递处理进度数据不准确【超过100% => bug】
+h263                    mpeg1video              mpeg4                   pcm_s16be               pcm_u8
+mp3                     mpeg2video              mpegvideo               pcm_s16le
 ```
 
-#
-## 历史版本
+Enabled encoders:
 ```
-1. https://www.videohelp.com/software/ffmpeg/old-versions
-2. http://www.ffmpeg.org/releases/
+libmp3lame              pcm_s16be               pcm_s16le               pcm_u8
 ```
 
-ffmpeg编译参数对比
-精简版	增强版
---enable-gpl	+
---enable-shared	+
---disable-static	+
---enable-version3	+
---enable-pthreads	+
---enable-small	+
---disable-vda	+
---disable-iconv	+
---disable-encoders	--enable-encoders
---enable-libx264	+
---enable-neon	+
---enable-yasm	+
---enable-libfdk_aac	+
---enable-encoder=libx264	+
---enable-encoder=libfdk_aac	+
---enable-encoder=mjpeg	+
---enable-encoder=png	+
---enable-nonfree	+
---enable-muxers	+
---enable-muxer=mov	-
---enable-muxer=mp4	-
---enable-muxer=h264	-
---enable-muxer=avi	-
---disable-decoders	--enable-decoders
---enable-decoder=aac	-
---enable-decoder=aac_latm	-
---enable-decoder=h264	-
---enable-decoder=mpeg4	-
---enable-decoder=mjpeg	-
---enable-decoder=png	-
---disable-demuxers	--enable-demuxers
---enable-demuxer=image2	-
---enable-demuxer=h264	-
---enable-demuxer=aac	-
---enable-demuxer=avi	-
---enable-demuxer=mpc	-
---enable-demuxer=mpegts	-
---enable-demuxer=mov	-
---disable-parsers	--enable-parsers
---enable-parser=aac	-
---enable-parser=ac3	-
---enable-parser=h264	-
---enable-protocols	+
---enable-zlib	+
---enable-avfilter	+
---disable-outdevs	+
---disable-ffprobe	+
---disable-ffplay	+
---disable-ffmpeg	+
---disable-ffserver	+
---disable-debug	+
---disable-postproc	+
---disable-avdevice	+
---disable-symver	+
---disable-stripping	+
+Enabled hwaccels:
+```
+```
+
+Enabled parsers:
+```
+h263                    mpeg4video              mpegaudio
+```
+
+Enabled demuxers:
+```
+mp3                     mpegts                  pcm_s16be               pcm_s16le               pcm_u8
+```
+
+Enabled muxers:
+```
+mp3                     pcm_s16be               pcm_s16le               pcm_u8
+```
+
+Enabled protocols:
+```
+file
+```
+
+Enabled filters:
+```
+adelay                  anull                   copy                    overlay                 setpts
+afade                   anullsrc                crop                    palettegen              split
+afftdn                  apad                    format                  paletteuse              transpose
+aformat                 aresample               fps                     pan                     trim
+amerge                  atempo                  hflip                   rotate                  vflip
+amix                    atrim                   null                    scale                   volume
+```
+
+Enabled bsfs:
+```
+null
+```
+
+Enabled indevs:
+```
+lavfi
+```
+
+Enabled outdevs:
+```
+```

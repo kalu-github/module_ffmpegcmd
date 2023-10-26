@@ -5,6 +5,9 @@ chmod a+x build_android_*.sh
 export COMMON_SET="--enable-static \
   --disable-symver \
   --disable-network \
+  --enable-small \
+  --disable-jni \
+  --disable-mediacodec \
   --disable-stripping
   --disable-asm
   --disable-optimizations \
@@ -98,9 +101,6 @@ export COMMON_SET="--enable-static \
   --enable-filter=pan \
   --enable-libmp3lame \
   --enable-zlib \
-  --enable-small \
-  --disable-jni \
-  --disable-mediacodec \
   --enable-gpl \
   --enable-nonfree \
   --enable-version3 "
