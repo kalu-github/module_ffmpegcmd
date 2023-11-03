@@ -1,3 +1,3 @@
-//include ':lib_ffmpegcmd_v4.4.4_full'
+include ':lib_ffmpegcmd_v4.4.4_full'
 //include ':lib_ffmpegcmd_v4.4.4_lite'
 include ':lib_ffmpegcmd_v4.4.4_mini'
