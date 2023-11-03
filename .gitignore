@@ -1,6 +1,7 @@
 # Project exclude paths
 /.idea/
 /.gradle/
+/app/
 /lib_ffmpegcmd_v4.4.4_full/.cxx/
 /lib_ffmpegcmd_v4.4.4_full/build/
 /lib_ffmpegcmd_v4.4.4_lite/build/
