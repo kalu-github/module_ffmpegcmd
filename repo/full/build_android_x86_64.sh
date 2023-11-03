@@ -1,6 +1,6 @@
 #!/bin/bash
 #Change NDK to your Android NDK location
-PLATFORM=$NDK/platforms/android-27/arch-x86_64/
+PLATFORM=$NDK/platforms/android-21/arch-x86_64/
 PREBUILT=$NDK/toolchains/x86_64-4.9/prebuilt/linux-x86_64
 
 GENERAL="\
@@ -19,12 +19,13 @@ GENERAL="\
 temp_prefix=${PREFIX}/ffmpeg/android/x86_64
 rm -rf $temp_prefix
 export PATH=$PREBUILT/bin/:$PATH/
+#export TMPDIR="D:/FFmpeg/temp"
 
 function build_x86_64
 {
   ./configure \
   --pkg-config="pkg-config --static" \
-  --logfile=conflog.txt \
+  --logfile=log_build_x86_64.txt \
   --target-os=android \
   --prefix=${temp_prefix} \
   ${GENERAL} \

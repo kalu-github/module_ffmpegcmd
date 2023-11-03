@@ -24,7 +24,7 @@ function build_x86
 {
   ./configure \
   --pkg-config="pkg-config --static" \
-  --logfile=conflog.txt \
+  --logfile=log_build_x86.txt \
   --target-os=android \
   --prefix=${temp_prefix} \
   ${GENERAL} \

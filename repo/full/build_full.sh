@@ -24,6 +24,8 @@ export COMMON_SET="--enable-static \
   --enable-avutil \
   --enable-swresample \
   --enable-decoders \
+  --enable-decoder=libx264 \
+  --enable-decoder=libmp3lame \
   --enable-encoders \
   --enable-encoder=libx264 \
   --enable-encoder=libmp3lame \
