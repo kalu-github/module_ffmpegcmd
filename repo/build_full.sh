@@ -5,22 +5,15 @@ chmod a+x build_android_*.sh
 export COMMON_SET="--enable-static \
   --disable-symver \
   --disable-network \
-  --enable-small \
-  --disable-jni \
-  --disable-mediacodec \
-  --disable-stripping
-  --disable-asm
-  --disable-optimizations \
   --disable-debug \
-  --disable-programs \
-  --disable-ffmpeg \
-  --disable-ffplay \
-  --disable-ffprobe \
   --disable-doc \
   --disable-htmlpages \
   --disable-manpages \
   --disable-podpages \
   --disable-txtpages \
+  --disable-ffplay \
+  --disable-ffmpeg \
+  --disable-ffprobe \
   --enable-avdevice \
   --enable-avcodec \
   --enable-avformat \
@@ -38,16 +31,19 @@ export COMMON_SET="--enable-static \
   --enable-encoders \
   --enable-swscale \
   --enable-filters \
-  --enable-libx264 \
-  --enable-libmp3lame \
-  --enable-zlib \
   --enable-gpl \
+  --enable-libx264 \
+  --enable-zlib \
+  --enable-libmp3lame \
+  --enable-jni \
   --enable-nonfree \
+  --enable-mediacodec \
+  --enable-asm \
   --enable-version3 "
 
 # Build arm v7a
 # make distclean
-./build_android_armeabi_v7a.sh
+# ./build_android_armeabi_v7a.sh
 
 # Build arm64 v8a
 # make distclean
@@ -59,4 +55,4 @@ export COMMON_SET="--enable-static \
 
 # Build x86_64
 # make distclean
-# ./build_android_x86_64.sh
+./build_android_x86_64.sh

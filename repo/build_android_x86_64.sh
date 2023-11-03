@@ -28,8 +28,12 @@ function build_x86_64
   --prefix=${temp_prefix} \
   ${GENERAL} \
   --sysroot=$PLATFORM \
-  --extra-cflags="-march=x86-64 -msse4.2 -mpopcnt -m64 -mtune=intel" \
-  --extra-ldflags="-Wl,-rpath-link=$PLATFORM/usr/lib64 -L$PLATFORM/usr/lib64 -nostdlib -lc -lm -ldl -llog" \
+  --host-cflags="-fPIC" \
+  --host-cppflags="-fPIC" \
+  --host-ldflags="-fPIC" \
+  --extra-cflags="-march=x86-64 -msse4.2 -mpopcnt -m64 -mtune=intel -fPIC" \
+  --extra-cxxflags="-fPIC" \
+  --extra-ldflags="-Wl,-rpath-link=$PLATFORM/usr/lib64 -L$PLATFORM/usr/lib64 -fPIC -nostdlib -lc -lm -ldl -llog" \
   ${COMMON_SET}
 
   make clean

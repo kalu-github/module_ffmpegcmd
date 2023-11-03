@@ -27,8 +27,12 @@ function build_x86
   --prefix=${temp_prefix} \
   ${GENERAL} \
   --sysroot=$PLATFORM \
-  --extra-cflags="" \
-  --extra-ldflags="-Wl,-rpath-link=$PLATFORM/usr/lib -L$PLATFORM/usr/lib -nostdlib -lc -lm -ldl -llog" \
+  --host-cflags="-fPIC" \
+  --host-cppflags="-fPIC" \
+  --host-ldflags="-fPIC" \
+  --extra-cflags="-fPIC" \
+  --extra-cxxflags="-fPIC" \
+  --extra-ldflags="-Wl,-rpath-link=$PLATFORM/usr/lib -L$PLATFORM/usr/lib -fPIC -nostdlib -lc -lm -ldl -llog" \
   ${COMMON_SET}
 
   make clean

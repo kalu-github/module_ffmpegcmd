@@ -5,18 +5,22 @@ buildscript {
     repositories {
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://jitpack.io' }
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.0.2'
     }
+}
+// 指定javadoc UTF-8格式(bintray-release)
+task javadoc(type: Javadoc) {
+    options.encoding = "utf-8"
 }
 
 allprojects {
     repositories {
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://jitpack.io' }
+        google()
     }
 }
 
