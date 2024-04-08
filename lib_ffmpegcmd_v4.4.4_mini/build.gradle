@@ -3,28 +3,24 @@ apply plugin: 'com.android.library'
 android {
 
     namespace 'lib.kalu.ffmpegcmd'
-    compileSdkVersion 34
-    buildToolsVersion "34.0.0"
+    compileSdkVersion 33
+    buildToolsVersion "33.0.1"
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 34
+        minSdkVersion 19
+        targetSdkVersion 33
 
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++11"
-                cppFlags "-Wl,-Bsymbolic"
+                cppFlags "-std=c++17"
                 version "3.18.1"
-//                abiFilters 'armeabi-v7a'
-                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
-//                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
             }
         }
-
-        ndk {
-//            abiFilters 'armeabi-v7a'
-            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86'
-//            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+    }
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
         }
     }
 
@@ -46,14 +42,12 @@ android {
             consumerProguardFiles 'proguard-rules.pro'
         }
     }
-
-    externalNativeBuild {
-        cmake {
-            path file('src/main/cpp/CMakeLists.txt')
-        }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.4.0'
+    compileOnly 'androidx.appcompat:appcompat:1.6.1'
 }

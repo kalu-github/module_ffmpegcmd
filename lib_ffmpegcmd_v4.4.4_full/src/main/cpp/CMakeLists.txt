@@ -3,31 +3,22 @@
 # value of 3.4.0 or lower.
 
 cmake_minimum_required(VERSION 3.4.1)
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-#set(BEGIN_WHOLE_ARCHIVE -Wl,--whole-archive)
-#set(END_WHOLE_ARCHIVE -Wl,--no-whole-archive)
-add_definitions(-fPIC)
-add_definitions(-pie)
 add_definitions(-w)
 add_definitions(-DNDEBUG)
-#set(CMAKE_SHARED_LINKER_FLAGS "-Wl,-Bsymbolic")
-#-fpic
-#-mno-pic-data-is-text-relative
-#-msingle-pic-base
-#-mpic-register=r11
-#-fno-jump-tables
-#linker flags
 
-#-pie
-
+message(STATUS "这是一条状态信息")
 if (${ANDROID_ABI} STREQUAL "x86")
-    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-warn-shared-textrel")
+    message(STATUS "ANDROID_ABI => x86")
+    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl")
+    #    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-warn-shared-textrel")
+else (${ANDROID_ABI} STREQUAL "x86_64")
+    message(STATUS "ANDROID_ABI => x86_64")
+    add_compile_options(-fPIC)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+    set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 endif ()
 
-#if (${ANDROID_ABI} STREQUAL "x86_64")
-#    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
-#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
-#endif ()
 
 set(ffmpegcmd-sources
         cmd/api_cmd.c;
@@ -46,7 +37,7 @@ add_library( # Sets the name of the library.
         ${ffmpegcmd-sources})
 
 # ffmpeg-libx264
-configure_file(${CMAKE_SOURCE_DIR}/lame/${ANDROID_ABI}/lib/libx264.a ${Project_BINARY_DIR}/libx264.a COPYONLY)
+configure_file(${CMAKE_SOURCE_DIR}/x264/${ANDROID_ABI}/lib/libx264.a ${Project_BINARY_DIR}/libx264.a COPYONLY)
 add_library(ffmpeg-libx264
         STATIC
         IMPORTED)
