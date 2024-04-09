@@ -100,12 +100,16 @@ public final class FFmpegUtil {
 //    }
 
     public static boolean clipAudio(String videoPath, String audioPath) {
-        return clipAudio(videoPath, audioPath, null);
+        return doClipAudio(videoPath, audioPath, null);
     }
 
     public static boolean clipAudio(String videoPath, String audioPath, OnFFmpegChangeListener listener) {
+        return doClipAudio(videoPath, audioPath, listener);
+    }
+
+    private static boolean doClipAudio(String videoPath, String audioPath, OnFFmpegChangeListener listener) {
         try {
-            Log.e("FFmpegUtil", "clipAudio => videoPath = " + videoPath + ", audioPath = " + audioPath);
+            Log.e("FFmpegUtil", "doClipAudio => videoPath = " + videoPath + ", audioPath = " + audioPath);
             if (null == videoPath || videoPath.length() == 0)
                 throw new Exception("videoPath error: " + videoPath);
             if (null == audioPath || audioPath.length() == 0)
@@ -141,21 +145,25 @@ public final class FFmpegUtil {
             }
             if (execute != 0)
                 throw new IllegalArgumentException("execute error: " + execute);
-            Log.e("FFmpegUtil", "clipAudio => succ");
+            Log.e("FFmpegUtil", "doClipAudio => succ");
             return true;
         } catch (Exception e) {
-            Log.e("FFmpegUtil", "clipAudio => " + e.getMessage());
+            Log.e("FFmpegUtil", "doClipAudio => " + e.getMessage());
             return false;
         }
     }
 
     public static boolean createNullAudio(float second, String audioPath) {
-        return createNullAudio(second, audioPath, null);
+        return doCreateNullAudio(second, audioPath, null);
     }
 
     public static boolean createNullAudio(float second, String audioPath, OnFFmpegChangeListener listener) {
+        return doCreateNullAudio(second, audioPath, listener);
+    }
+
+    private static boolean doCreateNullAudio(float second, String audioPath, OnFFmpegChangeListener listener) {
         try {
-            Log.e("FFmpegUtil", "createNullAudio => second = " + second + ", audioPath = " + audioPath);
+            Log.e("FFmpegUtil", "doCreateNullAudio => second = " + second + ", audioPath = " + audioPath);
             if (second <= 0)
                 throw new Exception("second error: " + second);
             File fileAudio = new File(audioPath);
@@ -187,21 +195,25 @@ public final class FFmpegUtil {
             }
             if (execute != 0)
                 throw new Exception("execute error: " + execute);
-            Log.e("FFmpegUtil", "createNullAudio => succ");
+            Log.e("FFmpegUtil", "doCreateNullAudio => succ");
             return true;
         } catch (Exception e) {
-            Log.e("FFmpegUtil", "createNullAudio => " + e.getMessage());
+            Log.e("FFmpegUtil", "doCreateNullAudio => " + e.getMessage());
             return false;
         }
     }
 
     public static boolean mixAudio(String fromAudioPath, String mixAudioPath, LinkedHashMap<Integer, String> map) {
-        return mixAudio(fromAudioPath, mixAudioPath, map, null);
+        return doMixAudio(fromAudioPath, mixAudioPath, map, null);
     }
 
     public static boolean mixAudio(String fromAudioPath, String mixAudioPath, LinkedHashMap<Integer, String> map, OnFFmpegChangeListener listener) {
+        return doMixAudio(fromAudioPath, mixAudioPath, map, listener);
+    }
+
+    private static boolean doMixAudio(String fromAudioPath, String mixAudioPath, LinkedHashMap<Integer, String> map, OnFFmpegChangeListener listener) {
         try {
-            Log.e("FFmpegUtil", "mixAudio => fromAudioPath = " + fromAudioPath + ", mixAudioPath = " + mixAudioPath);
+            Log.e("FFmpegUtil", "doMixAudio => fromAudioPath = " + fromAudioPath + ", mixAudioPath = " + mixAudioPath);
             if (null == fromAudioPath || fromAudioPath.length() == 0)
                 throw new Exception("fromAudioPath error: " + fromAudioPath);
             if (null == mixAudioPath || mixAudioPath.length() == 0)
@@ -273,21 +285,25 @@ public final class FFmpegUtil {
             }
             if (execute != 0)
                 throw new Exception("execute error: " + execute);
-            Log.e("FFmpegUtil", "mixAudio => succ");
+            Log.e("FFmpegUtil", "doMixAudio => succ");
             return true;
         } catch (Exception e) {
-            Log.e("FFmpegUtil", "mixAudio => " + e.getMessage());
+            Log.e("FFmpegUtil", "doMixAudio => " + e.getMessage());
             return false;
         }
     }
 
     public static boolean pcmToMp3(String pcmPath, String mp3Path) {
-        return pcmToMp3(pcmPath, mp3Path, null);
+        return doPcmToMp3(pcmPath, mp3Path, null);
     }
 
     public static boolean pcmToMp3(String pcmPath, String mp3Path, OnFFmpegChangeListener listener) {
+        return doPcmToMp3(pcmPath, mp3Path, listener);
+    }
+
+    private static boolean doPcmToMp3(String pcmPath, String mp3Path, OnFFmpegChangeListener listener) {
         try {
-            Log.e("FFmpegUtil", "pcmToMp3 => pcmPath = " + pcmPath + ", mp3Path = " + mp3Path);
+            Log.e("FFmpegUtil", "doPcmToMp3 => pcmPath = " + pcmPath + ", mp3Path = " + mp3Path);
             if (null == pcmPath || pcmPath.length() == 0)
                 throw new Exception("pcmPath error: " + pcmPath);
             if (null == mp3Path || mp3Path.length() == 0)
@@ -330,21 +346,25 @@ public final class FFmpegUtil {
             }
             if (execute != 0)
                 throw new Exception("execute error: " + execute);
-            Log.e("FFmpegUtil", "pcmToMp3 => succ");
+            Log.e("FFmpegUtil", "doPcmToMp3 => succ");
             return true;
         } catch (Exception e) {
-            Log.e("FFmpegUtil", "pcmToMp3 => " + e.getMessage());
+            Log.e("FFmpegUtil", "doPcmToMp3 => " + e.getMessage());
             return false;
         }
     }
 
     public static boolean compressVideo(String fromPath, String savePath) {
-        return compressVideo(fromPath, savePath, null);
+        return doCompressVideo(fromPath, savePath, null);
     }
 
     public static boolean compressVideo(String fromPath, String savePath, OnFFmpegChangeListener listener) {
+        return doCompressVideo(fromPath, savePath, listener);
+    }
+
+    private static boolean doCompressVideo(String fromPath, String savePath, OnFFmpegChangeListener listener) {
         try {
-            Log.e("FFmpegUtil", "scaleVideo => fromPath = " + fromPath + ", savePath = " + savePath);
+            Log.e("FFmpegUtil", "doCompressVideo => fromPath = " + fromPath + ", savePath = " + savePath);
             if (null == fromPath || fromPath.length() == 0)
                 throw new Exception("error: fromPath null");
             if (null == savePath || savePath.length() == 0)
@@ -388,11 +408,72 @@ public final class FFmpegUtil {
             }
             if (execute != 0)
                 throw new Exception("execute error: " + execute);
-            Log.e("FFmpegUtil", "compressVideo => succ");
+            Log.e("FFmpegUtil", "doCompressVideo => succ");
             return true;
         } catch (Exception e) {
-            Log.e("FFmpegUtil", "compressVideo => " + e.getMessage());
+            Log.e("FFmpegUtil", "doCompressVideo => " + e.getMessage());
             return false;
         }
+    }
+
+    /***/
+
+    public static int executeCmd(List<String> list) {
+        FFmpeg.executeCancle();
+        return FFmpeg.executeCmd(list);
+    }
+
+    public static int executeCmd(List<String> list, OnFFmpegChangeListener listener) {
+        FFmpeg.executeCancle();
+        return FFmpeg.executeCmd(list, listener);
+    }
+
+    public static int executeCmd(String[] strings) {
+        FFmpeg.executeCancle();
+        return FFmpeg.executeCmd(strings);
+    }
+
+    public static int executeCmd(String[] strings, OnFFmpegChangeListener listener) {
+        FFmpeg.executeCancle();
+        return FFmpeg.executeCmd(strings, listener);
+    }
+
+    public static int executeCmd(String command) {
+        FFmpeg.executeCancle();
+        return FFmpeg.executeCmd(command);
+    }
+
+    public static int executeCmd(String command, OnFFmpegChangeListener listener) {
+        FFmpeg.executeCancle();
+        return FFmpeg.executeCmd(command, listener);
+    }
+
+    public static int executeCmd(String command, long totalTime, OnFFmpegChangeListener listener) {
+        FFmpeg.executeCancle();
+        return FFmpeg.executeCmd(command, totalTime, listener);
+    }
+
+    public static int cancle() {
+        return FFmpeg.executeCancle();
+    }
+
+    public static String getDetail() {
+        return FFmpeg.executeGetDetails();
+    }
+
+    public static String getInformation() {
+        return FFmpeg.executeGetInformation();
+    }
+
+    public static String getVersion() {
+        return FFmpeg.executeGetVersion();
+    }
+
+    public static int setLogger(boolean enable) {
+        return FFmpeg.executeSetLogger(enable);
+    }
+
+    public static long getDuration(String fromPath) {
+        return FFmpeg.executeGetDuration(fromPath);
     }
 }

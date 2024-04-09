@@ -8,45 +8,37 @@ public final class FFmpeg {
         System.loadLibrary("ffmpegcmd");
     }
 
-    /*****************/
+    private static native String getVersion();
 
-    public static native String getVersion();
+    private static native String getInformation();
 
-    public static native String getInformation();
+    private static native String getDetails();
 
-    public static native String getDetails();
+    private static native int setLogger(boolean enable);
 
-    /*****************/
+    private static native long getDuration(String mediaPath);
 
-    public static native int setLogger(boolean enable);
-
-    public static native long getDuration(String mediaPath);
-
-    public static native int cancel();
+    private static native int cancel();
 
     private static native int execute(String command, long totalTime, OnFFmpegChangeListener listener);
 
     /*****************/
 
-    public static String getABI() {
-        return android.os.Build.CPU_ABI;
-    }
-
-    public static int executeCmd(List<String> list) {
+    static int executeCmd(List<String> list) {
         return executeCmd(list, null);
     }
 
-    public static int executeCmd(List<String> list, OnFFmpegChangeListener listener) {
+    static int executeCmd(List<String> list, OnFFmpegChangeListener listener) {
         int size = list.size();
         String[] strings = list.toArray(new String[size]);
         return executeCmd(strings, listener);
     }
 
-    public static int executeCmd(String[] strings) {
+    static int executeCmd(String[] strings) {
         return executeCmd(strings, null);
     }
 
-    public static int executeCmd(String[] strings, OnFFmpegChangeListener listener) {
+    static int executeCmd(String[] strings, OnFFmpegChangeListener listener) {
         StringBuilder builder = new StringBuilder();
         int length = strings.length;
         for (int i = 0; i < length; i++) {
@@ -62,16 +54,39 @@ public final class FFmpeg {
         return executeCmd(command, listener);
     }
 
-    public static int executeCmd(String command) {
+    static int executeCmd(String command) {
         return executeCmd(command, -1, null);
     }
 
-    public static int executeCmd(String command, OnFFmpegChangeListener listener) {
+    static int executeCmd(String command, OnFFmpegChangeListener listener) {
         return executeCmd(command, -1, listener);
     }
 
-    public static int executeCmd(String command, long totalTime, OnFFmpegChangeListener listener) {
-        cancel();
+    static int executeCmd(String command, long totalTime, OnFFmpegChangeListener listener) {
         return execute(command, totalTime, listener);
+    }
+
+    static int executeCancle() {
+        return cancel();
+    }
+
+    static long executeGetDuration(String fromPath) {
+        return getDuration(fromPath);
+    }
+
+    static int executeSetLogger(boolean enable) {
+        return setLogger(enable);
+    }
+
+    static String executeGetVersion() {
+        return getVersion();
+    }
+
+    static String executeGetInformation() {
+        return getInformation();
+    }
+
+    static String executeGetDetails() {
+        return getDetails();
     }
 }
