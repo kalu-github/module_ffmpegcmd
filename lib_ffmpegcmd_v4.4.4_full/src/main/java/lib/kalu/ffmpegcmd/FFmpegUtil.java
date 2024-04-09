@@ -385,20 +385,24 @@ public final class FFmpegUtil {
                     "10",
                     "-c:v", // 视频编码器 x264
                     "libx264",
-                    "-x264-params",
-                    "profile=high:level=3.0", // .H264编码profile & level控制
-                    "-b:v", // 视频码率
-                    "1000k",
+                    "-x264-params", // .H264编码profile & level控制
+                    "profile=high:level=3.0",
+                    "-b:v", // 视频码率1M
+                    "1024000",
                     "-bufsize",  // 视频码率控制缓冲器的大小
                     "1000k",
-                    "-c:a", // 音频编码器 libmp3lame
-                    "libmp3lame",
-                    "-b:a",  // 音频码率
-                    "16k",
+                    "-c:a", // 音频编码器 aac, libmp3lame
+                    "aac",
+                    "-b:a", // 音频码率 16K
+                    "16000",
+                    "-ar", // 音频的采样率 16K
+                    "16000",
+                    "-ac", // 音频声道数量
+                    "1",
                     "-preset", // 选择快速编码预设。
                     "veryfast",
                     "-crf",
-                    "30", // -crf 28：设置CRF值（常量速率因子），范围从0（无损）到51（最糟），通常使用18到28的值。
+                    "40", // -crf 28：设置CRF值（常量速率因子），范围从0（无损）到51（最糟），通常使用18到28的值。
                     savePath);
             int execute;
             if (null != listener) {
