@@ -338,6 +338,10 @@ public final class FFmpegUtil {
         }
     }
 
+    public static boolean compressVideo(String fromPath, String savePath) {
+        return compressVideo(fromPath, savePath, null);
+    }
+
     public static boolean compressVideo(String fromPath, String savePath, OnFFmpegChangeListener listener) {
         try {
             Log.e("FFmpegUtil", "scaleVideo => fromPath = " + fromPath + ", savePath = " + savePath);
@@ -361,6 +365,8 @@ public final class FFmpegUtil {
                     "10",
                     "-c:v", // 视频编码器 x264
                     "libx264",
+                    "-x264-params",
+                    "profile=high:level=3.0", // .H264编码profile & level控制
                     "-b:v", // 视频码率
                     "1000k",
                     "-bufsize",  // 视频码率控制缓冲器的大小
