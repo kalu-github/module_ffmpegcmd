@@ -2,10 +2,6 @@ package lib.kalu.ffmpegcmd;
 
 import android.util.Log;
 
-import androidx.annotation.Keep;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-@Keep
 public final class FFmpegUtil {
 
 //    /**
@@ -24,7 +19,7 @@ public final class FFmpegUtil {
 //     * @param toPath
 //     * @return
 //     */
-//    public static String addI(@NonNull String fromPath, @NonNull String toPath) {
+//    public static String addI(String fromPath, String toPath) {
 //        try {
 //            ArrayList<String> arrays = new ArrayList<>();
 //            arrays.add("-y");
@@ -68,7 +63,7 @@ public final class FFmpegUtil {
 //     *
 //     * @return
 //     */
-//    public static String clipTS(@NonNull String fromPath, @NonNull String toPath) {
+//    public static String clipTS(String fromPath, String toPath) {
 //        try {
 //            Log.e("FFmpegUtil", "clipTS => fromPath = " + fromPath);
 //            Log.e("FFmpegUtil", "clipTS => toPath = " + toPath);
@@ -104,11 +99,11 @@ public final class FFmpegUtil {
 //        }
 //    }
 
-    public static boolean clipAudio(@NonNull String videoPath, @NonNull String audioPath) {
+    public static boolean clipAudio(String videoPath, String audioPath) {
         return clipAudio(videoPath, audioPath, null);
     }
 
-    public static boolean clipAudio(@NonNull String videoPath, @NonNull String audioPath, @Nullable OnFFmpegChangeListener listener) {
+    public static boolean clipAudio(String videoPath, String audioPath, OnFFmpegChangeListener listener) {
         try {
             Log.e("FFmpegUtil", "clipAudio => videoPath = " + videoPath + ", audioPath = " + audioPath);
             if (null == videoPath || videoPath.length() == 0)
@@ -154,11 +149,11 @@ public final class FFmpegUtil {
         }
     }
 
-    public static boolean createNullAudio(@NonNull float second, @NonNull String audioPath) {
+    public static boolean createNullAudio(float second, String audioPath) {
         return createNullAudio(second, audioPath, null);
     }
 
-    public static boolean createNullAudio(@NonNull float second, @NonNull String audioPath, @Nullable OnFFmpegChangeListener listener) {
+    public static boolean createNullAudio(float second, String audioPath, OnFFmpegChangeListener listener) {
         try {
             Log.e("FFmpegUtil", "createNullAudio => second = " + second + ", audioPath = " + audioPath);
             if (second <= 0)
@@ -200,11 +195,11 @@ public final class FFmpegUtil {
         }
     }
 
-    public static boolean mixAudio(@NonNull String fromAudioPath, @NonNull String mixAudioPath, @NonNull LinkedHashMap<Integer, String> map) {
+    public static boolean mixAudio(String fromAudioPath, String mixAudioPath, LinkedHashMap<Integer, String> map) {
         return mixAudio(fromAudioPath, mixAudioPath, map, null);
     }
 
-    public static boolean mixAudio(@NonNull String fromAudioPath, @NonNull String mixAudioPath, @NonNull LinkedHashMap<Integer, String> map, @Nullable OnFFmpegChangeListener listener) {
+    public static boolean mixAudio(String fromAudioPath, String mixAudioPath, LinkedHashMap<Integer, String> map, OnFFmpegChangeListener listener) {
         try {
             Log.e("FFmpegUtil", "mixAudio => fromAudioPath = " + fromAudioPath + ", mixAudioPath = " + mixAudioPath);
             if (null == fromAudioPath || fromAudioPath.length() == 0)
@@ -286,11 +281,11 @@ public final class FFmpegUtil {
         }
     }
 
-    public static boolean pcmToMp3(@NonNull String pcmPath, @NonNull String mp3Path) {
+    public static boolean pcmToMp3(String pcmPath, String mp3Path) {
         return pcmToMp3(pcmPath, mp3Path, null);
     }
 
-    public static boolean pcmToMp3(@NonNull String pcmPath, @NonNull String mp3Path, @Nullable OnFFmpegChangeListener listener) {
+    public static boolean pcmToMp3(String pcmPath, String mp3Path, OnFFmpegChangeListener listener) {
         try {
             Log.e("FFmpegUtil", "pcmToMp3 => pcmPath = " + pcmPath + ", mp3Path = " + mp3Path);
             if (null == pcmPath || pcmPath.length() == 0)
@@ -339,6 +334,58 @@ public final class FFmpegUtil {
             return true;
         } catch (Exception e) {
             Log.e("FFmpegUtil", "pcmToMp3 => " + e.getMessage());
+            return false;
+        }
+    }
+
+    public static boolean compressVideo(String fromPath, String savePath, OnFFmpegChangeListener listener) {
+        try {
+            Log.e("FFmpegUtil", "scaleVideo => fromPath = " + fromPath + ", savePath = " + savePath);
+            if (null == fromPath || fromPath.length() == 0)
+                throw new Exception("error: fromPath null");
+            if (null == savePath || savePath.length() == 0)
+                throw new Exception("error: savePath null");
+            File fromFile = new File(fromPath);
+            if (!fromFile.exists())
+                throw new Exception("error: fromFile not exists");
+            File saveFile = new File(savePath);
+            if (saveFile.exists()) {
+                saveFile.delete();
+            }
+            List<String> arrays = Arrays.asList(
+                    "ffmpeg",
+                    "-y",
+                    "-i",
+                    fromPath,
+                    "-r", // 目标帧率设置为10fps。
+                    "10",
+                    "-c:v", // 视频编码器 x264
+                    "libx264",
+                    "-b:v", // 视频码率
+                    "1000k",
+                    "-bufsize",  // 视频码率控制缓冲器的大小
+                    "1000k",
+                    "-c:a", // 音频编码器 libmp3lame
+                    "libmp3lame",
+                    "-b:a",  // 音频码率
+                    "16k",
+                    "-preset", // 选择快速编码预设。
+                    "veryfast",
+                    "-crf",
+                    "50", // -crf 28：设置CRF值（常量速率因子），范围从0（无损）到51（最糟），通常使用18到28的值。
+                    savePath);
+            int execute;
+            if (null != listener) {
+                execute = FFmpeg.executeCmd(arrays, listener);
+            } else {
+                execute = FFmpeg.executeCmd(arrays);
+            }
+            if (execute != 0)
+                throw new Exception("execute error: " + execute);
+            Log.e("FFmpegUtil", "compressVideo => succ");
+            return true;
+        } catch (Exception e) {
+            Log.e("FFmpegUtil", "compressVideo => " + e.getMessage());
             return false;
         }
     }
