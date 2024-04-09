@@ -398,7 +398,7 @@ public final class FFmpegUtil {
                     "-preset", // 选择快速编码预设。
                     "veryfast",
                     "-crf",
-                    "50", // -crf 28：设置CRF值（常量速率因子），范围从0（无损）到51（最糟），通常使用18到28的值。
+                    "30", // -crf 28：设置CRF值（常量速率因子），范围从0（无损）到51（最糟），通常使用18到28的值。
                     savePath);
             int execute;
             if (null != listener) {
